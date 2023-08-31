@@ -1,0 +1,51 @@
+header .header-nav .header-nav-right .deal-button {
+  color: var(--theme-color);
+  padding: calc(6px + (15 - 6) * ((100vw - 320px) / (1920 - 320)))
+    calc(11px + (20 - 11) * ((100vw - 320px) / (1920 - 320)));
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 0;
+}
+header .header-nav .header-nav-right .deal-button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--theme-color);
+  opacity: 0.1;
+  z-index: -1;
+}
+header .header-nav .header-nav-right .deal-button .feather {
+  margin-right: 10px;
+  stroke-width: 1.5px;
+}
+[dir="rtl"] header .header-nav .header-nav-right .deal-button .feather {
+  margin-right: unset;
+  margin-left: 10px;
+}
+@media (max-width: 1366px) {
+  header .header-nav .header-nav-right .deal-button .feather {
+    margin-right: 0;
+  }
+  [dir="rtl"] header .header-nav .header-nav-right .deal-button .feather {
+    margin-right: unset;
+    margin-left: 0;
+  }
+}
+header .header-nav .header-nav-right .deal-button span {
+  font-size: 16px;
+  font-weight: 600;
+}
+@media (max-width: 1366px) {
+  header .header-nav .header-nav-right .deal-button span {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  header .header-nav .header-nav-right {
+    display: none;
+  }
+}

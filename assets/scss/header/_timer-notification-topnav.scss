@@ -1,0 +1,24 @@
+header .timer-notification {
+  color: #fff;
+  text-align: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+@media (max-width: 1399px) {
+  header .timer-notification {
+    text-align: left;
+  }
+}
+header .timer-notification h6 {
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+}
+header .timer-notification h6 a {
+  text-decoration: underline;
+  font-weight: 600;
+  display: inline-block;
+  margin-left: 5px;
+}

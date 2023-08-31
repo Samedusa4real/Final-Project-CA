@@ -1,0 +1,86 @@
+.mobile-menu {
+  position: fixed;
+  bottom: 0;
+  padding: 10px;
+  width: 100%;
+  background-color: var(--theme-color);
+  z-index: 2;
+  overflow: hidden;
+  -webkit-box-shadow: 0 -3px 10px 0px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 -3px 10px 0px rgba(0, 0, 0, 0.08);
+}
+[dir="rtl"] .mobile-menu {
+  left: 0;
+}
+.mobile-menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .mobile-menu ul {
+    width: 80%;
+  }
+}
+@media (max-width: 480px) {
+  .mobile-menu ul {
+    width: 95%;
+  }
+}
+@media (max-width: 360px) {
+  .mobile-menu ul {
+    width: 100%;
+  }
+}
+[dir="rtl"] .mobile-menu ul {
+  padding: 0;
+}
+.mobile-menu ul li {
+  width: 100%;
+  text-align: center;
+}
+.mobile-menu ul li.active {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  position: relative;
+}
+.mobile-menu ul li.active::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  bottom: -15px;
+  left: 50%;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+  transform: translateX(-50%) rotate(45deg);
+  background-color: #fff;
+  border-radius: 100%;
+}
+.mobile-menu ul li a {
+  display: block;
+}
+.mobile-menu ul li a img {
+  display: block;
+  margin: 0px auto;
+}
+.mobile-menu ul li a.active,
+.mobile-menu ul li a:hover {
+  color: #222;
+}
+@media (max-width: 360px) {
+  .mobile-menu ul li a {
+    font-size: 13px;
+  }
+}
+.mobile-menu ul li a .icli {
+  display: inline-block;
+  margin: 0 auto;
+  font-size: calc(20px + (22 - 20) * ((100vw - 320px) / (1920 - 320)));
+  color: #fff;
+}
+.mobile-menu ul li a span {
+  display: block;
+  color: #fff;
+}

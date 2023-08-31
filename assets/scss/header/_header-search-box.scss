@@ -1,0 +1,123 @@
+@media (max-width: 1199px) {
+  header .top-nav .navbar-top .middle-box .search-box {
+    display: none;
+  }
+}
+header
+  .top-nav
+  .navbar-top
+  .middle-box
+  .search-box
+  .input-group
+  ::-webkit-input-placeholder {
+  font-size: 16px;
+  font-weight: 400;
+}
+header
+  .top-nav
+  .navbar-top
+  .middle-box
+  .search-box
+  .input-group
+  ::-moz-placeholder {
+  font-size: 16px;
+  font-weight: 400;
+}
+header
+  .top-nav
+  .navbar-top
+  .middle-box
+  .search-box
+  .input-group
+  :-ms-input-placeholder {
+  font-size: 16px;
+  font-weight: 400;
+}
+header
+  .top-nav
+  .navbar-top
+  .middle-box
+  .search-box
+  .input-group
+  ::-ms-input-placeholder {
+  font-size: 16px;
+  font-weight: 400;
+}
+header .top-nav .navbar-top .middle-box .search-box .input-group ::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+}
+header .top-nav .navbar-top .middle-box .search-box .input-group .form-control {
+  width: 577px;
+  border-radius: 5px 0 0 5px;
+  border-color: #ececec;
+}
+[dir="rtl"]
+  header
+  .top-nav
+  .navbar-top
+  .middle-box
+  .search-box
+  .input-group
+  .form-control {
+  border-radius: 0 5px 5px 0;
+}
+@media (max-width: 1812px) {
+  header
+    .top-nav
+    .navbar-top
+    .middle-box
+    .search-box
+    .input-group
+    .form-control {
+    width: 466px;
+  }
+}
+header
+  .top-nav
+  .navbar-top
+  .middle-box
+  .search-box
+  .input-group
+  .form-control:focus {
+  border-color: var(--theme-color);
+  background-color: #fff;
+}
+header .top-nav .navbar-top .middle-box .search-box .input-group button {
+  background-color: #ffa53b;
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 5px;
+  border: 1px solid #ffa53b;
+}
+header
+  .top-nav
+  .navbar-top
+  .middle-box
+  .search-box
+  .input-group
+  button.search-button-2 {
+  background-color: var(--theme-color);
+  border-color: var(--theme-color);
+}
+[dir="rtl"]
+  header
+  .top-nav
+  .navbar-top
+  .middle-box
+  .search-box
+  .input-group
+  button {
+  border-radius: 5px 0 0 5px !important;
+}
+header
+  .top-nav
+  .navbar-top
+  .middle-box
+  .search-box
+  .input-group
+  button
+  .feather {
+  width: 20px;
+  height: 20px;
+}

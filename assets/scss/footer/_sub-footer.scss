@@ -1,0 +1,100 @@
+footer .sub-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-top: 1px dashed #c1c1c1;
+}
+@media (max-width: 991px) {
+  footer .sub-footer {
+    display: block;
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  footer .sub-footer {
+    margin-bottom: 66px;
+  }
+}
+@media (max-width: 991px) {
+  footer .sub-footer .payment {
+    margin: 8px 0;
+  }
+}
+footer .sub-footer .social-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+@media (max-width: 991px) {
+  footer .sub-footer .social-link {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+footer .sub-footer .social-link h6 {
+  margin-right: 10px;
+}
+[dir="rtl"] footer .sub-footer .social-link h6 {
+  margin-left: 10px;
+  margin-right: unset;
+}
+footer .sub-footer .social-link ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+footer .sub-footer .social-link ul li:hover i {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+footer .sub-footer .social-link ul li a {
+  display: block;
+}
+footer .sub-footer .social-link ul li a i {
+  color: #4a5568;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+footer .sub-footer .social-link ul li + li {
+  margin-left: 8px;
+}
+[dir="rtl"] footer .sub-footer .social-link ul li + li {
+  margin-left: unset;
+  margin-right: 8px;
+}
+footer .sub-footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+@media (max-width: 991px) {
+  footer .sub-footer ul {
+    display: block;
+    text-align: center;
+  }
+}
+footer .sub-footer ul li {
+  display: block;
+}

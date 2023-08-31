@@ -1,0 +1,214 @@
+
+.title-leaf {
+  width: 140px;
+  text-align: center;
+  margin-top: 7px;
+  position: relative;
+  z-index: 0;
+}
+.title-leaf::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%;
+  height: 1px;
+  left: 0;
+  background-color: var(--theme-color);
+  z-index: -1;
+}
+.title-leaf svg {
+  background-color: #fff;
+  width: 45px;
+  z-index: 1;
+  fill: var(--theme-color);
+}
+.title-leaf svg.bg-gray {
+  background-color: #f8f8f8;
+}
+
+
+.title {
+  margin-bottom: calc(16px + (30 - 16) * ((100vw - 320px) / (1920 - 320)));
+  display: inline-block;
+  position: relative;
+}
+.title h2 {
+  font-weight: 700;
+  color: #222;
+  position: relative;
+}
+.title p {
+  line-height: 1.5;
+  margin: calc(5px + (10 - 5) * ((100vw - 320px) / (1920 - 320))) 0 0;
+  font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+  color: #4a5568;
+}
+.title-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+@media (max-width: 1265px) {
+  .title-flex {
+    display: block;
+  }
+}
+.title-flex .timing-box {
+  display: inline-block;
+}
+.title-flex .timing-box .timing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #ff4f4f;
+  color: #fff;
+  padding: calc(8px + (12 - 8) * ((100vw - 320px) / (1920 - 320)))
+    calc(9px + (11 - 9) * ((100vw - 320px) / (1920 - 320)));
+  border-radius: 5px;
+}
+@media (max-width: 1265px) {
+  .title-flex .timing-box .timing {
+    margin-top: calc(14px + (20 - 14) * ((100vw - 320px) / (1920 - 320)));
+  }
+}
+.title-flex .timing-box .timing i {
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+  margin-right: 9px;
+}
+.title-flex .timing-box .timing .feather {
+  width: 17px;
+  height: 17px;
+  margin-right: 9px;
+}
+[dir="rtl"] .title-flex .timing-box .timing .feather {
+  margin-left: 9px;
+  margin-right: unset;
+}
+.title-flex .timing-box .timing .name {
+  font-weight: 600;
+  margin-right: 8px;
+  line-height: 1;
+}
+[dir="rtl"] .title-flex .timing-box .timing .name {
+  margin-left: 8px;
+  margin-right: unset;
+}
+.title-flex .timing-box .timing .time ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+[dir="rtl"] .title-flex .timing-box .timing .time ul {
+  padding-left: unset;
+  padding-right: 0;
+}
+.title-flex .timing-box .timing .time ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  line-height: 1;
+}
+.title-flex .timing-box .timing .time ul li + li {
+  margin-left: 15px;
+}
+[dir="rtl"] .title-flex .timing-box .timing .time ul li + li {
+  margin-left: unset;
+  margin-right: 15px;
+}
+.title-flex .timing-box .timing .time ul li + li::after {
+  content: ":";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-weight: bolder;
+  left: -10px;
+}
+[dir="rtl"] .title-flex .timing-box .timing .time ul li + li::after {
+  left: unset;
+  right: -10px;
+}
+.title-flex .timing-box .timing .time ul li .counter h6 {
+  font-weight: 600;
+}
+.title .product-tabs {
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.title .product-tabs .nav-item {
+  position: relative;
+}
+.title .product-tabs .nav-item .nav-link {
+  border: none;
+  border-radius: unset;
+  color: #4a5568;
+  position: relative;
+  font-weight: 400;
+  font-size: 16px;
+}
+.title .product-tabs .nav-item .nav-link.active {
+  font-weight: 500;
+  color: var(--theme-color);
+}
+.title .product-tabs .nav-item .nav-link.active::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  bottom: 0;
+  left: 17px;
+  border-radius: 50px;
+  background-color: var(--theme-color);
+}
+.title .product-tabs .nav-item .nav-link.active::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 2px;
+  bottom: 0;
+  left: 75px;
+  border-radius: 50px;
+  background-color: var(--theme-color);
+}
+.title .product-tabs .nav-item + .nav-item {
+  margin-left: 10px;
+}
+.title .product-tabs .nav-item + .nav-item::before {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  top: 9px;
+  left: -11px;
+  background-image: url(https://themes.pixelstrap.com/fastkart/assets/svg/bag.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
