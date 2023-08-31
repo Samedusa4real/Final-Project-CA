@@ -12,6 +12,7 @@ import { lazySizes } from "../lazyload/lazysizes.min.js";
 
 import { slickJs } from "../slick/slick.js";
 import { slickAnimation } from "../slick/slick-animation.min.js";
+import { customAnimated } from "../custom-slick-animated.js";
 import { customSlick } from "../slick/custom_slick.js";
 
 import { wowMinJs } from "../wow-js/wow.min.js";
@@ -31,6 +32,7 @@ lazySizes();
 
 slickJs();
 slickAnimation();
+customAnimated();
 customSlick();
 
 wowMinJs();
