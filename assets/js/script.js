@@ -1,13 +1,3 @@
-/*-----------------------------------------------------------------------------------
-
- Template Name: Fastkart
- Template URI: themes.pixelstrap.com/Fastkart
- Description: This is Ecommerce website
- Author: Pixelstrap
- Author URI: https://themeforest.net/user/pixelstrap
-
- ----------------------------------------------------------------------------------- */
-
 // 01. Image to background js
 // 02. Shop Page Grid Setting Js
 // 03. Footer function js

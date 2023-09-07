@@ -1,0 +1,30 @@
+.ratio_60 .bg-size:before {
+  content: "";
+  padding-top: 60%;
+  display: block;
+}
+.ratio_65 .bg-size:before {
+  content: "";
+  padding-top: 65%;
+  display: block;
+}
+.ratio_87 .bg-size:before {
+  content: "";
+  padding-top: 87%;
+  display: block;
+}
+.ratio_medium .bg-size:before {
+  content: "";
+  padding-top: 134%;
+  display: block;
+}
+.ratio_148_1 .bg-size {
+  content: "";
+  padding-top: 148%;
+  display: block;
+}
+@media (max-width: 1199px) {
+  .ratio_148_1 .bg-size {
+    padding-top: 88%;
+  }
+}

@@ -1,0 +1,78 @@
+$color_1: #000;
+$background-color_1: #ececec;
+
+.button-group {
+	text-align: right;
+	margin-top: calc(14px + (20 - 14) * ((100vw - 320px) / (1920 - 320)));
+	ul {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-webkit-box-pack: end;
+		-ms-flex-pack: end;
+		justify-content: flex-end;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		gap: calc(7px + (16 - 7) * ((100vw - 320px) / (1920 - 320)));
+		li {
+			button {
+				width: 100%;
+				font: inherit;
+				letter-spacing: 0.04em;
+				padding: calc(8px + (12 - 8) * ((100vw - 320px) / (1920 - 320))) calc(14px + (20 - 14) * ((100vw - 320px) / (1920 - 320)));
+			}
+			button.shopping-button {
+				font-size: calc(13px + (14 - 13) * ((100vw - 320px) / (1920 - 320)));
+				background-color: $background-color_1;
+				color: $color_1;
+				i {
+					margin-right: 8px;
+				}
+			}
+		}
+	}
+	ul.button-group-list {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		margin-top: calc(26px + (45 - 26) * ((100vw - 320px) / (1920 - 320)));
+	}
+}
+.button-group.cart-button {
+	margin-top: 0;
+	padding: 0 calc(16px + (22 - 16) * ((100vw - 320px) / (1920 - 320))) calc(14px + (20 - 14) * ((100vw - 320px) / (1920 - 320)));
+	ul {
+		li {
+			width: 100%;
+		}
+	}
+}
+[dir="rtl"] {
+	.button-group.cart-button {
+		ul {
+			padding-right: 0;
+		}
+	}
+	.button-group {
+		ul {
+			padding-right: 0;
+			li {
+				button.shopping-button {
+					i {
+						margin-right: unset;
+						margin-left: 8px !important;
+					}
+				}
+			}
+		}
+	}
+}

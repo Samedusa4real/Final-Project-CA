@@ -172,3 +172,25 @@ $border-color_1: transparent;
 		}
 	}
 }
+
+.custom-padding {
+  padding-right: 10px;
+}
+.custom-height {
+  max-height: 190px;
+  overflow-y: auto;
+  height: 100%;
+}
+.custom-height::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgba(85, 85, 85, 0.14);
+}
+.custom-height::-webkit-scrollbar {
+  width: 4px;
+  background-color: #f5f5f5;
+  border-radius: 50px;
+}
+.custom-height::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgba(85, 85, 85, 0.5);
+}

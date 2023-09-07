@@ -240,3 +240,14 @@ $background-color_4: #ff4f4f;
 		}
 	}
 }
+.img-slider img {
+  display: initial;
+}
+.slick-height .slick-list .slick-track .slick-slide {
+  height: auto;
+}
+.title-border {
+  border-bottom: 1px solid #ececec;
+  padding-bottom: calc(14px + (20 - 14) * ((100vw - 320px) / (1920 - 320)));
+  margin-bottom: calc(5px + (10 - 5) * ((100vw - 320px) / (1920 - 320)));
+}

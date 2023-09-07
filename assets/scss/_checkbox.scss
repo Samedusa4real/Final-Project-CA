@@ -1,0 +1,68 @@
+$background-color_1: #fff;
+
+.checkbox_animated {
+	cursor: pointer;
+	position: relative;
+	margin-right: 16px;
+	height: 100%;
+	&:before {
+		content: "";
+		position: absolute;
+		width: 12px;
+		height: 6px;
+		-webkit-transition: -webkit-transform 0.4s cubic-bezier(0.45, 1.8, 0.5, 0.75);
+		transition: -webkit-transform 0.4s cubic-bezier(0.45, 1.8, 0.5, 0.75);
+		transition: transform 0.4s cubic-bezier(0.45, 1.8, 0.5, 0.75);
+		transition: transform 0.4s cubic-bezier(0.45, 1.8, 0.5, 0.75), -webkit-transform 0.4s cubic-bezier(0.45, 1.8, 0.5, 0.75);
+		-webkit-transform: rotate(-45deg) scale(0, 0);
+		transform: rotate(-45deg) scale(0, 0);
+		left: 4px;
+		top: 4px;
+		z-index: 1;
+		border: 2px solid var(--theme-color);
+		border-top-style: none;
+		border-right-style: none;
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		width: 21px;
+		height: 21px;
+		top: -2px;
+		left: 0;
+		background-color: $background-color_1;
+		border: 2px solid #ececec;
+		cursor: pointer;
+	}
+	&:checked {
+		&:before {
+			-webkit-transform: rotate(-45deg) scale(1, 1);
+			transform: rotate(-45deg) scale(1, 1);
+		}
+	}
+}
+[dir="rtl"] {
+	.checkbox_animated {
+		margin-right: unset;
+		margin-left: 16px;
+		&:before {
+			left: unset;
+			right: 4px;
+		}
+		&:after {
+			left: unset;
+			right: 0;
+		}
+	}
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.normal-form .form-control {
+  border: none;
+}
+.normal-form .form-control:focus {
+  background-color: #fff;
+}

@@ -32,9 +32,11 @@ header {
 }
 
 
+@import './header-category';
 @import './header-categories-button';
 @import './header-deal-button';
 @import './header-main-navbar';
 @import './header-offcanvas';
 @import './navbar-dropdown-menu';
 @import './header-mainnav-basket-dropdown';
+@import './basket-button';
