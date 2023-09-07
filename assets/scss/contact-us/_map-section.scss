@@ -1,8 +1,10 @@
-.map-section .map-box {
-  margin-bottom: -6px;
-  display: block;
-}
-.map-section .map-box iframe {
-  width: 100%;
-  height: 350px;
+.map-section {
+	.map-box {
+		margin-bottom: -6px;
+		display: block;
+		iframe {
+			width: 100%;
+			height: 350px;
+		}
+	}
 }

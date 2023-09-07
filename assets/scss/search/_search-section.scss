@@ -1,0 +1,9 @@
+.search-section .search-box {
+  position: relative;
+}
+.search-section .search-box .input-group .form-control:focus {
+  z-index: 0;
+}
+.search-section .search-box .input-group button {
+  z-index: 0;
+}

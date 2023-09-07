@@ -1,24 +1,30 @@
-header .timer-notification {
-  color: #fff;
-  text-align: center;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  position: relative;
+$color_1: #fff;
+
+header {
+	.timer-notification {
+		color: $color_1;
+		text-align: center;
+		-webkit-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+		position: relative;
+		h6 {
+			-webkit-line-clamp: 1;
+			-webkit-box-orient: vertical;
+			display: -webkit-box;
+			overflow: hidden;
+			a {
+				text-decoration: underline;
+				font-weight: 600;
+				display: inline-block;
+				margin-left: 5px;
+			}
+		}
+	}
 }
 @media (max-width: 1399px) {
-  header .timer-notification {
-    text-align: left;
-  }
-}
-header .timer-notification h6 {
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  display: -webkit-box;
-  overflow: hidden;
-}
-header .timer-notification h6 a {
-  text-decoration: underline;
-  font-weight: 600;
-  display: inline-block;
-  margin-left: 5px;
+	header {
+		.timer-notification {
+			text-align: left;
+		}
+	}
 }

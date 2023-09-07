@@ -1,0 +1,119 @@
+$color_1: #4a5568;
+$color_2: var(--theme-color);
+$background-color_1: #f8f8f8;
+$background-color_2: #fff;
+$background-color_3: #f9f8f6;
+$background-color_4: transparent;
+
+.add-to-cart-box {
+	background-color: $background-color_1;
+	border-radius: 50px;
+	position: relative;
+	max-width: 250px;
+	.btn-add-cart {
+		padding: calc(8px + (10 - 8) * ((100vw - 320px) / (1920 - 320))) 0;
+		width: 100%;
+		font-size: calc(14px + (15 - 14) * ((100vw - 320px) / (1920 - 320)));
+		margin-top: 10px;
+		color: $color_1;
+		border-radius: 50px;
+		font-weight: 500;
+		.add-icon {
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			transform: translateY(-50%);
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+			width: calc(30px + (37 - 30) * ((100vw - 320px) / (1920 - 320)));
+			height: calc(30px + (37 - 30) * ((100vw - 320px) / (1920 - 320)));
+			background-color: $background-color_2;
+			border-radius: 100%;
+			color: $color_2;
+			position: absolute;
+			right: 4px;
+			i {
+				font-size: 13px;
+			}
+		}
+		.add-icon.bg-light-orange {
+			background-color: $background-color_3;
+		}
+		.add-icon.bg-light-gray {
+			background-color: $background-color_1;
+		}
+	}
+	.qty-box {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin: 0;
+		display: none;
+		.input-group {
+			background-color: $background-color_1;
+			border-radius: 50px;
+			padding: 4px;
+			text-align: center;
+			z-index: 0;
+			button {
+				width: calc(29px + (35 - 29) * ((100vw - 320px) / (1920 - 320)));
+				height: calc(29px + (35 - 29) * ((100vw - 320px) / (1920 - 320)));
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				justify-content: center;
+				border: none;
+				padding: 0;
+				background-color: $background-color_2;
+				z-index: 0;
+				border-radius: 100% !important;
+				i {
+					font-size: 13px;
+					color: $color_2;
+					margin-top: 1px;
+				}
+				&:focus {
+					-webkit-box-shadow: none;
+					box-shadow: none;
+				}
+			}
+			input {
+				height: auto;
+				background-color: $background-color_4;
+				border: none;
+				padding: 0;
+				text-align: center;
+				font-size: 14px;
+				color: $color_1;
+			}
+		}
+		.input-group.theme-bg-white {
+			background-color: $background-color_2;
+		}
+	}
+	.qty-box.open {
+		display: block;
+	}
+}
+@media (max-width: 480px) {
+	.add-to-cart-box {
+		.btn-add-cart {
+			.add-icon {
+				display: none;
+			}
+		}
+	}
+}

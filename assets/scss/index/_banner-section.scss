@@ -1,145 +1,158 @@
+$color_1: #fff;
+$color_2: #4a5568;
+$background-color_1: rgba(255, 255, 255, 0.5);
+$background-color_2: rgba(var(--theme-color-rgb), 0.4);
+$background-color_3: rgba(255, 255, 255, 0.2);
+$background-color_4: rgba(153, 105, 31, 0.5);
 
 .banner-contain {
-  border-radius: 5px;
-  overflow: hidden;
-  position: relative;
+	border-radius: 5px;
+	overflow: hidden;
+	position: relative;
+	.banner-details.banner-b-space {
+		padding: calc(27px + (45 - 27) * ((100vw - 320px) / (1920 - 320))) calc(20px + (140 - 20) * ((100vw - 320px) / (1920 - 320)));
+	}
+	.banner-details {
+		.banner-box {
+			position: absolute;
+			top: 30px;
+			left: 0;
+			background-color: $background-color_1;
+			padding: calc(8px + (12 - 8) * ((100vw - 320px) / (1920 - 320))) calc(30px + (39 - 30) * ((100vw - 320px) / (1920 - 320))) calc(8px + (12 - 8) * ((100vw - 320px) / (1920 - 320))) calc(8px + (12 - 8) * ((100vw - 320px) / (1920 - 320)));
+			border-radius: 0px 60px 60px 0px;
+			-webkit-backdrop-filter: blur(5px);
+			backdrop-filter: blur(5px);
+			-webkit-box-shadow: 0px 11px 10px rgba(74, 85, 104, 0.06);
+			box-shadow: 0px 11px 10px rgba(74, 85, 104, 0.06);
+			h5 {
+				margin: calc(4px + (6 - 4) * ((100vw - 320px) / (1920 - 320))) 0;
+				font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+				font-weight: 600;
+			}
+		}
+		.banner-button {
+			position: absolute;
+			bottom: calc(8px + (16 - 8) * ((100vw - 320px) / (1920 - 320)));
+			left: calc(14px + (22 - 14) * ((100vw - 320px) / (1920 - 320)));
+			color: $color_1;
+			font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+			font-weight: 600;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+		}
+		h2 {
+			font-size: calc(20px + (42 - 20) * ((100vw - 320px) / (1920 - 320)));
+		}
+		h2.banner-title {
+			font-size: calc(31px + (50 - 31) * ((100vw - 320px) / (1920 - 320)));
+			font-weight: 700;
+		}
+		h3 {
+			font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1920 - 320)));
+			margin-top: -7px;
+		}
+		h4 {
+			font-size: calc(20px + (24 - 20) * ((100vw - 320px) / (1920 - 320)));
+			line-height: 1.6;
+		}
+		.coupon-code {
+			padding: calc(7px + (10 - 7) * ((100vw - 320px) / (1920 - 320))) calc(9px + (15 - 9) * ((100vw - 320px) / (1920 - 320)));
+			background-color: $background-color_2;
+			border: 2px dashed rgba(255, 255, 255, 0.5);
+			display: inline-block;
+			font-weight: 500;
+			margin-top: 13px;
+		}
+		.coupon-code-white {
+			background-color: $background-color_3;
+		}
+		.coupon-code.code-2 {
+			background-color: $background-color_4;
+		}
+		p {
+			color: $color_2;
+			line-height: 1.5;
+		}
+		p.banner-text {
+			width: 62%;
+		}
+		.banner-timing {
+			width: 100%;
+			height: 210px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: linear-gradient( 181.97deg, rgba(0, 0, 0, 0.3) 1.66%, rgba(0, 0, 0, 0) 95.27% );
+			-webkit-backdrop-filter: blur(2px);
+			backdrop-filter: blur(2px);
+			text-align: center;
+			color: $color_1;
+			.time {
+				margin-top: 25px;
+				ul {
+					display: -webkit-box;
+					display: -ms-flexbox;
+					display: flex;
+					-webkit-box-align: center;
+					-ms-flex-align: center;
+					align-items: center;
+					-webkit-box-pack: space-evenly;
+					-ms-flex-pack: space-evenly;
+					justify-content: space-evenly;
+					li {
+						.counter {
+							width: 55px;
+							height: 70px;
+							display: -webkit-box;
+							display: -ms-flexbox;
+							display: flex;
+							-webkit-box-align: center;
+							-ms-flex-align: center;
+							align-items: center;
+							-webkit-box-pack: center;
+							-ms-flex-pack: center;
+							justify-content: center;
+							border: 1px dashed #fff;
+							h5 {
+								font-weight: 600;
+								margin-bottom: 4px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
-[dir="rtl"] .banner-contain .banner-details {
-  text-align: left;
-}
-.banner-contain .banner-details.banner-b-space {
-  padding: calc(27px + (45 - 27) * ((100vw - 320px) / (1920 - 320)))
-    calc(20px + (140 - 20) * ((100vw - 320px) / (1920 - 320)));
-}
-.banner-contain .banner-details .banner-box {
-  position: absolute;
-  top: 30px;
-  left: 0;
-  background-color: rgba(255, 255, 255, 0.5);
-  padding: calc(8px + (12 - 8) * ((100vw - 320px) / (1920 - 320)))
-    calc(30px + (39 - 30) * ((100vw - 320px) / (1920 - 320)))
-    calc(8px + (12 - 8) * ((100vw - 320px) / (1920 - 320)))
-    calc(8px + (12 - 8) * ((100vw - 320px) / (1920 - 320)));
-  border-radius: 0px 60px 60px 0px;
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
-  -webkit-box-shadow: 0px 11px 10px rgba(74, 85, 104, 0.06);
-  box-shadow: 0px 11px 10px rgba(74, 85, 104, 0.06);
-}
-.banner-contain .banner-details .banner-box h5 {
-  margin: calc(4px + (6 - 4) * ((100vw - 320px) / (1920 - 320))) 0;
-  font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
-  font-weight: 600;
-}
-.banner-contain .banner-details .banner-button {
-  position: absolute;
-  bottom: calc(8px + (16 - 8) * ((100vw - 320px) / (1920 - 320)));
-  left: calc(14px + (22 - 14) * ((100vw - 320px) / (1920 - 320)));
-  color: #fff;
-  font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
-  font-weight: 600;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-.banner-contain .banner-details h2 {
-  font-size: calc(20px + (42 - 20) * ((100vw - 320px) / (1920 - 320)));
-}
-.banner-contain .banner-details h2.banner-title {
-  font-size: calc(31px + (50 - 31) * ((100vw - 320px) / (1920 - 320)));
-  font-weight: 700;
-}
-.banner-contain .banner-details h3 {
-  font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1920 - 320)));
-  margin-top: -7px;
-}
-.banner-contain .banner-details h4 {
-  font-size: calc(20px + (24 - 20) * ((100vw - 320px) / (1920 - 320)));
-  line-height: 1.6;
-}
-.banner-contain .banner-details .coupon-code {
-  padding: calc(7px + (10 - 7) * ((100vw - 320px) / (1920 - 320)))
-    calc(9px + (15 - 9) * ((100vw - 320px) / (1920 - 320)));
-  background-color: rgba(var(--theme-color-rgb), 0.4);
-  border: 2px dashed rgba(255, 255, 255, 0.5);
-  display: inline-block;
-  font-weight: 500;
-  margin-top: 13px;
-}
-.banner-contain .banner-details .coupon-code-white {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-.banner-contain .banner-details .coupon-code.code-2 {
-  background-color: rgba(153, 105, 31, 0.5);
-}
-.banner-contain .banner-details p {
-  color: #4a5568;
-  line-height: 1.5;
-}
-[dir="rtl"] .banner-contain .banner-details p {
-  margin-right: auto;
-}
-.banner-contain .banner-details p.banner-text {
-  width: 62%;
+[dir="rtl"] {
+	.banner-contain {
+		.banner-details {
+			text-align: left;
+			p {
+				margin-right: auto;
+			}
+		}
+	}
 }
 @media (max-width: 575px) {
-  .banner-contain .banner-details p.banner-text {
-    width: 80%;
-  }
+	.banner-contain {
+		.banner-details {
+			p.banner-text {
+				width: 80%;
+			}
+		}
+	}
 }
 @media (max-width: 480px) {
-  .banner-contain .banner-details p.banner-text {
-    width: 100%;
-  }
-}
-.banner-contain .banner-details .banner-timing {
-  width: 100%;
-  height: 210px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: linear-gradient(
-    181.97deg,
-    rgba(0, 0, 0, 0.3) 1.66%,
-    rgba(0, 0, 0, 0) 95.27%
-  );
-  -webkit-backdrop-filter: blur(2px);
-  backdrop-filter: blur(2px);
-  text-align: center;
-  color: #fff;
-}
-.banner-contain .banner-details .banner-timing .time {
-  margin-top: 25px;
-}
-.banner-contain .banner-details .banner-timing .time ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
-}
-.banner-contain .banner-details .banner-timing .time ul li .counter {
-  width: 55px;
-  height: 70px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  border: 1px dashed #fff;
-}
-.banner-contain .banner-details .banner-timing .time ul li .counter h5 {
-  font-weight: 600;
-  margin-bottom: 4px;
+	.banner-contain {
+		.banner-details {
+			p.banner-text {
+				width: 100%;
+			}
+		}
+	}
 }

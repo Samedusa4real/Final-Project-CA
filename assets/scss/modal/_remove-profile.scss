@@ -1,12 +1,24 @@
-.remove-profile .modal-dialog .modal-content .modal-header {
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding-bottom: 0;
-}
-.remove-profile .modal-dialog .modal-content .modal-body .remove-box p {
-  text-align: center;
-  line-height: 1.6;
-  margin: 0;
-  color: #4a5568;
+$color_1: #4a5568;
+
+.remove-profile {
+	.modal-dialog {
+		.modal-content {
+			.modal-header {
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				justify-content: center;
+				padding-bottom: 0;
+			}
+			.modal-body {
+				.remove-box {
+					p {
+						text-align: center;
+						line-height: 1.6;
+						margin: 0;
+						color: $color_1;
+					}
+				}
+			}
+		}
+	}
 }
