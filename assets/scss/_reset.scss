@@ -62,9 +62,6 @@ button {
 		box-shadow: none;
 	}
 }
-&:focus {
-	outline: none;
-}
 .form-control {
 	background-color: $background-color_1;
 	&:focus {
