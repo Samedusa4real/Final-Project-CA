@@ -1,0 +1,17 @@
+.dashboard-title {
+	margin-bottom: 22px;
+	h3 {
+		font-size: 20px;
+		line-height: 1.3;
+		position: relative;
+		font-weight: 600;
+	}
+}
+.dashboard-title.dashboard-flex {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	button {
+		margin-left: auto;
+	}
+}

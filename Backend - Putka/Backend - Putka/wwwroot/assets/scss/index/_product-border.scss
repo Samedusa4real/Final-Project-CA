@@ -1,0 +1,60 @@
+.product-border {
+  border: 1px solid rgba(74, 85, 104, 0.3);
+  border-radius: 10px;
+  padding: 0 14px;
+}
+.product-border.border-row .slick-slider .slick-list {
+  margin: 0 -14px;
+}
+.product-border.border-row .row > div:last-child {
+  border-top: 1px solid #ddd;
+}
+.product-border .slider-5-1 .slick-slide > .row {
+  border-right: 1px solid rgba(74, 85, 104, 0.3);
+  margin-left: 0;
+}
+[dir="rtl"] .product-border .slider-5-1 .slick-slide > .row {
+  border-left: 1px solid rgba(74, 85, 104, 0.3);
+  border-right: unset;
+}
+.product-border > .product-box-slider > div > .row > div:nth-child(n + 6) {
+  border-top: 1px solid rgba(74, 85, 104, 0.3);
+}
+.product-border
+  > .product-box-slider
+  > div
+  > .row
+  > div:nth-child(5n + 5)
+  .product-box {
+  border-right: none;
+}
+[dir="rtl"]
+  .product-border
+  > .product-box-slider
+  > div
+  > .row
+  > div:nth-child(5n + 5)
+  .product-box {
+  border-left: none;
+  border-right: unset;
+}
+@media screen and (max-width: 616px) {
+  .product-border
+    > .product-box-slider
+    > div
+    > .row
+    > div:nth-child(5n + 2)
+    .product-box {
+    border-right: none;
+  }
+  [dir="rtl"]
+    .product-border
+    > .product-box-slider
+    > div
+    > .row
+    > div:nth-child(5n + 2)
+    .product-box {
+    border-left: none;
+    border-right: unset;
+  }
+}

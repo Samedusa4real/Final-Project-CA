@@ -1,0 +1,23 @@
+$color_1: #4a5568;
+
+.product-rating {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	span {
+		color: $color_1;
+		font-size: 12px;
+		margin-left: 5px;
+	}
+}
+[dir="rtl"] {
+	.product-rating {
+		span {
+			margin-left: unset;
+			margin-right: 5px;
+		}
+	}
+}

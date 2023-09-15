@@ -1,0 +1,210 @@
+$color_1: #222;
+$color_2: var(--theme-color);
+$color_3: #4a5568;
+$color_4: #fff;
+$background-color_1: #fff;
+$background-color_2: var(--theme-color);
+$background-color_3: transparent;
+
+header {
+	.onhover-dropdown {
+		position: relative;
+		&:hover {
+			.onhover-div {
+				opacity: 1;
+				top: 50px;
+				visibility: visible;
+			}
+		}
+		.onhover-div {
+			position: absolute;
+			top: 60px;
+			right: -10px;
+			background-color: $background-color_1;
+			z-index: 1001;
+			width: 320px;
+			border-radius: 10px;
+			padding: calc(14px + (30 - 14) * ((100vw - 320px) / (1920 - 320))) calc(11px + (20 - 11) * ((100vw - 320px) / (1920 - 320)));
+			-webkit-box-shadow: -1px 0 10px 0 rgba(34, 34, 34, 0.07), 5px 20px 40px 0 rgba(34, 34, 34, 0.04);
+			box-shadow: -1px 0 10px 0 rgba(34, 34, 34, 0.07), 5px 20px 40px 0 rgba(34, 34, 34, 0.04);
+			opacity: 0;
+			-webkit-transition: all 0.3s ease-in-out;
+			transition: all 0.3s ease-in-out;
+			visibility: hidden;
+			.cart-list {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-ms-flex-wrap: wrap;
+				flex-wrap: wrap;
+				gap: calc(10px + (25 - 10) * ((100vw - 320px) / (1920 - 320)));
+				border-bottom: 1px solid #ececec;
+				padding-bottom: calc(12px + (22 - 12) * ((100vw - 320px) / (1920 - 320)));
+				li {
+					margin: 0 !important;
+					&::after {
+						content: none !important;
+					}
+					.drop-cart {
+						display: -webkit-box;
+						display: -ms-flexbox;
+						display: flex;
+						-ms-flex-wrap: nowrap;
+						flex-wrap: nowrap;
+						gap: 15px;
+						-webkit-box-align: center;
+						-ms-flex-align: center;
+						align-items: center;
+						position: relative;
+						&::after {
+							content: none;
+						}
+						.drop-image {
+							img {
+								width: 87px;
+								background: #f8f8f8;
+								padding: 10px;
+							}
+						}
+						.drop-contain {
+							h5 {
+								-webkit-line-clamp: 1;
+								-webkit-box-orient: vertical;
+								display: -webkit-box;
+								overflow: hidden;
+								margin-bottom: 5px;
+								font-size: calc(15px + (17 - 15) * ((100vw - 320px) / (1920 - 320)));
+								color: $color_2;
+								font-weight: 500;
+							}
+							h6 {
+								display: -webkit-box;
+								display: -ms-flexbox;
+								display: flex;
+								-ms-flex-wrap: nowrap;
+								flex-wrap: nowrap;
+								gap: 5px;
+								-webkit-box-align: end;
+								-ms-flex-align: end;
+								align-items: flex-end;
+								span {
+									margin-top: -2px;
+									color: $color_3;
+								}
+							}
+							.close-button {
+								position: absolute;
+								top: 0;
+								right: 0;
+								background-color: $background-color_3;
+								border: none;
+								padding: 0;
+								color: $color_3;
+							}
+						}
+					}
+				}
+			}
+			.button-group {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				-webkit-box-pack: justify;
+				-ms-flex-pack: justify;
+				justify-content: space-between;
+				margin-top: calc(10px + (20 - 10) * ((100vw - 320px) / (1920 - 320)));
+				.cart-button {
+					border: 2px solid var(--theme-color);
+					color: $color_2;
+					padding: 6px 10px;
+					&:hover {
+						background-color: $background-color_2;
+						color: $color_4;
+					}
+				}
+			}
+			.price-box {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				-webkit-box-pack: justify;
+				-ms-flex-pack: justify;
+				justify-content: space-between;
+				margin-top: calc(10px + (20 - 10) * ((100vw - 320px) / (1920 - 320)));
+			}
+		}
+		.onhover-div-login {
+			right: 0;
+			width: 160px;
+			padding: 20px;
+			.user-box-name {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-ms-flex-wrap: wrap;
+				flex-wrap: wrap;
+				gap: 5px;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				li {
+					display: block;
+					width: 100%;
+					a {
+						color: $color_1;
+						display: block;
+						position: relative;
+						&:hover {
+							&::after {
+								width: 40%;
+							}
+						}
+						&::after {
+							content: "";
+							position: absolute;
+							width: 0;
+							height: 4px;
+							bottom: 2px;
+							left: 0;
+							background-color: $background-color_2;
+							opacity: 0.3;
+							border-radius: 50px;
+							-webkit-transition: all 0.3s ease-in-out;
+							transition: all 0.3s ease-in-out;
+							z-index: -1;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+[dir="rtl"] {
+	header {
+		.onhover-dropdown {
+			.onhover-div {
+				right: unset;
+				left: 20px;
+				.cart-list {
+					padding-right: 0;
+					li {
+						.drop-cart {
+							.drop-contain {
+								.close-button {
+									right: unset;
+									left: 0;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

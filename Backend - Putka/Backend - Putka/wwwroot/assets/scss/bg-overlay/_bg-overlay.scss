@@ -1,0 +1,18 @@
+$background-color_1: #222;
+
+.bg-overlay {
+	width: 100vw;
+	height: 100vh;
+	background-color: $background-color_1;
+	position: fixed;
+	z-index: 9;
+	top: 0;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+.bg-overlay.show {
+	visibility: visible;
+	opacity: 0.5;
+}

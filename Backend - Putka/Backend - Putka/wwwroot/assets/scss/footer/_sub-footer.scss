@@ -1,0 +1,122 @@
+$color_1: #4a5568;
+
+footer {
+	.sub-footer {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		border-top: 1px dashed #c1c1c1;
+		.social-link {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			h6 {
+				margin-right: 10px;
+			}
+			ul {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				li {
+					&:hover {
+						i {
+							-webkit-transform: translateY(-5px);
+							transform: translateY(-5px);
+						}
+					}
+					a {
+						display: block;
+						i {
+							color: $color_1;
+							-webkit-transition: all 0.3s ease-in-out;
+							transition: all 0.3s ease-in-out;
+						}
+					}
+					+ {
+						li {
+							margin-left: 8px;
+						}
+					}
+				}
+			}
+		}
+		ul {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			-webkit-box-pack: justify;
+			-ms-flex-pack: justify;
+			justify-content: space-between;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			gap: 6px;
+			li {
+				display: block;
+			}
+		}
+	}
+}
+[dir="rtl"] {
+	footer {
+		.sub-footer {
+			.social-link {
+				h6 {
+					margin-left: 10px;
+					margin-right: unset;
+				}
+				ul {
+					li {
+						+ {
+							li {
+								margin-left: unset;
+								margin-right: 8px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media (max-width: 991px) {
+	footer {
+		.sub-footer {
+			display: block;
+			text-align: center;
+			.payment {
+				margin: 8px 0;
+			}
+			.social-link {
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				justify-content: center;
+			}
+			ul {
+				display: block;
+				text-align: center;
+			}
+		}
+	}
+}
+@media (max-width: 767px) {
+	footer {
+		.sub-footer {
+			margin-bottom: 66px;
+		}
+	}
+}

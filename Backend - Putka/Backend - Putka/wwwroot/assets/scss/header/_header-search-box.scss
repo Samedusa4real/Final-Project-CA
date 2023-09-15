@@ -1,0 +1,113 @@
+$color_1: #fff;
+$background-color_1: #fff;
+$background-color_2: #ffa53b;
+$background-color_3: var(--theme-color);
+$border-color_1: #ececec;
+$border-color_2: var(--theme-color);
+
+@media (max-width: 1199px) {
+	header {
+		.top-nav {
+			.navbar-top {
+				.middle-box {
+					.search-box {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+header {
+	.top-nav {
+		.navbar-top {
+			.middle-box {
+				.search-box {
+					.input-group {
+						&::-webkit-input-placeholder {
+							font-size: 16px;
+							font-weight: 400;
+						}
+						&::-moz-placeholder {
+							font-size: 16px;
+							font-weight: 400;
+						}
+						&:-ms-input-placeholder {
+							font-size: 16px;
+							font-weight: 400;
+						}
+						&::-ms-input-placeholder {
+							font-size: 16px;
+							font-weight: 400;
+						}
+						&::placeholder {
+							font-size: 16px;
+							font-weight: 400;
+						}
+						.form-control {
+							width: 577px;
+							border-radius: 5px 0 0 5px;
+							border-color: $border-color_1;
+							&:focus {
+								border-color: $border-color_2;
+								background-color: $background-color_1;
+							}
+						}
+						button {
+							background-color: $background-color_2;
+							color: $color_1;
+							padding: 14px 20px;
+							border-radius: 5px;
+							border: 1px solid #ffa53b;
+							.feather {
+								width: 20px;
+								height: 20px;
+							}
+						}
+						button.search-button-2 {
+							background-color: $background-color_3;
+							border-color: $border-color_2;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+[dir="rtl"] {
+	header {
+		.top-nav {
+			.navbar-top {
+				.middle-box {
+					.search-box {
+						.input-group {
+							.form-control {
+								border-radius: 0 5px 5px 0;
+							}
+							button {
+								border-radius: 5px 0 0 5px !important;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media (max-width: 1812px) {
+	header {
+		.top-nav {
+			.navbar-top {
+				.middle-box {
+					.search-box {
+						.input-group {
+							.form-control {
+								width: 466px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

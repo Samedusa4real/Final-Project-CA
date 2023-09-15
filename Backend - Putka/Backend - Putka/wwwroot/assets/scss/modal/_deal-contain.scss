@@ -1,0 +1,117 @@
+$color_1: #222;
+$color_2: #ff4f4f;
+$background-color_1: #fff;
+
+.deal-contain {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	.deal-image {
+		img {
+			width: 250px;
+			height: 250px;
+			-o-object-fit: contain;
+			object-fit: contain;
+		}
+	}
+	.deal-detail {
+		padding-left: 25px;
+		width: calc(100% - 250px);
+		a {
+			color: $color_1;
+			&:hover {
+				color: $color_1;
+			}
+		}
+		.name {
+			font-weight: 600;
+			margin-bottom: calc(5px + (11 - 5) * ((100vw - 320px) / (1920 - 320)));
+		}
+		h4 {
+			font-weight: 500;
+			margin-top: calc(7px + (14 - 7) * ((100vw - 320px) / (1920 - 320)));
+			del {
+				font-size: 14px;
+				margin-left: 2px;
+				color: $color_2;
+				font-weight: 600;
+			}
+		}
+		.option-icon {
+			li {
+				+ {
+					li {
+						margin-left: 8px;
+					}
+				}
+				a {
+					width: calc(36px + (48 - 36) * ((100vw - 320px) / (1920 - 320)));
+					height: calc(36px + (48 - 36) * ((100vw - 320px) / (1920 - 320)));
+					display: -webkit-box;
+					display: -ms-flexbox;
+					display: flex;
+					-webkit-box-align: center;
+					-ms-flex-align: center;
+					align-items: center;
+					-webkit-box-pack: center;
+					-ms-flex-pack: center;
+					justify-content: center;
+					background-color: $background-color_1;
+					-webkit-box-shadow: 0px 5.57831px 13.9458px rgba(0, 0, 0, 0.05);
+					box-shadow: 0px 5.57831px 13.9458px rgba(0, 0, 0, 0.05);
+					border-radius: 100%;
+					color: $color_1;
+					svg {
+						width: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+						height: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+					}
+				}
+			}
+		}
+	}
+}
+[dir="rtl"] {
+	.deal-contain {
+		.deal-detail {
+			padding-left: unset;
+			padding-right: 25px;
+			h4 {
+				del {
+					margin-left: unset;
+					margin-right: 2px;
+				}
+			}
+			.option-icon {
+				padding-left: unset;
+				padding-right: 0;
+				li {
+					+ {
+						li {
+							margin-left: unset;
+							margin-right: 8px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media (max-width: 575px) {
+	.deal-contain {
+		display: block;
+		.deal-image {
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.deal-detail {
+			padding-left: 0;
+			width: 100%;
+			margin-top: 10px;
+		}
+	}
+}

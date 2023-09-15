@@ -1,0 +1,19 @@
+$color_1: #4a5568;
+$background-color_1: #f8f8f8;
+
+.hot-line-number {
+	padding: calc(12px + (33 - 12) * ((100vw - 320px) / (1920 - 320)));
+	background-color: $background-color_1;
+	h5 {
+		font-weight: 600;
+		margin-bottom: 4px;
+	}
+	h6 {
+		color: $color_1;
+		margin-bottom: 17px;
+	}
+	h2 {
+		font-weight: 600;
+		font-size: 24px;
+	}
+}

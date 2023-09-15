@@ -1,0 +1,150 @@
+$color_1: #4a5568;
+$color_2: #fff;
+$color_3: #4267b2;
+$color_4: #00acee;
+$color_5: #c8232c;
+$color_6: #f56040;
+$background-color_1: #ededed;
+$background-color_2: #4267b2;
+$background-color_3: #00acee;
+$background-color_4: #c8232c;
+$background-color_5: #f56040;
+
+.team-section {
+	.team-box {
+		&:hover {
+			.team-iamge {
+				img {
+					-webkit-transform: scale(1.1);
+					transform: scale(1.1);
+					-webkit-filter: grayscale(0);
+					filter: grayscale(0);
+				}
+				.team-media {
+					opacity: 1;
+					right: 10px;
+				}
+			}
+		}
+		.team-iamge {
+			width: 50%;
+			height: auto;
+			border-radius: 100%;
+			position: relative;
+			overflow: hidden;
+			margin: 0 auto;
+			img {
+				-webkit-transition: all 0.3s ease-in-out;
+				transition: all 0.3s ease-in-out;
+				-webkit-filter: grayscale(1);
+				filter: grayscale(1);
+			}
+		}
+		.team-name {
+			text-align: center;
+			margin-top: 20px;
+			h3 {
+				font-size: calc(18px + (20 - 18) * ((100vw - 320px) / (1920 - 320)));
+				letter-spacing: 0.7px;
+				font-weight: 700;
+			}
+			h5 {
+				margin-top: 6px;
+				letter-spacing: 0.5px;
+				color: $color_1;
+			}
+			p {
+				font-size: calc(14px + (15 - 14) * ((100vw - 320px) / (1920 - 320)));
+				line-height: 1.6;
+				color: $color_1;
+				margin: 9px auto 14px;
+				width: 80%;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+				display: -webkit-box;
+				overflow: hidden;
+			}
+			.team-media {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-ms-flex-wrap: wrap;
+				flex-wrap: wrap;
+				gap: 14px;
+				position: relative;
+				margin-top: 15px;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				justify-content: center;
+				-webkit-transition: all 0.3s ease-in-out;
+				transition: all 0.3s ease-in-out;
+				li {
+					a {
+						display: -webkit-box;
+						display: -ms-flexbox;
+						display: flex;
+						-webkit-box-align: center;
+						-ms-flex-align: center;
+						align-items: center;
+						-webkit-box-pack: center;
+						-ms-flex-pack: center;
+						justify-content: center;
+						width: 30px;
+						height: 30px;
+						font-size: 16px;
+						color: $color_2;
+						border-radius: 5px;
+						background-color: $background-color_1;
+					}
+					a.fb-bg {
+						color: $color_3;
+						-webkit-transition: all 0.3s ease-in-out;
+						transition: all 0.3s ease-in-out;
+						&:hover {
+							background-color: $background-color_2;
+							color: $color_2;
+						}
+					}
+					a.twitter-bg {
+						color: $color_4;
+						-webkit-transition: all 0.3s ease-in-out;
+						transition: all 0.3s ease-in-out;
+						&:hover {
+							background-color: $background-color_3;
+							color: $color_2;
+						}
+					}
+					a.pint-bg {
+						color: $color_5;
+						-webkit-transition: all 0.3s ease-in-out;
+						transition: all 0.3s ease-in-out;
+						&:hover {
+							background-color: $background-color_4;
+							color: $color_2;
+						}
+					}
+					a.insta-bg {
+						color: $color_6;
+						-webkit-transition: all 0.3s ease-in-out;
+						transition: all 0.3s ease-in-out;
+						&:hover {
+							background-color: $background-color_5;
+							color: $color_2;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media (max-width: 360px) {
+	.team-section {
+		.team-box {
+			.team-name {
+				p {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

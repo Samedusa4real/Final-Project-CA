@@ -1,0 +1,79 @@
+$background-color_1: #fff;
+$background-color_2: var(--theme-color);
+
+.fullpage-loader {
+	width: 100vw;
+	height: 100vh;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	background-color: $background-color_1;
+	z-index: 9999;
+	opacity: 1;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+	span {
+		width: 6vmin;
+		height: 6vmin;
+		background-color: $background-color_2;
+		border-radius: 100%;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		position: absolute;
+		-webkit-animation-name: move;
+		animation-name: move;
+		-webkit-animation-timing-function: cubic-bezier(0.4, 0, 1, 0.8);
+		animation-timing-function: cubic-bezier(0.4, 0, 1, 0.8);
+		-webkit-animation-iteration-count: infinite;
+		animation-iteration-count: infinite;
+		-webkit-animation-duration: 3s;
+		animation-duration: 3s;
+		top: calc(50% - 4vmin);
+		left: 50%;
+		-webkit-transform-origin: -4vmin center;
+		transform-origin: -4vmin center;
+		&:nth-child(1) {
+			-webkit-animation-delay: -0.5s;
+			animation-delay: -0.5s;
+			opacity: 0;
+		}
+		&:nth-child(2) {
+			-webkit-animation-delay: -1s;
+			animation-delay: -1s;
+			opacity: 0;
+		}
+		&:nth-child(3) {
+			-webkit-animation-delay: -1.5s;
+			animation-delay: -1.5s;
+			opacity: 0;
+		}
+		&:nth-child(4) {
+			-webkit-animation-delay: -2s;
+			animation-delay: -2s;
+			opacity: 0;
+		}
+		&:nth-child(5) {
+			-webkit-animation-delay: -2.5s;
+			animation-delay: -2.5s;
+			opacity: 0;
+		}
+		&:nth-child(6) {
+			-webkit-animation-delay: -3s;
+			animation-delay: -3s;
+			opacity: 0;
+		}
+	}
+}
+.fullpage-loader--invisible {
+	opacity: 0;
+}

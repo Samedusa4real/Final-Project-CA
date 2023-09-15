@@ -1,0 +1,17 @@
+.tooltip {
+  -webkit-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+}
+.tooltip .tooltip-arrow::before {
+  border-top-color: var(--theme-color);
+}
+.tooltip .tooltip-inner {
+  font-weight: 500;
+  background-color: var(--theme-color);
+  color: #fff;
+}
+@media (min-width: 1464px) {
+  .container {
+    max-width: 1440px;
+  }
+}

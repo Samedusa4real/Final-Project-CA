@@ -1,0 +1,84 @@
+$color_1: var(--theme-color);
+$color_2: #222;
+$color_3: #4a5568;
+$color_4: #ffb321;
+$color_5: #ff4f4f;
+$color_6: #ffbc5d;
+$font-family_1: "Exo 2", sans-serif;
+$font-family_2: "Russo One", sans-serif;
+$font-family_3: "Pacifico", cursive;
+$font-family_4: "Kaushan Script", cursive;
+$font-family_5: "Great Vibes", cursive;
+$font-family_6: "Qwitcher Grypen", cursive;
+$background-color_1: #f8f8f8;
+$background-color_2: var(--theme-color);
+
+.mend-auto {
+	margin-right: auto !important;
+	text-align: left;
+}
+.mstart-auto {
+	margin-left: auto !important;
+	text-align: left;
+}
+.fw-500 {
+	font-weight: 500;
+}
+.text-theme {
+	color: $color_1;
+}
+.text-title {
+	color: $color_2 !important;
+}
+.text-content {
+	color: $color_3;
+}
+.text-yellow {
+	color: $color_4 !important;
+}
+.text-danger {
+	color: $color_5 !important;
+}
+.bg-gray {
+	background-color: $background-color_1 !important;
+}
+.bg-theme {
+	background-color: $background-color_2;
+}
+.bg-gradient-color {
+	background: linear-gradient(149.8deg, #f8f8fb 17.21%, #f3f5f9 79.21%);
+}
+.orange-color {
+	color: $color_6 !important;
+}
+.text-exo {
+	font-family: $font-family_1;
+}
+.text-russo {
+	font-family: $font-family_2;
+}
+.text-pacifico {
+	font-family: $font-family_3;
+}
+.text-kaushan {
+	font-family: $font-family_4;
+}
+.text-great {
+	font-family: $font-family_5;
+}
+.text-qwitcher {
+	font-family: $font-family_6;
+}
+.w-58 {
+	width: 58% !important;
+}
+.colorpick-eyedropper-input-trigger {
+	display: none;
+}
+.hover-effect {
+	&:hover {
+		opacity: 1;
+		-webkit-animation: flash 1.5s;
+		animation: flash 1.5s;
+	}
+}

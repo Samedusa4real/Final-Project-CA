@@ -1,0 +1,28 @@
+.pt-25 {
+  padding-top: 25px;
+}
+.product-category {
+  gap: 25px;
+  padding: calc(12px + (33 - 12) * ((100vw - 320px) / (1920 - 320)));
+}
+.product-load-more .col-grid-box {
+  display: none;
+}
+.product-title {
+  margin-top: 20px;
+}
+.product-title h4 {
+  font-weight: 600;
+  margin-bottom: calc(10px + (12 - 10) * ((100vw - 320px) / (1920 - 320)));
+  letter-spacing: 0.4px;
+  font-size: calc(15px + (16 - 15) * ((100vw - 320px) / (1920 - 320)));
+}
+
+@import '../sticky-bottom-cart';
+@import './product-section';
+@import './product-section-box';
+@import './related-products';
+@import './vendor-box';
+@import './hot-line-number';
+@import './deal-timer';
+@import './review-box';

@@ -1,0 +1,26 @@
+$background-color_1: var(--theme-color);
+$border-color_1: var(--theme-color);
+
+.custom-form-check {
+	.form-check-input {
+		width: calc(15px + (17 - 15) * ((100vw - 320px) / (1920 - 320)));
+		height: calc(15px + (17 - 15) * ((100vw - 320px) / (1920 - 320)));
+		margin-top: 0;
+		&:checked {
+			background-color: $background-color_1;
+			border-color: $border-color_1;
+		}
+		&:focus {
+			-webkit-box-shadow: none;
+			box-shadow: none;
+		}
+	}
+}
+[dir="rtl"] {
+	.custom-form-check {
+		.form-check-input {
+			margin-right: -1.5em;
+			margin-left: unset;
+		}
+	}
+}
