@@ -1,6 +1,8 @@
 ﻿using Backend___Putka.DAL;
 using Backend___Putka.Models;
+using Backend___Putka.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
 namespace Backend___Putka.Controllers
@@ -15,7 +17,13 @@ namespace Backend___Putka.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            HomeViewModel hvm = new HomeViewModel
+            {
+                Products = _context.Products.Include(x=>x.ProductImages).Where(x => x.StockStatus == true).Take(8).ToList(),
+                BestSellerProducts = _context.Products.Include(x => x.ProductImages).Where(x => x.IsNew == false).Take(8).ToList(),
+            };
+
+            return View(hvm);
         }
 
         public IActionResult AboutUs()

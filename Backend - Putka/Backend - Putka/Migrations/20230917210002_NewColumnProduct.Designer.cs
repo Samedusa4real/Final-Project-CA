@@ -4,6 +4,7 @@ using Backend___Putka.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Backend___Putka.Migrations
 {
     [DbContext(typeof(PutkaDbContext))]
-    partial class PutkaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230917210002_NewColumnProduct")]
+    partial class NewColumnProduct
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -126,21 +128,6 @@ namespace Backend___Putka.Migrations
                     b.ToTable("ProductTags");
                 });
 
-            modelBuilder.Entity("Backend___Putka.Models.ProductWeight", b =>
-                {
-                    b.Property<int>("WeightId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
-                    b.HasKey("WeightId", "ProductId");
-
-                    b.HasIndex("ProductId");
-
-                    b.ToTable("ProductWeights");
-                });
-
             modelBuilder.Entity("Backend___Putka.Models.Tag", b =>
                 {
                     b.Property<int>("Id")
@@ -157,22 +144,6 @@ namespace Backend___Putka.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Tags");
-                });
-
-            modelBuilder.Entity("Backend___Putka.Models.Weight", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<decimal>("Name")
-                        .HasColumnType("money");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Weights");
                 });
 
             modelBuilder.Entity("Backend___Putka.Models.Product", b =>
@@ -214,25 +185,6 @@ namespace Backend___Putka.Migrations
                     b.Navigation("Product");
 
                     b.Navigation("Tag");
-                });
-
-            modelBuilder.Entity("Backend___Putka.Models.ProductWeight", b =>
-                {
-                    b.HasOne("Backend___Putka.Models.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Backend___Putka.Models.Weight", "Weight")
-                        .WithMany()
-                        .HasForeignKey("WeightId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Product");
-
-                    b.Navigation("Weight");
                 });
 #pragma warning restore 612, 618
         }

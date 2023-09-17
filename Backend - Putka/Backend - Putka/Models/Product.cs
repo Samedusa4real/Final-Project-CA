@@ -22,6 +22,10 @@ namespace Backend___Putka.Models
         public int DiscountPercent { get; set; }
         [Required]
         public bool StockStatus { get; set; }
+        [Required]
+        public bool IsNew { get; set; }
+        public DateTime ProductionDate { get; set; } 
         public Category Category { get; set; }
+        public List<ProductImage> ProductImages { get; set; }
     }
 }
