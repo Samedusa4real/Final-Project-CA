@@ -17,6 +17,7 @@ namespace Backend___Putka.DAL
         public DbSet<ProductTag> ProductTags { get; set; }
         public DbSet<Weight> Weights { get; set; }
         public DbSet<ProductWeight> ProductWeights { get; set; }
+        public DbSet<Setting> Settings { get; set; }
 
 
 
@@ -24,6 +25,8 @@ namespace Backend___Putka.DAL
         {
             modelBuilder.Entity<ProductTag>().HasKey(x => new { x.TagId, x.ProductId });
             modelBuilder.Entity<ProductWeight>().HasKey(x => new { x.WeightId, x.ProductId });
+
+            modelBuilder.Entity<Setting>().HasKey(x => x.Key);
 
 
             base.OnModelCreating(modelBuilder);

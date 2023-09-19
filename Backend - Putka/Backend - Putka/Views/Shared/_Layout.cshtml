@@ -1,4 +1,11 @@
-﻿<!DOCTYPE html>
+﻿@using Backend___Putka.Services;
+@inject LayoutService _layoutService
+
+@{
+    var settings = _layoutService.GetSettings();
+}
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -92,7 +99,7 @@
                                 </span>
                             </button>
                             <a href="index.html" class="web-logo nav-logo">
-                                <img src="assets/images/logo/putka.png" class="img-fluid blur-up lazyload" alt="">
+                                <img src="assets/images/logo/@settings["HeaderLogo"]" class="img-fluid blur-up lazyload" alt="">
                             </a>
 
                             <div class="middle-box">
@@ -862,7 +869,7 @@
                         <div class="footer-logo">
                             <div class="theme-logo">
                                 <a href="index.html">
-                                    <img src="assets/images/logo/putka.png" class="blur-up lazyload" alt="">
+                                    <img src="assets/images/logo/@settings["FooterLogo"]" class="blur-up lazyload" alt="">
                                 </a>
                             </div>
 
@@ -875,11 +882,11 @@
                                 <ul class="address">
                                     <li>
                                         <i data-feather="home"></i>
-                                        <a href="javascript:void(0)">1418 Riverwood Drive, CA 96052, US</a>
+                                        <a href="javascript:void(0)">@settings["Address"]</a>
                                     </li>
                                     <li>
                                         <i data-feather="mail"></i>
-                                        <a href="javascript:void(0)">support@putka.com</a>
+                                        <a href="javascript:void(0)">@settings["SupportEmailAddress"]</a>
                                     </li>
                                 </ul>
                             </div>
@@ -982,7 +989,7 @@
                                         <i data-feather="phone"></i>
                                         <div class="contact-number">
                                             <h6 class="text-content">Hotline 24/7 :</h6>
-                                            <h5>+91 888 104 2340</h5>
+                                            <h5>@settings["ContactPhone"]</h5>
                                         </div>
                                     </div>
                                 </li>
@@ -992,7 +999,7 @@
                                         <i data-feather="mail"></i>
                                         <div class="contact-number">
                                             <h6 class="text-content">Email Address :</h6>
-                                            <h5>putka@hotmail.com</h5>
+                                            <h5>@settings["EmailAddress"]</h5>
                                         </div>
                                     </div>
                                 </li>

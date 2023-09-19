@@ -1,4 +1,5 @@
 using Backend___Putka.DAL;
+using Backend___Putka.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +9,7 @@ builder.Services.AddDbContext<PutkaDbContext>(opt =>
 {
     opt.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
 });
+builder.Services.AddScoped<LayoutService>();
 
 var app = builder.Build();
 
