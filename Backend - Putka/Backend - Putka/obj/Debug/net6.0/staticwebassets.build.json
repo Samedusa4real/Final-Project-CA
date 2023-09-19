@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "a2O/F7DjgdqPL717HefvQi1mgKsSXyHRFBvmC2AfmdU=",
+  "Hash": "RzZ3XERdObUUJTQLrSzQEz40Q/3+FahOUgKbuaBTXbc=",
   "Source": "Backend - Putka",
   "BasePath": "_content/Backend - Putka",
   "Mode": "Default",
@@ -6713,6 +6713,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\timer1.js"
+    },
+    {
+      "Identity": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\assets\\js\\view-modal.js",
+      "SourceId": "Backend - Putka",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\",
+      "BasePath": "_content/Backend - Putka",
+      "RelativePath": "assets/js/view-modal.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\js\\view-modal.js"
     },
     {
       "Identity": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\assets\\js\\wizard.js",

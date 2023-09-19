@@ -27,5 +27,7 @@ namespace Backend___Putka.Models
         public DateTime ProductionDate { get; set; } 
         public Category Category { get; set; }
         public List<ProductImage> ProductImages { get; set; }
+        public List<ProductWeight> ProductWeights { get; set; } = new List<ProductWeight>();
+        public List<ProductTag> ProductTags { get; set; } = new List<ProductTag>();
     }
 }

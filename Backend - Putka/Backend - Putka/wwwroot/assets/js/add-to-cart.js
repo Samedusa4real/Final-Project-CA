@@ -1,7 +1,9 @@
 export function addToCartButton(){
-     $(".addcart-button").click(function () {
-       $(this).next().addClass("open");
-       $(".add-to-cart-box .qty-input").val("1");
+    $(".addcart-button").click(function () {
+        $(this).next().addClass("open");
+        if (isNaN(parseInt($(this).closest(".add-to-cart-box").find(".qty-input").val())) || parseInt($(this).closest(".add-to-cart-box").find(".qty-input").val()) === 0) {
+            $(".add-to-cart-box .qty-input").val("1");
+        }
      });
 
      $(".add-to-cart-box").on("click", function () {

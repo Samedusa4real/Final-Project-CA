@@ -375,10 +375,10 @@
                     <div class="section-b-space">
                         <div class="product-border border-row overflow-hidden">
                             <div class="product-box-slider no-arrow">
-                                
+
                                 @foreach (var item in Model.Products)
                                 {
-                                    if(item.Id % 2 != 0)
+                                    if (item.Id % 2 != 0)
                                     {
                                         <div>
                                             <div class="row m-0">
@@ -387,14 +387,13 @@
                                                     <div class="product-box">
                                                         <div class="product-image">
                                                             <a href="product-left-thumbnail.html">
-                                                                <img src="/assets/images/product/category/@item.ProductImages.FirstOrDefault(x=>x.IsMain == true).Url"
+                                                                <img src="/assets/images/product/category/@item.ProductImages.FirstOrDefault(x=>x.IsMain == true)?.Url"
                                                                      class="img-fluid blur-up lazyload" alt="">
                                                             </a>
                                                             <ul class="product-option">
                                                                 <li data-bs-toggle="tooltip" data-bs-placement="top"
                                                                     title="View">
-                                                                    <a href="javascript:void(0)" data-bs-toggle="modal"
-                                                                       data-bs-target="#view">
+                                                                    <a asp-controller="product" asp-action="detail" asp-route-id="@item.Id" class="quick-view-modal-btn">
                                                                         <i data-feather="eye"></i>
                                                                     </a>
                                                                 </li>
@@ -413,10 +412,14 @@
                                                             </a>
 
                                                             <h5 class="sold text-content">
-                                                                @if(item.DiscountPercent != 0)
+                                                                @if (item.DiscountPercent != 0)
                                                                 {
-                                                                    <span class="theme-color price">$@((item.SalePrice * (100 - item.DiscountPercent) / 100).ToString("#.00"))</span>
-                                                                    <del>@item.SalePrice.ToString("#.00")</del>
+                                                                    <span class="theme-color price">$@((item.SalePrice * (100 - item.DiscountPercent) / 100).ToString("0.00"))</span>
+                                                                    <del>@item.SalePrice.ToString("0.00")</del>
+                                                                }
+                                                                else
+                                                                {
+                                                                    <span class="theme-color price">$@((item.SalePrice * (100 - item.DiscountPercent) / 100).ToString("0.00"))</span>
                                                                 }
                                                             </h5>
 
@@ -468,98 +471,11 @@
                                                     </div>
                                                 </div>
 
-                                                else
-                                                {
-                                                    <div class="col-12 px-0">
-                                                        <div class="product-box">
-                                                        <div class="product-image">
-                                                            <a href="product-left-thumbnail.html">
-                                                                <img src="/assets/images/product/category/@item.ProductImages.FirstOrDefault(x=>x.IsMain == true).Url"
-                                                                     class="img-fluid blur-up lazyload" alt="">
-                                                            </a>
-                                                            <ul class="product-option">
-                                                                <li data-bs-toggle="tooltip" data-bs-placement="top"
-                                                                    title="View">
-                                                                    <a href="javascript:void(0)" data-bs-toggle="modal"
-                                                                       data-bs-target="#view">
-                                                                        <i data-feather="eye"></i>
-                                                                    </a>
-                                                                </li>
-
-                                                                <li data-bs-toggle="tooltip" data-bs-placement="top"
-                                                                    title="Wishlist">
-                                                                    <a href="wishlist.html" class="notifi-wishlist">
-                                                                        <i data-feather="heart"></i>
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="product-detail">
-                                                            <a href="product-left-thumbnail.html">
-                                                                <h6 class="name">@item.Name</h6>
-                                                            </a>
-
-                                                            <h5 class="sold text-content">
-                                                                @if (item.DiscountPercent != 0)
-                                                                {
-                                                                    <span class="theme-color price">$@((item.SalePrice * (100 - item.DiscountPercent) / 100).ToString("#.00"))</span>
-                                                                    <del>@item.SalePrice.ToString("#.00")</del>
-                                                                }
-                                                            </h5>
-
-                                                            <div class="product-rating mt-sm-2 mt-1">
-                                                                <ul class="rating">
-                                                                    <li>
-                                                                        <i data-feather="star" class="fill"></i>
-                                                                    </li>
-                                                                    <li>
-                                                                        <i data-feather="star" class="fill"></i>
-                                                                    </li>
-                                                                    <li>
-                                                                        <i data-feather="star" class="fill"></i>
-                                                                    </li>
-                                                                    <li>
-                                                                        <i data-feather="star" class="fill"></i>
-                                                                    </li>
-                                                                    <li>
-                                                                        <i data-feather="star"></i>
-                                                                    </li>
-                                                                </ul>
-
-                                                                <h6 class="theme-color">In Stock</h6>
-                                                            </div>
-
-                                                            <div class="add-to-cart-box">
-                                                                <button class="btn btn-add-cart addcart-button">
-                                                                    Add
-                                                                    <span class="add-icon">
-                                                                        <i class="fa-solid fa-plus"></i>
-                                                                    </span>
-                                                                </button>
-                                                                <div class="cart_qty qty-box">
-                                                                    <div class="input-group">
-                                                                        <button type="button" class="qty-left-minus"
-                                                                                data-type="minus" data-field="">
-                                                                            <i class="fa fa-minus" aria-hidden="true"></i>
-                                                                        </button>
-                                                                        <input class="form-control input-number qty-input"
-                                                                               type="text" name="quantity" value="0">
-                                                                        <button type="button" class="qty-right-plus"
-                                                                                data-type="plus" data-field="">
-                                                                            <i class="fa fa-plus" aria-hidden="true"></i>
-                                                                        </button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    </div>
-                                                }
                                             </div>
                                         </div>
                                     }
                                 }
-                                
+
                             </div>
                         </div>
                     </div>
@@ -576,241 +492,100 @@
                     <div class="best-selling-slider product-wrapper wow fadeInUp">
                         <div>
                             <ul class="product-list">
-                                <li>
-                                    <div class="offer-product">
-                                        <a href="product-left-thumbnail.html" class="offer-image">
-                                            <img src="../assets/images/vegetable/product/11.png"
-                                                 class="blur-up lazyload" alt="">
-                                        </a>
+                                @foreach (var item in Model.BestSellerProducts.Take(4))
+                                {
+                                    <li>
+                                        <div class="offer-product">
+                                            <a href="product-left-thumbnail.html" class="offer-image">
+                                                <img src="/assets/images/vegetable/product/@item.ProductImages.FirstOrDefault(x=>x.IsMain == true)?.Url"
+                                                     class="blur-up lazyload" alt="">
+                                            </a>
 
-                                        <div class="offer-detail">
-                                            <div>
-                                                <a href="product-left-thumbnail.html" class="text-title">
-                                                    <h6 class="name">Tuffets Whole Wheat Bread</h6>
-                                                </a>
-                                                <span>500 G</span>
-                                                <h6 class="price theme-color">$ 10.00</h6>
+                                            <div class="offer-detail">
+                                                <div>
+                                                    <a href="product-left-thumbnail.html" class="text-title">
+                                                        <h6 class="name">@item.Name</h6>
+                                                    </a>
+                                                    <span>500 G</span>
+                                                    @if (item.DiscountPercent > 0)
+                                                    {
+                                                        <h6 class="price theme-color">@((item.SalePrice * (100 - item.DiscountPercent) / 100).ToString("0.00"))</h6>
+                                                    }
+                                                    else
+                                                    {
+                                                        <h6 class="price theme-color">@item.SalePrice.ToString("0.00")</h6>
+                                                    }
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="offer-product">
-                                        <a href="product-left-thumbnail.html" class="offer-image">
-                                            <img src="../assets/images/vegetable/product/12.png"
-                                                 class="blur-up lazyload" alt="">
-                                        </a>
-
-                                        <div class="offer-detail">
-                                            <div>
-                                                <a href="product-left-thumbnail.html" class="text-title">
-                                                    <h6 class="name">Potato</h6>
-                                                </a>
-                                                <span>500 G</span>
-                                                <h6 class="price theme-color">$ 10.00</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="offer-product">
-                                        <a href="product-left-thumbnail.html" class="offer-image">
-                                            <img src="../assets/images/vegetable/product/13.png"
-                                                 class="blur-up lazyload" alt="">
-                                        </a>
-
-                                        <div class="offer-detail">
-                                            <div>
-                                                <a href="product-left-thumbnail.html" class="text-title">
-                                                    <h6 class="name">Green Chilli</h6>
-                                                </a>
-                                                <span>200 G</span>
-                                                <h6 class="price theme-color">$ 10.00</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="offer-product">
-                                        <a href="product-left-thumbnail.html" class="offer-image">
-                                            <img src="../assets/images/vegetable/product/14.png"
-                                                 class="blur-up lazyload" alt="">
-                                        </a>
-
-                                        <div class="offer-detail">
-                                            <div>
-                                                <a href="product-left-thumbnail.html" class="text-title">
-                                                    <h6 class="name">Muffets Burger Bun</h6>
-                                                </a>
-                                                <span>150 G</span>
-                                                <h6 class="price theme-color">$ 10.00</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
+                                    </li>
+                                }
                             </ul>
                         </div>
 
                         <div>
                             <ul class="product-list">
-                                <li>
-                                    <div class="offer-product">
-                                        <a href="product-left-thumbnail.html" class="offer-image">
-                                            <img src="../assets/images/vegetable/product/15.png"
-                                                 class="blur-up lazyload" alt="">
-                                        </a>
+                                @foreach (var item in Model.BestSellerProducts.Skip(4).Take(4))
+                                {
+                                    <li>
+                                        <div class="offer-product">
+                                            <a href="product-left-thumbnail.html" class="offer-image">
+                                                <img src="/assets/images/vegetable/product/@item.ProductImages.FirstOrDefault(x=>x.IsMain == true)?.Url"
+                                                     class="blur-up lazyload" alt="">
+                                            </a>
 
-                                        <div class="offer-detail">
-                                            <div>
-                                                <a href="product-left-thumbnail.html" class="text-title">
-                                                    <h6 class="name">Tuffets Britannia Cheezza</h6>
-                                                </a>
-                                                <span>500 G</span>
-                                                <h6 class="price theme-color">$ 10.00</h6>
+                                            <div class="offer-detail">
+                                                <div>
+                                                    <a href="product-left-thumbnail.html" class="text-title">
+                                                        <h6 class="name">@item.Name</h6>
+                                                    </a>
+                                                    <span>500 G</span>
+                                                    @if (item.DiscountPercent > 0)
+                                                    {
+                                                        <h6 class="price theme-color">@((item.SalePrice * (100 - item.DiscountPercent) / 100).ToString("0.00"))</h6>
+                                                    }
+                                                    else
+                                                    {
+                                                        <h6 class="price theme-color">@item.SalePrice.ToString("0.00")</h6>
+                                                    }
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="offer-product">
-                                        <a href="product-left-thumbnail.html" class="offer-image">
-                                            <img src="../assets/images/vegetable/product/16.png"
-                                                 class="blur-up lazyload" alt="">
-                                        </a>
-
-                                        <div class="offer-detail">
-                                            <div>
-                                                <a href="product-left-thumbnail.html" class="text-title">
-                                                    <h6 class="name">Long Life Toned Milk</h6>
-                                                </a>
-                                                <span>1 L</span>
-                                                <h6 class="price theme-color">$ 10.00</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="offer-product">
-                                        <a href="product-left-thumbnail.html" class="offer-image">
-                                            <img src="../assets/images/vegetable/product/17.png"
-                                                 class="blur-up lazyload" alt="">
-                                        </a>
-
-                                        <div class="offer-detail">
-                                            <div>
-                                                <a href="product-left-thumbnail.html" class="text-title">
-                                                    <h6 class="name">Organic Tomato</h6>
-                                                </a>
-                                                <span>1 KG</span>
-                                                <h6 class="price theme-color">$ 10.00</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="offer-product">
-                                        <a href="product-left-thumbnail.html" class="offer-image">
-                                            <img src="../assets/images/vegetable/product/18.png"
-                                                 class="blur-up lazyload" alt="">
-                                        </a>
-
-                                        <div class="offer-detail">
-                                            <div>
-                                                <a href="product-left-thumbnail.html" class="text-title">
-                                                    <h6 class="name">Organic Jam</h6>
-                                                </a>
-                                                <span>150 G</span>
-                                                <h6 class="price theme-color">$ 10.00</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
+                                    </li>
+                                }
                             </ul>
                         </div>
 
                         <div>
                             <ul class="product-list">
-                                <li>
-                                    <div class="offer-product">
-                                        <a href="product-left-thumbnail.html" class="offer-image">
-                                            <img src="../assets/images/vegetable/product/19.png"
-                                                 class="blur-up lazyload" alt="">
-                                        </a>
+                                @foreach (var item in Model.BestSellerProducts.Skip(8).Take(4))
+                                {
+                                    <li>
+                                        <div class="offer-product">
+                                            <a href="product-left-thumbnail.html" class="offer-image">
+                                                <img src="/assets/images/vegetable/product/@item.ProductImages.FirstOrDefault(x=>x.IsMain == true)?.Url"
+                                                     class="blur-up lazyload" alt="">
+                                            </a>
 
-                                        <div class="offer-detail">
-                                            <div>
-                                                <a href="product-left-thumbnail.html" class="text-title">
-                                                    <h6 class="name">Good Life Refined Sunflower Oil</h6>
-                                                </a>
-                                                <span>1 L</span>
-                                                <h6 class="price theme-color">$ 10.00</h6>
+                                            <div class="offer-detail">
+                                                <div>
+                                                    <a href="product-left-thumbnail.html" class="text-title">
+                                                        <h6 class="name">@item.Name</h6>
+                                                    </a>
+                                                    <span>500 G</span>
+                                                    @if (item.DiscountPercent > 0)
+                                                    {
+                                                        <h6 class="price theme-color">@((item.SalePrice * (100 - item.DiscountPercent) / 100).ToString("0.00"))</h6>
+                                                    }
+                                                    else
+                                                    {
+                                                        <h6 class="price theme-color">@item.SalePrice.ToString("0.00")</h6>
+                                                    }
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="offer-product">
-                                        <a href="product-left-thumbnail.html" class="offer-image">
-                                            <img src="../assets/images/vegetable/product/20.png"
-                                                 class="blur-up lazyload" alt="">
-                                        </a>
-
-                                        <div class="offer-detail">
-                                            <div>
-                                                <a href="product-left-thumbnail.html" class="text-title">
-                                                    <h6 class="name">Good Life Raw Peanuts</h6>
-                                                </a>
-                                                <span>500 G</span>
-                                                <h6 class="price theme-color">$ 10.00</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="offer-product">
-                                        <a href="product-left-thumbnail.html" class="offer-image">
-                                            <img src="../assets/images/vegetable/product/21.png"
-                                                 class="blur-up lazyload" alt="">
-                                        </a>
-
-                                        <div class="offer-detail">
-                                            <div>
-                                                <a href="product-left-thumbnail.html" class="text-title">
-                                                    <h6 class="name">TufBest Farms Moong Dal</h6>
-                                                </a>
-                                                <span>1 KG</span>
-                                                <h6 class="price theme-color">$ 10.00</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="offer-product">
-                                        <a href="product-left-thumbnail.html" class="offer-image">
-                                            <img src="../assets/images/vegetable/product/22.png"
-                                                 class="blur-up lazyload" alt="">
-                                        </a>
-
-                                        <div class="offer-detail">
-                                            <div>
-                                                <a href="product-left-thumbnail.html" class="text-title">
-                                                    <h6 class="name">Frooti Mango Drink</h6>
-                                                </a>
-                                                <span>160 ML</span>
-                                                <h6 class="price theme-color">$ 10.00</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
+                                    </li>
+                                }
                             </ul>
                         </div>
                     </div>
@@ -892,6 +667,15 @@
         </div>
     </section>
     <!-- Product Section End -->
+    <!-- Quick View Modal Box Start -->
+    <div class="modal fade theme-modal view-modal" id="view" tabindex="-1" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-sm-down">
+
+        </div>
+    </div>
+    <!-- Quick View Modal Box End -->
+
 </main>
 <!-- Main End -->
 
@@ -935,11 +719,13 @@
     <script src="~/assets/js/pages/common.js" type="module" defer></script>
     <script src="~/assets/js/pages/index.js" type="module" defer></script>
     <script src="~/assets/js/script.js" defer></script>
+    <script src="~/assets/js/view-modal.js" defer></script>
+
 }
 
 @section modals{
     @Html.Partial("_PrivacyPartialView");
-    @Html.Partial("_QuickViewModalPartial");
+    @*@Html.Partial("_QuickViewModalPartial");*@
     @Html.Partial("_LocationPartialModal");
     @Html.Partial("_DealBoxPartialModal");
 }
