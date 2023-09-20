@@ -72,6 +72,41 @@ namespace Backend___Putka.Controllers
             return PartialView("_BasketPartialView", bv);
         }
 
+        public IActionResult RemoveBasket(int id)
+        {
+            var basketStr = Request.Cookies["basket"];
+            if (basketStr == null)
+                return StatusCode(404);
+
+            List<BasketItemCookieViewModel> cookieItems = JsonConvert.DeserializeObject<List<BasketItemCookieViewModel>>(basketStr);
+
+            BasketItemCookieViewModel item = cookieItems.FirstOrDefault(x => x.ProductId == id);
+
+            if (item == null)
+                return StatusCode(404);
+
+            if (item.Count > 1)
+                item.Count--;
+            else
+                cookieItems.Remove(item);
+
+            Response.Cookies.Append("basket", JsonConvert.SerializeObject(cookieItems));
+
+            BasketViewModel bv = new BasketViewModel();
+            foreach (var ci in cookieItems)
+            {
+                BasketItemViewModel bi = new BasketItemViewModel
+                {
+                    Count = ci.Count,
+                    Product = _context.Products.Include(x => x.ProductImages).FirstOrDefault(x => x.Id == ci.ProductId)
+                };
+                bv.BasketItems.Add(bi);
+                bv.TotalPrice += (bi.Product.DiscountPercent > 0 ? (bi.Product.SalePrice * (100 - bi.Product.DiscountPercent) / 100) : bi.Product.SalePrice) * bi.Count;
+            }
+
+            return PartialView("_BasketPartialView", bv);
+        }
+
         public IActionResult Cart()
         {
             return View();

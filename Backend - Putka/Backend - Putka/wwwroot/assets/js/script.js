@@ -444,7 +444,25 @@ $(".bg-overlay").click(function () {
    ==========================*/
 $(document).on("click", ".addtobasket", function (e) {
     e.preventDefault();
-    let url = $(this).attr("href");
+    let url = $(this).attr("data-url");
+    fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                alert("xeta bas verdi")
+            }
+            return response.text()
+        })
+        .then(data => {
+            $(".header-basket").html(data)
+        })
+})
+
+/*=====================
+   27. Remove Basket Js
+   ==========================*/
+$(document).on("click", ".removefrombasket", function (e) {
+    e.preventDefault();
+    let url = $(this).attr("data-url");
     fetch(url)
         .then(response => {
             if (!response.ok) {

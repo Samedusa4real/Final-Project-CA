@@ -24,7 +24,7 @@
                             <h5>@item.Product.Name</h5>
                         </a>
                         <h6><span>@item.Count x</span> $@((item.Product.DiscountPercent > 0 ? (item.Product.SalePrice * (100 - item.Product.DiscountPercent) / 100) : item.Product.SalePrice).ToString("0.00"))</h6>
-                        <button class="close-button close_button">
+                        <button class="close-button close_button removefrombasket" data-url="@Url.Action("removebasket", "product", new { id = item.Product.Id })">
                             <i class="fa-solid fa-xmark"></i>
                         </button>
                     </div>

@@ -446,24 +446,25 @@
                                                             </div>
 
                                                             <div class="add-to-cart-box">
-                                                                <a asp-controller="product" asp-action="addtobasket" asp-route-id="@item.Id" class="btn btn-add-cart addcart-button addtobasket">
+                                                                <button class="btn btn-add-cart addcart-button addtobasket"
+                                                                        data-url="@Url.Action("addtobasket", "product", new { id = item.Id })">
                                                                     Add
-                                                                    <span class="add-icon">
+                                                                    <span class="add-icon bg-light-gray">
                                                                         <i class="fa-solid fa-plus"></i>
                                                                     </span>
-                                                                </a>
+                                                                </button>
                                                                 <div class="cart_qty qty-box">
                                                                     <div class="input-group">
-                                                                        <button type="button" class="qty-left-minus"
-                                                                                data-type="minus" data-field="">
+                                                                        <button type="button" class="qty-left-minus removefrombasket"
+                                                                                data-type="minus" data-field="" data-url="@Url.Action("removebasket", "product", new { id = item.Id })">
                                                                             <i class="fa fa-minus" aria-hidden="true"></i>
                                                                         </button>
                                                                         <input class="form-control input-number qty-input"
                                                                                type="text" name="quantity" value="0">
-                                                                        <a asp-controller="product" asp-action="addtobasket" asp-route-id="@item.Id" class="qty-right-plus addtobasket plus-button"
-                                                                                data-type="plus" data-field="">
+                                                                        <button type="button" class="qty-right-plus addtobasket"
+                                                                                data-type="plus" data-field="" data-url="@Url.Action("addtobasket", "product", new { id = item.Id })">
                                                                             <i class="fa fa-plus" aria-hidden="true"></i>
-                                                                        </a>
+                                                                        </button>
                                                                     </div>
                                                                 </div>
                                                             </div>
