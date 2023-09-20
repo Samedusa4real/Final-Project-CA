@@ -438,3 +438,21 @@ $(".navbar-toggler-icon-2").click(function () {
 $(".bg-overlay").click(function () {
     $(".bg-overlay, .sidebar-col").removeClass("show");
 });
+
+/*=====================
+   26. Add Basket Js
+   ==========================*/
+$(document).on("click", ".addtobasket", function (e) {
+    e.preventDefault();
+    let url = $(this).attr("href");
+    fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                alert("xeta bas verdi")
+            }
+            return response.text()
+        })
+        .then(data => {
+            $(".header-basket").html(data)
+        })
+})

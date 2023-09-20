@@ -593,6 +593,10 @@
       "PackagePath": "staticwebassets\\assets\\images\\grocery\\product\\personal-care\\8.png"
     },
     {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\assets\\images\\icon\\basket-icon.png",
+      "PackagePath": "staticwebassets\\assets\\images\\icon\\basket-icon.png"
+    },
+    {
       "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\assets\\images\\icon\\hot-sale.png",
       "PackagePath": "staticwebassets\\assets\\images\\icon\\hot-sale.png"
     },

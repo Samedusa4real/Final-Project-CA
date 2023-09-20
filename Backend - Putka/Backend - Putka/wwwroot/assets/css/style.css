@@ -13648,4 +13648,68 @@ footer .sub-footer ul li {
 .bg-overlay.show {
   visibility: visible;
   opacity: 0.5;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.plus-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: calc(30px + 5 * (100vw - 320px) / 1600);
+    height: calc(30px + 5 * (100vw - 320px) / 1600);
+    border: 1px solid #ececec;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 20px;
+    line-height: 24px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-radius: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-left: 0;
+}
+
+    .plus-button i {
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        width: calc(30px + 7 * (100vw - 320px) / 1600);
+        height: calc(30px + 7 * (100vw - 320px) / 1600);
+        background-color: #fff;
+        border-radius: 100%;
+        color: var(--theme-color);
+        position: absolute;
+        right: 4px;
+    }
+
+.plus-button:hover {
+    color: #010200;
+}
+
+[dir=rtl] .plus-button {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0;
+    border-left: 1px solid #ececec;
+}
+/*# sourceMappingURL=style.css.map */

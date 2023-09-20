@@ -11,6 +11,8 @@ builder.Services.AddDbContext<PutkaDbContext>(opt =>
 });
 builder.Services.AddScoped<LayoutService>();
 
+builder.Services.AddHttpContextAccessor();
+
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())

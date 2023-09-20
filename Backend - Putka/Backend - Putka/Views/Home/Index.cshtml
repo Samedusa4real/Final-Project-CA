@@ -446,12 +446,12 @@
                                                             </div>
 
                                                             <div class="add-to-cart-box">
-                                                                <button class="btn btn-add-cart addcart-button">
+                                                                <a asp-controller="product" asp-action="addtobasket" asp-route-id="@item.Id" class="btn btn-add-cart addcart-button addtobasket">
                                                                     Add
                                                                     <span class="add-icon">
                                                                         <i class="fa-solid fa-plus"></i>
                                                                     </span>
-                                                                </button>
+                                                                </a>
                                                                 <div class="cart_qty qty-box">
                                                                     <div class="input-group">
                                                                         <button type="button" class="qty-left-minus"
@@ -460,10 +460,10 @@
                                                                         </button>
                                                                         <input class="form-control input-number qty-input"
                                                                                type="text" name="quantity" value="0">
-                                                                        <button type="button" class="qty-right-plus"
+                                                                        <a asp-controller="product" asp-action="addtobasket" asp-route-id="@item.Id" class="qty-right-plus addtobasket plus-button"
                                                                                 data-type="plus" data-field="">
                                                                             <i class="fa fa-plus" aria-hidden="true"></i>
-                                                                        </button>
+                                                                        </a>
                                                                     </div>
                                                                 </div>
                                                             </div>

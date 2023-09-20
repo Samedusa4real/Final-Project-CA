@@ -1,7 +1,9 @@
 ﻿using Backend___Putka.DAL;
 using Backend___Putka.Models;
+using Backend___Putka.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 
 namespace Backend___Putka.Controllers
 {
@@ -25,6 +27,49 @@ namespace Backend___Putka.Controllers
             if (product == null) return View("Error");
 
             return PartialView("_QuickViewModalPartial", product);
+        }
+
+        public IActionResult AddToBasket(int id)
+        {
+            List<BasketItemCookieViewModel> cookieItems = new List<BasketItemCookieViewModel>();
+
+            BasketItemCookieViewModel cookieItem;
+            var basketStr = Request.Cookies["basket"];
+            if (basketStr != null)
+            {
+                cookieItems = JsonConvert.DeserializeObject<List<BasketItemCookieViewModel>>(basketStr);
+
+                cookieItem = cookieItems.FirstOrDefault(x => x.ProductId == id);
+
+                if (cookieItem != null)
+                    cookieItem.Count++;
+                else
+                {
+                    cookieItem = new BasketItemCookieViewModel { ProductId = id, Count = 1 };
+                    cookieItems.Add(cookieItem);
+                }
+            }
+            else
+            {
+                cookieItem = new BasketItemCookieViewModel { ProductId = id, Count = 1 };
+                cookieItems.Add(cookieItem);
+            }
+
+            Response.Cookies.Append("Basket", JsonConvert.SerializeObject(cookieItems));
+
+            BasketViewModel bv = new BasketViewModel();
+            foreach (var ci in cookieItems)
+            {
+                BasketItemViewModel bi = new BasketItemViewModel
+                {
+                    Count = ci.Count,
+                    Product = _context.Products.Include(x => x.ProductImages).FirstOrDefault(x => x.Id == ci.ProductId)
+                };
+                bv.BasketItems.Add(bi);
+                bv.TotalPrice += (bi.Product.DiscountPercent > 0 ? (bi.Product.SalePrice * (100 - bi.Product.DiscountPercent) / 100) : bi.Product.SalePrice) * bi.Count;
+            }
+
+            return PartialView("_BasketPartialView", bv);
         }
 
         public IActionResult Cart()

@@ -1,0 +1,46 @@
+﻿@model BasketViewModel    
+
+<button type="button" class="btn p-0 position-relative header-wishlist">
+    <img src="/assets/images/icon/basket-icon.png" style="width: 33px">
+    <span class="position-absolute top-0 start-100 translate-middle badge">
+        @Model.BasketItems.Count
+        <span class="visually-hidden">unread messages</span>
+    </span>
+</button>
+
+<div class="onhover-div">
+    <ul class="cart-list">
+        @foreach (var item in Model.BasketItems)
+        {
+            <li class="product-box-contain">
+                <div class="drop-cart">
+                    <a href="product-left-thumbnail.html" class="drop-image">
+                        <img src="/assets/images/product/category/@item.Product.ProductImages.FirstOrDefault(x=>x.IsMain == true)?.Url"
+                             class="blur-up lazyload" alt="">
+                    </a>
+
+                    <div class="drop-contain">
+                        <a href="product-left-thumbnail.html">
+                            <h5>@item.Product.Name</h5>
+                        </a>
+                        <h6><span>@item.Count x</span> $@((item.Product.DiscountPercent > 0 ? (item.Product.SalePrice * (100 - item.Product.DiscountPercent) / 100) : item.Product.SalePrice).ToString("0.00"))</h6>
+                        <button class="close-button close_button">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                </div>
+            </li>
+        }
+    </ul>
+
+    <div class="price-box">
+        <h5>Total :</h5>
+        <h4 class="theme-color fw-bold">$@Model.TotalPrice.ToString("0.00")</h4>
+    </div>
+
+    <div class="button-group">
+        <a href="cart.html" class="btn btn-sm cart-button">View Cart</a>
+        <a href="checkout.html" class="btn btn-sm cart-button theme-bg-color
+                                                    text-white">Checkout</a>
+    </div>
+</div>
