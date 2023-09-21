@@ -474,3 +474,11 @@ $(document).on("click", ".removefrombasket", function (e) {
             $(".header-basket").html(data)
         })
 })
+
+$(document).on("click", ".removefrombasket", function (e) {
+    var $qty = $(this).parents(".qty-box").find(".input-number");
+    var currentVal = parseInt($qty.val(), 10);
+    if (!isNaN(currentVal) && currentVal > 0) {
+        $qty.val(currentVal - 0);
+    }
+})
