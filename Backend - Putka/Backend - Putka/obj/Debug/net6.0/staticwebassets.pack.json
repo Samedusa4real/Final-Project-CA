@@ -2009,6 +2009,34 @@
       "PackagePath": "staticwebassets\\assets\\scss\\total\\_transactions.scss"
     },
     {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\assets\\svg\\biscuit.svg",
+      "PackagePath": "staticwebassets\\assets\\svg\\biscuit.svg"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\assets\\svg\\breakfast.svg",
+      "PackagePath": "staticwebassets\\assets\\svg\\breakfast.svg"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\assets\\svg\\cup.svg",
+      "PackagePath": "staticwebassets\\assets\\svg\\cup.svg"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\assets\\svg\\drink.svg",
+      "PackagePath": "staticwebassets\\assets\\svg\\drink.svg"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\assets\\svg\\meats.svg",
+      "PackagePath": "staticwebassets\\assets\\svg\\meats.svg"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\assets\\svg\\milk.svg",
+      "PackagePath": "staticwebassets\\assets\\svg\\milk.svg"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\assets\\svg\\vegetable.svg",
+      "PackagePath": "staticwebassets\\assets\\svg\\vegetable.svg"
+    },
+    {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Backend - Putka.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

@@ -1,0 +1,44 @@
+﻿@model List<Category>
+
+<div class="header-nav-left">
+    <button class="dropdown-category">
+        <i data-feather="align-left"></i>
+        <span>All Categories</span>
+    </button>
+
+    <div class="category-dropdown">
+        <div class="category-title">
+            <h5>Categories</h5>
+            <button type="button" class="btn p-0 close-button text-content">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <ul class="category-list">
+            @foreach (var item in Model)
+            {
+                <li class="onhover-category-list">
+                    <a href="javascript:void(0)" class="category-name">
+                        <img src="/assets/svg/@item.Icon" alt="">
+                        <h6>@item.Name</h6>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+
+                    <div class="onhover-category-box w-100">
+                        <div class="list-1">
+                            <ul>
+                                @foreach (var product in item.Products)
+                                {
+                                    <li>
+                                        <a href="javascript:void(0)">@product.Name</a>
+                                    </li>
+                                }
+
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            }
+        </ul>
+    </div>
+</div>

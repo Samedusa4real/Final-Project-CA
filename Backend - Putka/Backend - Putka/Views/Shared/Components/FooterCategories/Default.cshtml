@@ -1,0 +1,16 @@
+﻿@model List<Category>
+
+<div class="footer-title">
+    <h4>Categories</h4>
+</div>
+
+<div class="footer-contain">
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+                <a href="shop-left-sidebar.html" class="text-content">@item.Name</a>
+            </li>
+        }
+    </ul>
+</div>
