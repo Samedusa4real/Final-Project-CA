@@ -2577,6 +2577,42 @@
       "PackagePath": "staticwebassets\\manage\\assets\\svg\\vegetable.svg"
     },
     {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\categories\\6a889e47-2a40-45be-ab6d-f02993840c13peska.png",
+      "PackagePath": "staticwebassets\\uploads\\categories\\6a889e47-2a40-45be-ab6d-f02993840c13peska.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\categories\\ae36f27e-b445-4e81-86f3-174f715730e6peska.png",
+      "PackagePath": "staticwebassets\\uploads\\categories\\ae36f27e-b445-4e81-86f3-174f715730e6peska.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\categories\\breakfast.svg",
+      "PackagePath": "staticwebassets\\uploads\\categories\\breakfast.svg"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\categories\\cup.svg",
+      "PackagePath": "staticwebassets\\uploads\\categories\\cup.svg"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\categories\\frozen.svg",
+      "PackagePath": "staticwebassets\\uploads\\categories\\frozen.svg"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\categories\\meats.svg",
+      "PackagePath": "staticwebassets\\uploads\\categories\\meats.svg"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\categories\\milk.svg",
+      "PackagePath": "staticwebassets\\uploads\\categories\\milk.svg"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\categories\\pet.svg",
+      "PackagePath": "staticwebassets\\uploads\\categories\\pet.svg"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\categories\\vegetable.svg",
+      "PackagePath": "staticwebassets\\uploads\\categories\\vegetable.svg"
+    },
+    {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Backend - Putka.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

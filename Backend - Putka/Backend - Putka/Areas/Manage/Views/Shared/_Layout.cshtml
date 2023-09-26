@@ -72,6 +72,7 @@
     <script src="~/manage/assets/js/sidebar-menu.js" defer></script>
     <script src="~/manage/assets/js/notify/bootstrap-notify.min.js" defer></script>
     <script src="~/manage/assets/js/notify/index.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
 
     <!-- Apexchar js -->
     <script src="~/manage/assets/js/chart/apex-chart/apex-chart1.js" defer></script>
@@ -124,29 +125,8 @@
                         </a>
                     </div>
                 </div>
-
-                <form class="form-inline search-full" action="javascript:void(0)" method="get">
-                    <div class="form-group w-100">
-                        <div class="Typeahead Typeahead--twitterUsers">
-                            <div class="u-posRelative">
-                                <input class="demo-input Typeahead-input form-control-plaintext w-100" type="text"
-                                       placeholder="Search Fastkart .." name="q" title="" autofocus>
-                                <i class="close-search" data-feather="x"></i>
-                                <div class="spinner-border Typeahead-spinner" role="status">
-                                    <span class="sr-only">Loading...</span>
-                                </div>
-                            </div>
-                            <div class="Typeahead-menu"></div>
-                        </div>
-                    </div>
-                </form>
                 <div class="nav-right col-6 pull-right right-header p-0">
                     <ul class="nav-menus">
-                        <li>
-                            <span class="header-search">
-                                <i class="ri-search-line"></i>
-                            </span>
-                        </li>
                         <li class="onhover-dropdown">
                             <div class="notification-box">
                                 <i class="ri-notification-line"></i>
@@ -294,7 +274,7 @@
                                 <li class="sidebar-list">
                                     <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
                                         <i class="ri-list-check-2"></i>
-                                        <span>Category</span>
+                                        <span>Categories</span>
                                     </a>
                                     <ul class="sidebar-submenu">
                                         <li>
@@ -309,8 +289,8 @@
 
                                 <li class="sidebar-list">
                                     <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
-                                        <i class="ri-list-check-2"></i>
-                                        <span>Tag</span>
+                                        <i class="ri-price-tag-3-line"></i>
+                                        <span>Tags</span>
                                     </a>
                                     <ul class="sidebar-submenu">
                                         <li>
@@ -370,13 +350,6 @@
                                 </li>
 
                                 <li class="sidebar-list">
-                                    <a class="sidebar-link sidebar-title link-nav" href="media.html">
-                                        <i class="ri-price-tag-3-line"></i>
-                                        <span>Media</span>
-                                    </a>
-                                </li>
-
-                                <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title" href="javascript:void(0)">
                                         <i class="ri-archive-line"></i>
                                         <span>Orders</span>
@@ -406,22 +379,6 @@
 
                                         <li>
                                             <a href="currency-rates.html">Currency Rates</a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li class="sidebar-list">
-                                    <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
-                                        <i class="ri-price-tag-3-line"></i>
-                                        <span>Coupons</span>
-                                    </a>
-                                    <ul class="sidebar-submenu">
-                                        <li>
-                                            <a href="coupon-list.html">Coupon List</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="create-coupon.html">Create Coupon</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -484,6 +441,19 @@
             <!-- Page Sidebar Ends-->
             <!-- index body start -->
             @RenderBody()
+
+            <!-- footer start-->
+            <div class="container-fluid">
+                <footer class="footer">
+                    <div class="row">
+                        <div class="col-md-12 footer-copyright text-center">
+                            <p class="mb-0">Copyright 2023 © Putka by samedusa</p>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <!-- footer end-->
+            
             <!-- index body end -->
 
         </div>
