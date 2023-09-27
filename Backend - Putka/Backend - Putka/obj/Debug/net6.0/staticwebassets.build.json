@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "eu3vUt1+x1pu+r3e/2HHzsULxYAl8ZPJrjGitxSq5eg=",
+  "Hash": "I8pqMeHkOmNgiC9WjNRQPp9teKfV10M2f77nURsXIs8=",
   "Source": "Backend - Putka",
   "BasePath": "_content/Backend - Putka",
   "Mode": "Default",
@@ -10982,6 +10982,23 @@
       "OriginalItemSpec": "wwwroot\\manage\\assets\\svg\\vegetable.svg"
     },
     {
+      "Identity": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\categories\\23ca36e8-ec7a-44e8-b76e-8fceb10cba00peska.png",
+      "SourceId": "Backend - Putka",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\",
+      "BasePath": "_content/Backend - Putka",
+      "RelativePath": "uploads/categories/23ca36e8-ec7a-44e8-b76e-8fceb10cba00peska.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\categories\\23ca36e8-ec7a-44e8-b76e-8fceb10cba00peska.png"
+    },
+    {
       "Identity": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\categories\\6a889e47-2a40-45be-ab6d-f02993840c13peska.png",
       "SourceId": "Backend - Putka",
       "SourceType": "Discovered",
@@ -10997,6 +11014,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\categories\\6a889e47-2a40-45be-ab6d-f02993840c13peska.png"
+    },
+    {
+      "Identity": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\categories\\abe35fa5-c22a-4bbe-93cc-741724c38eaapeska.png",
+      "SourceId": "Backend - Putka",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\",
+      "BasePath": "_content/Backend - Putka",
+      "RelativePath": "uploads/categories/abe35fa5-c22a-4bbe-93cc-741724c38eaapeska.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\categories\\abe35fa5-c22a-4bbe-93cc-741724c38eaapeska.png"
     },
     {
       "Identity": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\categories\\ae36f27e-b445-4e81-86f3-174f715730e6peska.png",
@@ -11048,6 +11082,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\categories\\cup.svg"
+    },
+    {
+      "Identity": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\categories\\f23aff69-b263-44f2-8736-31160bf2bb40basket-icon.png",
+      "SourceId": "Backend - Putka",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\",
+      "BasePath": "_content/Backend - Putka",
+      "RelativePath": "uploads/categories/f23aff69-b263-44f2-8736-31160bf2bb40basket-icon.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\categories\\f23aff69-b263-44f2-8736-31160bf2bb40basket-icon.png"
     },
     {
       "Identity": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\categories\\frozen.svg",

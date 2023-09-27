@@ -2577,8 +2577,16 @@
       "PackagePath": "staticwebassets\\manage\\assets\\svg\\vegetable.svg"
     },
     {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\categories\\23ca36e8-ec7a-44e8-b76e-8fceb10cba00peska.png",
+      "PackagePath": "staticwebassets\\uploads\\categories\\23ca36e8-ec7a-44e8-b76e-8fceb10cba00peska.png"
+    },
+    {
       "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\categories\\6a889e47-2a40-45be-ab6d-f02993840c13peska.png",
       "PackagePath": "staticwebassets\\uploads\\categories\\6a889e47-2a40-45be-ab6d-f02993840c13peska.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\categories\\abe35fa5-c22a-4bbe-93cc-741724c38eaapeska.png",
+      "PackagePath": "staticwebassets\\uploads\\categories\\abe35fa5-c22a-4bbe-93cc-741724c38eaapeska.png"
     },
     {
       "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\categories\\ae36f27e-b445-4e81-86f3-174f715730e6peska.png",
@@ -2591,6 +2599,10 @@
     {
       "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\categories\\cup.svg",
       "PackagePath": "staticwebassets\\uploads\\categories\\cup.svg"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\categories\\f23aff69-b263-44f2-8736-31160bf2bb40basket-icon.png",
+      "PackagePath": "staticwebassets\\uploads\\categories\\f23aff69-b263-44f2-8736-31160bf2bb40basket-icon.png"
     },
     {
       "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\categories\\frozen.svg",

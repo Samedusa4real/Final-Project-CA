@@ -11,7 +11,7 @@
                                     <h5>Category Information</h5>
                                 </div>
 
-                                <form asp-action="create" method="post" enctype="multipart/form-data" class="theme-form theme-form-2 mega-form">
+                                <form method="post" asp-action="create" enctype="multipart/form-data" class="theme-form theme-form-2 mega-form">
                                     <div class="mb-4 row align-items-center">
                                         <label class="form-label-title col-sm-3 mb-0">Category Name</label>
                                         <div class="col-sm-9">
@@ -32,9 +32,9 @@
                                                     <p>Choose an image file or drag it here.</p>
                                                 </div>
                                                 <input class="dropzone" asp-for="ImageFile">
+                                                <span class="text-danger" asp-validation-for="ImageFile"></span>
                                             </div>
                                         </div>
-                                        <span class="text-danger" asp-validation-for="ImageFile"></span>
                                     </div>
 
                                     <div asp-validation-summary="ModelOnly"></div>

@@ -49,5 +49,58 @@ namespace Backend___Putka.Areas.Manage.Controllers
 
             return RedirectToAction("index");
         }
+
+        public IActionResult Edit(int id)
+        {
+            Category category = _context.Categories.Find(id);
+
+            if (category == null)
+                return View("Error");
+
+            return View(category);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(Category category)
+        {
+            if (!ModelState.IsValid)
+                return View();
+
+            Category existCategory = _context.Categories.Find(category.Id);
+
+            if (existCategory == null)
+                return View("Error");
+
+            existCategory.Name = category.Name;
+
+            string oldFileName = null;
+
+            if (category.ImageFile != null)
+            {
+                oldFileName = category.Icon;
+                existCategory.Icon = FileManager.Save(_environment.WebRootPath, "uploads/categories", category.ImageFile);
+            }
+
+            _context.SaveChanges();
+
+            if (oldFileName != null)
+                FileManager.Save(_environment.WebRootPath, "uploads/categories", category.ImageFile);
+
+            return RedirectToAction("index");
+        }
+
+        public IActionResult Delete(int id)
+        {
+            Category category = _context.Categories.Find(id);
+
+            if (category == null)
+                return StatusCode(404);
+
+            _context.Categories.Remove(category);
+            _context.SaveChanges();
+
+            return StatusCode(200);
+        }
     }
 }

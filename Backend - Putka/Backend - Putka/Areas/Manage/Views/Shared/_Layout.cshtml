@@ -18,6 +18,7 @@
 
     <!-- fontawesome css -->
     <link rel="stylesheet" type="text/css" href="~/manage/assets/css/vendors/font-awesome.css">
+    <script src="https://kit.fontawesome.com/460a2c75b1.js" crossorigin="anonymous"></script>
 
     <!-- Themify icon css-->
     <link rel="stylesheet" type="text/css" href="~/manage/assets/css/vendors/themify.css">
@@ -258,7 +259,7 @@
                                 <li class="sidebar-list">
                                     <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
                                         <i class="ri-store-3-line"></i>
-                                        <span>Product</span>
+                                        <span>Products</span>
                                     </a>
                                     <ul class="sidebar-submenu">
                                         <li>
@@ -298,7 +299,23 @@
                                         </li>
 
                                         <li>
-                                            <a href="add-new-category.html">Add New Tag</a>
+                                            <a asp-controller="tag" asp-action="create">Add New Tag</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="sidebar-list">
+                                    <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
+                                        <i class="fa-solid fa-scale-unbalanced-flip"></i>
+                                        <span>Weights</span>
+                                    </a>
+                                    <ul class="sidebar-submenu">
+                                        <li>
+                                            <a asp-controller="weight" asp-action="index">Weight List</a>
+                                        </li>
+
+                                        <li>
+                                            <a asp-controller="weight" asp-action="create">Add New Weight</a>
                                         </li>
                                     </ul>
                                 </li>

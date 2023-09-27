@@ -10,7 +10,6 @@ namespace Backend___Putka.Models
         [Required]
         [MaxLength(25)]
         public string Name { get; set; }
-        [Required]
         [MaxLength(250)]
         public string Icon { get; set; }
         public List<Product> Products { get; set; } = new List<Product>();

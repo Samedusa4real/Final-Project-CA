@@ -31,7 +31,6 @@ namespace Backend___Putka.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Icon")
-                        .IsRequired()
                         .HasMaxLength(250)
                         .HasColumnType("nvarchar(250)");
 
@@ -198,7 +197,7 @@ namespace Backend___Putka.Migrations
             modelBuilder.Entity("Backend___Putka.Models.Product", b =>
                 {
                     b.HasOne("Backend___Putka.Models.Category", "Category")
-                        .WithMany()
+                        .WithMany("Products")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -253,6 +252,11 @@ namespace Backend___Putka.Migrations
                     b.Navigation("Product");
 
                     b.Navigation("Weight");
+                });
+
+            modelBuilder.Entity("Backend___Putka.Models.Category", b =>
+                {
+                    b.Navigation("Products");
                 });
 
             modelBuilder.Entity("Backend___Putka.Models.Product", b =>
