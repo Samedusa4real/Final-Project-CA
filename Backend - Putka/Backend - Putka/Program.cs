@@ -1,5 +1,7 @@
 using Backend___Putka.DAL;
+using Backend___Putka.Models;
 using Backend___Putka.Services;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +11,15 @@ builder.Services.AddDbContext<PutkaDbContext>(opt =>
 {
     opt.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
 });
+
+builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
+{
+    opt.Password.RequireNonAlphanumeric = false;
+    opt.Password.RequiredLength = 8;
+    opt.Password.RequireUppercase = false;
+}).AddDefaultTokenProviders().AddEntityFrameworkStores<PutkaDbContext>();
+
+
 builder.Services.AddScoped<LayoutService>();
 
 builder.Services.AddHttpContextAccessor();

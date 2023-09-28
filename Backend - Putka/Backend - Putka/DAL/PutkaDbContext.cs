@@ -1,9 +1,10 @@
 ﻿using Backend___Putka.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Backend___Putka.DAL
 {
-    public class PutkaDbContext:DbContext
+    public class PutkaDbContext:IdentityDbContext
     {
         public PutkaDbContext(DbContextOptions<PutkaDbContext> options):base(options)
         {
@@ -18,6 +19,7 @@ namespace Backend___Putka.DAL
         public DbSet<Weight> Weights { get; set; }
         public DbSet<ProductWeight> ProductWeights { get; set; }
         public DbSet<Setting> Settings { get; set; }
+        public DbSet<AppUser> AppUsers { get; set; }
 
 
 
