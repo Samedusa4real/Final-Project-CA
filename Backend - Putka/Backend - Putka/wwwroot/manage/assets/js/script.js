@@ -415,3 +415,23 @@ $(document).on("click", ".delete-btn", function (e) {
         }
     })
 })
+
+//Show More & Show Less JS
+$(document).ready(function () {
+    $(document).ready(function () {
+        $(".toggle-description").click(function (e) {
+            e.preventDefault();
+            var $description = $(this).prevAll(".full-description");
+            var $truncatedDescription = $(this).prevAll(".truncated-description");
+
+            $description.toggle();
+            $truncatedDescription.toggle();
+
+            if ($description.is(":visible")) {
+                $(this).text("Show Less");
+            } else {
+                $(this).text("Show More");
+            }
+        });
+    });
+});

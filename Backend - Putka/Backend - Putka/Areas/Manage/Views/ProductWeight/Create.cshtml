@@ -1,0 +1,38 @@
+﻿@model ProductWeight
+<div class="page-body">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-sm-8 m-auto">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-header-2">
+                                    <h5>ProductWeight</h5>
+                                </div>
+
+                                <form asp-action="create" class="theme-form theme-form-2 mega-form">
+                                    <div class="form-group">
+                                        <label asp-for="ProductId">Product</label>
+                                        <select class="form-control" asp-for="ProductId" asp-items="ViewBag.Products">
+                                        </select>
+                                        <span class="text-danger" asp-validation-for="ProductId"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="WeightId">Weight(kg)</label>
+                                        <select class="form-control" asp-for="WeightId" asp-items="ViewBag.Weights">
+                                        </select>
+                                        <span class="text-danger" asp-validation-for="WeightId"></span>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-primary w-25 mx-auto">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

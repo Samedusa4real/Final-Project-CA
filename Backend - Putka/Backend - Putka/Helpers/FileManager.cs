@@ -13,5 +13,17 @@
 
             return newFileName;
         }
+
+        public static bool Delete(string rootPath, string folder, string fileName)
+        {
+            string path = Path.Combine(rootPath, folder, fileName);
+
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+                return true;
+            }
+            return false;
+        }
     }
 }

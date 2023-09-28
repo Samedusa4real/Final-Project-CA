@@ -14,13 +14,13 @@
                                 <form asp-action="create" class="theme-form theme-form-2 mega-form">
                                     <div class="form-group">
                                         <label asp-for="ProductId">Product</label>
-                                        <select class="form-control" asp-for="ProductId" asp-items="new SelectList(ViewBag.Products,nameof(Product.Id),nameof(Product.Name))">
+                                        <select class="form-control" asp-for="ProductId" asp-items="ViewBag.Products">
                                         </select>
                                         <span class="text-danger" asp-validation-for="ProductId"></span>
                                     </div>
                                     <div class="form-group">
                                         <label asp-for="TagId">Tag</label>
-                                        <select class="form-control" asp-for="TagId" asp-items="new SelectList(ViewBag.Tags,nameof(Tag.Id),nameof(Tag.Name))">
+                                        <select class="form-control" asp-for="TagId" asp-items="ViewBag.Tags">
                                         </select>
                                         <span class="text-danger" asp-validation-for="TagId"></span>
                                     </div>

@@ -1,0 +1,147 @@
+﻿@model Product
+<div class="page-body">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-sm-8 m-auto">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-header-2">
+                                    <h5>Product Information</h5>
+                                </div>
+
+                                <form method="post" asp-action="create" enctype="multipart/form-data" class="theme-form theme-form-2 mega-form">
+                                    <div class="mb-4 row align-items-center">
+                                        <label asp-for="Name" class="form-label-title col-sm-3 mb-0">Product Name</label>
+                                        <div class="col-sm-9">
+                                            <input class="form-control" asp-for="Name">
+                                            <span class="text-danger" asp-validation-for="Name"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-4 row align-items-center">
+                                        <label asp-for="CategoryId" class="form-label-title col-sm-3 mb-0">Category</label>
+                                        <div class="col-sm-9">
+                                            <select class="form-control" asp-for="CategoryId" asp-items="ViewBag.Categories">
+                                            </select>
+                                            <span class="text-danger" asp-validation-for="CategoryId"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-4 row align-items-center">
+                                        <label asp-for="TagIds" class="form-label-title col-sm-3 mb-0">Tags</label>
+                                        <div class="col-sm-9">
+                                            <select class="form-control" asp-for="TagIds" asp-items="ViewBag.Tags">
+                                            </select>
+                                            <span class="text-danger" asp-validation-for="TagIds"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-4 row align-items-center">
+                                        <label asp-for="Description" class="form-label-title col-sm-3 mb-0">Description</label>
+                                        <div class="col-sm-9">
+                                            <textarea asp-for="Description" class="form-control" rows="2"></textarea>
+                                            <span class="text-danger" asp-validation-for="Description"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-4 row align-items-center">
+                                        <label asp-for="SalePrice" class="form-label-title col-sm-3 mb-0">SalePrice</label>
+                                        <div class="col-sm-9">
+                                            <input class="form-control" asp-for="SalePrice">
+                                            <span class="text-danger" asp-validation-for="SalePrice"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-4 row align-items-center">
+                                        <label asp-for="CostPrice" class="form-label-title col-sm-3 mb-0">CostPrice</label>
+                                        <div class="col-sm-9">
+                                            <input class="form-control" asp-for="CostPrice">
+                                            <span class="text-danger" asp-validation-for="CostPrice"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-4 row align-items-center">
+                                        <label asp-for="DiscountPercent" class="form-label-title col-sm-3 mb-0">DiscountPercent</label>
+                                        <div class="col-sm-9">
+                                            <input class="form-control" asp-for="DiscountPercent">
+                                            <span class="text-danger" asp-validation-for="DiscountPercent"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-4 row align-items-center">
+                                        <label class="col-sm-3 col-form-label form-label-title" asp-for="IsNew">IsNew</label>
+                                        <div class="col-sm-9">
+                                            <label class="switch" asp-for="IsNew">
+                                                <input asp-for="IsNew"><span class="switch-state"></span>
+                                            </label>
+                                        </div>
+                                        <span class="text-danger" asp-validation-for="IsNew"></span>
+                                    </div>
+
+                                    <div class="mb-4 row align-items-center">
+                                        <label class="col-sm-3 col-form-label form-label-title" asp-for="StockStatus">StockStatus</label>
+                                        <div class="col-sm-9">
+                                            <label class="switch" asp-for="StockStatus">
+                                                <input asp-for="StockStatus"><span class="switch-state"></span>
+                                            </label>
+                                        </div>
+                                        <span class="text-danger" asp-validation-for="StockStatus"></span>
+                                    </div>
+
+                                    <div class="mb-4 row align-items-center">
+                                        <label asp-for="ProductionDate" class="form-label-title col-sm-3 mb-0">ProductionDate</label>
+                                        <div class="col-sm-9">
+                                            <input class="form-control" asp-for="ProductionDate">
+                                            <span class="text-danger" asp-validation-for="ProductionDate"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-4 row align-items-center">
+                                        <label class="col-sm-3 col-form-label form-label-title" asp-for="PosterImage">
+                                            Poster Image
+                                        </label>
+                                        <div class="form-group col-sm-9">
+                                            <div class="dropzone-wrapper">
+                                                <div class="dropzone-desc">
+                                                    <i class="ri-upload-2-line"></i>
+                                                    <p>Choose an image file or drag it here.</p>
+                                                </div>
+                                                <input class="dropzone" asp-for="PosterImage">
+                                                <span class="text-danger" asp-validation-for="PosterImage"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-4 row align-items-center">
+                                        <label class="col-sm-3 col-form-label form-label-title" asp-for="HoverImage">
+                                            Hover Image
+                                        </label>
+                                        <div class="form-group col-sm-9">
+                                            <div class="dropzone-wrapper">
+                                                <div class="dropzone-desc">
+                                                    <i class="ri-upload-2-line"></i>
+                                                    <p>Choose an image file or drag it here.</p>
+                                                </div>
+                                                <input class="dropzone" asp-for="HoverImage">
+                                                <span class="text-danger" asp-validation-for="HoverImage"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div asp-validation-summary="ModelOnly"></div>
+
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-primary w-25 mx-auto">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

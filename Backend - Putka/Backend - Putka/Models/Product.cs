@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Backend___Putka.Attributes;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Backend___Putka.Models
@@ -24,7 +25,17 @@ namespace Backend___Putka.Models
         public bool StockStatus { get; set; }
         [Required]
         public bool IsNew { get; set; }
-        public DateTime ProductionDate { get; set; } 
+        public DateTime ProductionDate { get; set; }
+        [NotMapped]
+        [MaxFileSize(10)]
+        [AllowedExtensions("image/jpeg", "image/png")]
+        public IFormFile PosterImage { get; set; }
+        [NotMapped]
+        [MaxFileSize(10)]
+        [AllowedExtensions("image/jpeg", "image/png")]
+        public IFormFile HoverImage { get; set; }
+        [NotMapped]
+        public List<int> TagIds { get; set; }
         public Category Category { get; set; }
         public List<ProductImage> ProductImages { get; set; }
         public List<ProductWeight> ProductWeights { get; set; } = new List<ProductWeight>();

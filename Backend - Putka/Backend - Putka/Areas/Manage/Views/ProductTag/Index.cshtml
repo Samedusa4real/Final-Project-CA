@@ -38,13 +38,13 @@
                                                 <td>
                                                     <ul>
                                                         <li>
-                                                            <a asp-action="edit" asp-route-id="@item.Product.Id">
+                                                            <a asp-action="edit" asp-route-productId="@item.Product.Id" asp-route-tagId="@item.Tag.Id">
                                                                 <i class="ri-pencil-line"></i>
                                                             </a>
                                                         </li>
 
                                                         <li>
-                                                            <a asp-action="delete" asp-route-id="@item.Product.Id" class="delete-btn">
+                                                            <a asp-action="delete" asp-route-productId="@item.Product.Id" asp-route-tagId="@item.Tag.Id" class="delete-btn">
                                                                 <i class="ri-delete-bin-line"></i>
                                                             </a>
                                                         </li>

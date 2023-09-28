@@ -36,8 +36,36 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFByb2R1Y3RUYWdcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Samedusa/Desktop/Final-Project-CA/Backend - Putka/Backend - Putka/Areas/Manage/Views/ProductTag/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFByb2R1Y3RUYWdcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Samedusa/Desktop/Final-Project-CA/Backend - Putka/Backend - Putka/Areas/Manage/Views/ProductTag/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFByb2R1Y3RUYWdcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Samedusa/Desktop/Final-Project-CA/Backend - Putka/Backend - Putka/Areas/Manage/Views/ProductWeight/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFByb2R1Y3RXZWlnaHRcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Samedusa/Desktop/Final-Project-CA/Backend - Putka/Backend - Putka/Areas/Manage/Views/ProductWeight/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFByb2R1Y3RXZWlnaHRcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Samedusa/Desktop/Final-Project-CA/Backend - Putka/Backend - Putka/Areas/Manage/Views/ProductWeight/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFByb2R1Y3RXZWlnaHRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Samedusa/Desktop/Final-Project-CA/Backend - Putka/Backend - Putka/Areas/Manage/Views/Product/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFByb2R1Y3RcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Samedusa/Desktop/Final-Project-CA/Backend - Putka/Backend - Putka/Areas/Manage/Views/Product/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFByb2R1Y3RcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Samedusa/Desktop/Final-Project-CA/Backend - Putka/Backend - Putka/Areas/Manage/Views/Product/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFByb2R1Y3RcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Samedusa/Desktop/Final-Project-CA/Backend - Putka/Backend - Putka/Areas/Manage/Views/Shared/Error.cshtml]
