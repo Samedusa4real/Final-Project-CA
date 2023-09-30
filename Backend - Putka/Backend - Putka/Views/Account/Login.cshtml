@@ -1,4 +1,5 @@
-﻿@{
+﻿@model MemberLoginViewModel
+@{
     ViewBag.Title = "The Freshest Products are just here | Putka";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -46,21 +47,24 @@
                         </div>
 
                         <div class="input-box">
-                            <form class="row g-4">
+                            <form method="post" class="row g-4">
                                 <div class="col-12">
                                     <div class="form-floating theme-form-floating log-in-form">
-                                        <input type="email" class="form-control" id="email" placeholder="Email Address">
-                                        <label for="email">Email Address</label>
+                                        <input asp-for="UserName" class="form-control" />
+                                        <label asp-for="UserName">UserName</label>
+                                        <span class="text-danger" asp-validation-for="UserName"></span>
                                     </div>
                                 </div>
 
                                 <div class="col-12">
                                     <div class="form-floating theme-form-floating log-in-form">
-                                        <input type="password" class="form-control" id="password"
-                                               placeholder="Password">
-                                        <label for="password">Password</label>
+                                        <input asp-for="Password" class="form-control" />
+                                        <label asp-for="Password">Password</label>
+                                        <span class="text-danger" asp-validation-for="Password"></span>
                                     </div>
                                 </div>
+
+                                <div class="text-danger" asp-validation-summary="ModelOnly"></div>
 
                                 <div class="col-12">
                                     <div class="forgot-box">

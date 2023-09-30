@@ -2,12 +2,15 @@
 using Backend___Putka.Helpers;
 using Backend___Putka.Models;
 using Backend___Putka.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 
 namespace Backend___Putka.Areas.Manage.Controllers
 {
+    [Authorize(Roles = "SuperAdmin,Admin")]
     [Area("manage")]
     public class ProductController : Controller
     {

@@ -4,6 +4,7 @@ using Backend___Putka.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
+using System.Security.Claims;
 
 namespace Backend___Putka.Controllers
 {
@@ -31,45 +32,52 @@ namespace Backend___Putka.Controllers
 
         public IActionResult AddToBasket(int id)
         {
-            List<BasketItemCookieViewModel> cookieItems = new List<BasketItemCookieViewModel>();
-
-            BasketItemCookieViewModel cookieItem;
-            var basketStr = Request.Cookies["basket"];
-            if (basketStr != null)
+            if (User.Identity.IsAuthenticated && User.IsInRole("Member"))
             {
-                cookieItems = JsonConvert.DeserializeObject<List<BasketItemCookieViewModel>>(basketStr);
+                string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                var basketItem = _context.BasketItems.FirstOrDefault(x => x.ProductId == id && x.AppUserId == userId);
 
-                cookieItem = cookieItems.FirstOrDefault(x => x.ProductId == id);
+                if (basketItem != null) basketItem.Count++;
+                else
+                {
+                    basketItem = new BasketItem { AppUserId = userId, ProductId = id, Count = 1 };
+                    _context.BasketItems.Add(basketItem);
+                }
+                _context.SaveChanges();
+                var basketItems = _context.BasketItems.Include(x => x.Product).ThenInclude(x => x.ProductImages).Where(x => x.AppUserId == userId).ToList();
 
-                if (cookieItem != null)
-                    cookieItem.Count++;
+
+                return PartialView("_BasketPartialView", GenerateBasketVM(basketItems));
+            }
+            else
+            {
+                List<BasketItemCookieViewModel> cookieItems = new List<BasketItemCookieViewModel>();
+
+                BasketItemCookieViewModel cookieItem;
+                var basketStr = Request.Cookies["basket"];
+                if (basketStr != null)
+                {
+                    cookieItems = JsonConvert.DeserializeObject<List<BasketItemCookieViewModel>>(basketStr);
+
+                    cookieItem = cookieItems.FirstOrDefault(x => x.ProductId == id);
+
+                    if (cookieItem != null)
+                        cookieItem.Count++;
+                    else
+                    {
+                        cookieItem = new BasketItemCookieViewModel { ProductId = id, Count = 1 };
+                        cookieItems.Add(cookieItem);
+                    }
+                }
                 else
                 {
                     cookieItem = new BasketItemCookieViewModel { ProductId = id, Count = 1 };
                     cookieItems.Add(cookieItem);
                 }
-            }
-            else
-            {
-                cookieItem = new BasketItemCookieViewModel { ProductId = id, Count = 1 };
-                cookieItems.Add(cookieItem);
-            }
 
-            Response.Cookies.Append("Basket", JsonConvert.SerializeObject(cookieItems));
-
-            BasketViewModel bv = new BasketViewModel();
-            foreach (var ci in cookieItems)
-            {
-                BasketItemViewModel bi = new BasketItemViewModel
-                {
-                    Count = ci.Count,
-                    Product = _context.Products.Include(x => x.ProductImages).FirstOrDefault(x => x.Id == ci.ProductId)
-                };
-                bv.BasketItems.Add(bi);
-                bv.TotalPrice += (bi.Product.DiscountPercent > 0 ? (bi.Product.SalePrice * (100 - bi.Product.DiscountPercent) / 100) : bi.Product.SalePrice) * bi.Count;
+                Response.Cookies.Append("Basket", JsonConvert.SerializeObject(cookieItems));
+                return PartialView("_BasketPartialView", GenerateBasketVM(cookieItems));
             }
-
-            return PartialView("_BasketPartialView", bv);
         }
 
         public IActionResult RemoveBasket(int id)
@@ -105,6 +113,39 @@ namespace Backend___Putka.Controllers
             }
 
             return PartialView("_BasketPartialView", bv);
+        }
+
+        private BasketViewModel GenerateBasketVM(List<BasketItemCookieViewModel> cookieItems)
+        {
+            BasketViewModel bv = new BasketViewModel();
+            foreach (var ci in cookieItems)
+            {
+                BasketItemViewModel bi = new BasketItemViewModel
+                {
+                    Count = ci.Count,
+                    Product = _context.Products.Include(x => x.ProductImages).FirstOrDefault(x => x.Id == ci.ProductId)
+                };
+                bv.BasketItems.Add(bi);
+                bv.TotalPrice += (bi.Product.DiscountPercent > 0 ? (bi.Product.SalePrice * (100 - bi.Product.DiscountPercent) / 100) : bi.Product.SalePrice) * bi.Count;
+            }
+
+            return bv;
+        }
+
+        private BasketViewModel GenerateBasketVM(List<BasketItem> basketItems)
+        {
+            BasketViewModel bv = new BasketViewModel();
+            foreach (var item in basketItems)
+            {
+                BasketItemViewModel bi = new BasketItemViewModel
+                {
+                    Count = item.Count,
+                    Product = item.Product
+                };
+                bv.BasketItems.Add(bi);
+                bv.TotalPrice += (bi.Product.DiscountPercent > 0 ? (bi.Product.SalePrice * (100 - bi.Product.DiscountPercent) / 100) : bi.Product.SalePrice) * bi.Count;
+            }
+            return bv;
         }
 
         public IActionResult Cart()

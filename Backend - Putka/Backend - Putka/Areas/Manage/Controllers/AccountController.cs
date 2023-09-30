@@ -1,4 +1,6 @@
-﻿using Backend___Putka.Models;
+﻿using Backend___Putka.Areas.Manage.ViewModels;
+using Backend___Putka.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -39,11 +41,36 @@ namespace Backend___Putka.Areas.Manage.Controllers
         //    return Json(result);
         //}
 
+
         public IActionResult Login() 
         {
             return View();
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login(AdminLoginViewModel adminVM, string returnUrl = null)
+        {
+            AppUser user = await _userManager.FindByNameAsync(adminVM.UserName);
+
+            if (user == null || !user.IsAdmin)
+            {
+                ModelState.AddModelError("", "UserName or Password incorrect");
+                return View();
+            }
+
+            var result = await _signInManager.PasswordSignInAsync(user, adminVM.Password, false, false);
+
+            if (!result.Succeeded)
+            {
+                ModelState.AddModelError("", "UserName or Password incorrect");
+                return View();
+            }
+
+            if (returnUrl != null) return Redirect(returnUrl);
+
+            return RedirectToAction("index", "dashboard");
+        }
 
     }
 }

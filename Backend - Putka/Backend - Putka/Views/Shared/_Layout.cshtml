@@ -173,18 +173,33 @@
 
                                         <div class="onhover-div onhover-div-login">
                                             <ul class="user-box-name">
-                                                <li class="product-box-contain">
-                                                    <i></i>
-                                                    <a href="login.html">Log In</a>
-                                                </li>
+                                                @if (User.Identity.IsAuthenticated && User.IsInRole("Member"))
+                                                {
+                                                    <li class="product-box-contain">
+                                                        <i></i>
+                                                        <a asp-controller="account" asp-action="profile">@User.Identity.Name</a>
+                                                    </li>
 
-                                                <li class="product-box-contain">
-                                                    <a href="sign-up.html">Register</a>
-                                                </li>
+                                                    <li class="product-box-contain">
+                                                        <a asp-controller="account" asp-action="logout">Log Out</a>
+                                                    </li>
+                                                }
+                                                else
+                                                {
+                                                    <li class="product-box-contain">
+                                                        <i></i>
+                                                        <a asp-controller="account" asp-action="login">Log In</a>
+                                                    </li>
 
-                                                <li class="product-box-contain">
-                                                    <a href="forgot.html">Forgot Password</a>
-                                                </li>
+                                                    <li class="product-box-contain">
+                                                        <a asp-controller="account" asp-action="register">Register</a>
+                                                    </li>
+
+                                                    <li class="product-box-contain">
+                                                        <a href="forgot.html">Forgot Password</a>
+                                                    </li>
+                                                }
+                                                
                                             </ul>
                                         </div>
                                     </li>

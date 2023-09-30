@@ -1,13 +1,16 @@
 ﻿using Backend___Putka.DAL;
 using Backend___Putka.Models;
 using Backend___Putka.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 using System.Drawing;
 using System.Security.Policy;
 
 namespace Backend___Putka.Areas.Manage.Controllers
 {
+    [Authorize(Roles = "SuperAdmin,Admin")]
     [Area("manage")]
     public class TagController : Controller
     {

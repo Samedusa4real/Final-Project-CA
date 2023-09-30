@@ -20,6 +20,7 @@ namespace Backend___Putka.DAL
         public DbSet<ProductWeight> ProductWeights { get; set; }
         public DbSet<Setting> Settings { get; set; }
         public DbSet<AppUser> AppUsers { get; set; }
+        public DbSet<BasketItem> BasketItems { get; set; }
 
 
 

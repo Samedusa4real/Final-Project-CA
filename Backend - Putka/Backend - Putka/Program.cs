@@ -24,6 +24,25 @@ builder.Services.AddScoped<LayoutService>();
 
 builder.Services.AddHttpContextAccessor();
 
+//builder.Services.ConfigureApplicationCookie(options =>
+//{
+//    bool alreadyRedirected = false;
+
+//    options.Events.OnRedirectToLogin = options.Events.OnRedirectToAccessDenied = context =>
+//    {
+//        if (!alreadyRedirected && context.HttpContext.Request.Path.Value.StartsWith("/manage"))
+//        {
+//            var redirectUri = new Uri(context.RedirectUri);
+//            context.Response.Redirect("/manage/account/login" + redirectUri.Query);
+
+//            alreadyRedirected = true;
+//        }
+
+//        return Task.CompletedTask;
+//    };
+
+//});
+
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())
@@ -37,6 +56,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
