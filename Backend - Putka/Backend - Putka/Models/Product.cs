@@ -40,5 +40,6 @@ namespace Backend___Putka.Models
         public List<ProductImage> ProductImages { get; set; }
         public List<ProductWeight> ProductWeights { get; set; } = new List<ProductWeight>();
         public List<ProductTag> ProductTags { get; set; } = new List<ProductTag>();
+        public List<ProductComment> ProductComments { get; set; } = new List<ProductComment>();
     }
 }

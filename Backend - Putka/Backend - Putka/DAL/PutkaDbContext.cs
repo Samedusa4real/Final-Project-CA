@@ -21,6 +21,7 @@ namespace Backend___Putka.DAL
         public DbSet<Setting> Settings { get; set; }
         public DbSet<AppUser> AppUsers { get; set; }
         public DbSet<BasketItem> BasketItems { get; set; }
+        public DbSet<ProductComment> ProductComments { get; set; }
 
 
 
