@@ -86,6 +86,7 @@ namespace Backend___Putka.Controllers
                 .Include(x => x.ProductImages)
                 .Include(x => x.Category)
                 .Include(x=>x.ProductTags).ThenInclude(x=>x.Tag)
+                .Include(x => x.ProductComments).ThenInclude(x => x.AppUser)
                 .FirstOrDefault(x => x.Id == id);
 
             if (product == null) return View("Error");

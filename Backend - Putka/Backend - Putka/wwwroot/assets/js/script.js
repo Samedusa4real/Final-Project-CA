@@ -492,3 +492,21 @@ const signupButton = document.getElementById('signupButton');
 termsCheckbox.addEventListener('change', function () {
     signupButton.disabled = !this.checked;
 });
+
+///*=====================
+//   29. Load More & Show Less Button Js
+//   ==========================*/
+//$('#loadMore').click(function () {
+//    console.log("salam")
+//    var remainingComments = $('#total-comments').val - $('#current-batch').val;
+//    var nextBatchSize = Math.min($('#batch-size').val, remainingComments);
+
+//for (var i = 0; i < nextBatchSize; i++) {
+//    $('#commentList .comment:hidden:first').show();
+//    $('#current-batch').val++;
+//}
+
+//    if (currentBatch >= $('#total-comments').val) {
+//    $('#loadMore').hide();
+//}
+//});    

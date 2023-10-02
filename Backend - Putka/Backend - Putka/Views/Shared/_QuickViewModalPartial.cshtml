@@ -1,4 +1,7 @@
 ﻿@model Product
+@{
+    int rate = Model.ProductComments.Any() ? (int)Math.Ceiling(Model.ProductComments.Average(x => x.Rate)) : 0;
+}
 
 <div class="modal-content">
     <div class="modal-header p-0">
@@ -10,7 +13,7 @@
         <div class="row g-sm-4 g-2">
             <div class="col-lg-6">
                 <div class="slider-image">
-                    <img src="/assets/images/product/category/@Model.ProductImages.FirstOrDefault(x=>x.IsMain == true)?.Url" class="img-fluid blur-up lazyload"
+                    <img src="~/uploads/products/@Model.ProductImages.FirstOrDefault(x=>x.IsMain == true)?.Url" class="img-fluid blur-up lazyload"
                          alt="">
                 </div>
             </div>
@@ -28,24 +31,14 @@
                     }
                     <div class="product-rating">
                         <ul class="rating">
-                            <li>
-                                <i data-feather="star" class="fill"></i>
-                            </li>
-                            <li>
-                                <i data-feather="star" class="fill"></i>
-                            </li>
-                            <li>
-                                <i data-feather="star" class="fill"></i>
-                            </li>
-                            <li>
-                                <i data-feather="star" class="fill"></i>
-                            </li>
-                            <li>
-                                <i data-feather="star"></i>
-                            </li>
+                            @for (int i = 1; i <= 5; i++)
+                            {
+                                <li>
+                                    <i data-feather="star" class="@(i <= rate ? "fill" : "")"></i>
+                                </li>
+                            }
                         </ul>
-                        <span class="ms-2">8 Reviews</span>
-                        <span class="ms-2 text-danger">6 sold in last 16 hours</span>
+                        <span class="ms-2 text-danger">@Model.ProductComments.Count Reviews</span>
                     </div>
 
                     <div class="product-detail">
@@ -73,10 +66,10 @@
                     </div>
 
                     <div class="modal-button">
-                        <button onclick="location.href = 'product-left.html';"
+                        <a asp-controller="product" asp-action="detail" asp-route-id="@Model.Id"
                                 class="btn theme-bg-color view-button icon text-white fw-bold btn-md">
                             View More Details
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>

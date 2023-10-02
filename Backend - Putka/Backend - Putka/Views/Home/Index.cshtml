@@ -386,8 +386,8 @@
                                                 <div class="col-12 px-0">
                                                     <div class="product-box">
                                                         <div class="product-image">
-                                                            <a href="product-left-thumbnail.html">
-                                                                <img src="/assets/images/product/category/@item.ProductImages.FirstOrDefault(x=>x.IsMain == true)?.Url"
+                                                            <a asp-controller="product" asp-action="detail" asp-route-id="@item.Id">
+                                                                <img src="~/uploads/products/@item.ProductImages.FirstOrDefault(x=>x.IsMain == true)?.Url"
                                                                      class="img-fluid blur-up lazyload" alt="">
                                                             </a>
                                                             <ul class="product-option">
@@ -407,7 +407,7 @@
                                                             </ul>
                                                         </div>
                                                         <div class="product-detail">
-                                                            <a href="product-left-thumbnail.html">
+                                                            <a asp-controller="product" asp-action="detail">
                                                                 <h6 class="name">@item.Name</h6>
                                                             </a>
 
@@ -415,7 +415,7 @@
                                                                 @if (item.DiscountPercent != 0)
                                                                 {
                                                                     <span class="theme-color price">$@((item.SalePrice * (100 - item.DiscountPercent) / 100).ToString("0.00"))</span>
-                                                                    <del>@item.SalePrice.ToString("0.00")</del>
+                                                                    <del>$@item.SalePrice.ToString("0.00")</del>
                                                                 }
                                                                 else
                                                                 {
@@ -727,7 +727,6 @@
 
 @section modals{
     @Html.Partial("_PrivacyPartialView");
-    @*@Html.Partial("_QuickViewModalPartial");*@
     @Html.Partial("_LocationPartialModal");
     @Html.Partial("_DealBoxPartialModal");
 }
