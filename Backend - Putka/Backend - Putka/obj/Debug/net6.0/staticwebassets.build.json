@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "GM4HVVwees4oXOhkXXRNFyn+unj3RoweE5ltbb9a2Ak=",
+  "Hash": "PUsJX8WpV7QaS7Dkpt3vHdDzKAWPW40SJvSgHY+kRPw=",
   "Source": "Backend - Putka",
   "BasePath": "_content/Backend - Putka",
   "Mode": "Default",
@@ -3313,6 +3313,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\product\\vendor.png"
+    },
+    {
+      "Identity": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\assets\\images\\profile\\no-profile-pic.jpg",
+      "SourceId": "Backend - Putka",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\",
+      "BasePath": "_content/Backend - Putka",
+      "RelativePath": "assets/images/profile/no-profile-pic.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\profile\\no-profile-pic.jpg"
     },
     {
       "Identity": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\assets\\images\\review\\1.jpg",

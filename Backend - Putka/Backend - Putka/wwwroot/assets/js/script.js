@@ -510,3 +510,30 @@ termsCheckbox.addEventListener('change', function () {
 //    $('#loadMore').hide();
 //}
 //});    
+
+///*=====================
+//   30. Password Inputs Js
+//   ==========================*/
+//document.addEventListener("DOMContentLoaded", function () {
+//    const currentPasswordInput = document.getElementById("currentPassword");
+//    const newPasswordInput = document.getElementById("newPassword");
+//    const confirmNewPasswordInput = document.getElementById("confirmNewPassword");
+
+//    currentPasswordInput.addEventListener("input", function () {
+//        if (this.value.trim() !== "") {
+//            newPasswordInput.disabled = false;
+//            confirmNewPasswordInput.disabled = true;
+//        } else {
+//            newPasswordInput.disabled = true;
+//            confirmNewPasswordInput.disabled = true;
+//        }
+//    });
+
+//    newPasswordInput.addEventListener("input", function () {
+//        if (this.value.trim() !== "") {
+//            confirmNewPasswordInput.disabled = false;
+//        } else {
+//            confirmNewPasswordInput.disabled = true;
+//        }
+//    });
+//});

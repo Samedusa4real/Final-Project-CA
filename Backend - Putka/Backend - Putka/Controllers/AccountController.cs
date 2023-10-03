@@ -1,8 +1,10 @@
 ﻿using Backend___Putka.DAL;
 using Backend___Putka.Models;
 using Backend___Putka.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Backend___Putka.Controllers
 {
@@ -17,9 +19,80 @@ namespace Backend___Putka.Controllers
             _signInManager = signInManager;
         }
 
-        public IActionResult Profile()
+        [Authorize(Roles = "Member")]
+        public async Task<IActionResult> Profile()
         {
-            return View();
+            AppUser user = await _userManager.FindByNameAsync(User.Identity.Name);
+
+            if (user == null)
+            {
+                await _signInManager.SignOutAsync();
+                return RedirectToAction("login");
+            }
+
+            AccountProfileViewModel accountVM = new AccountProfileViewModel
+            {
+                Profile = new ProfileEditViewModel
+                {
+                    Email = user.Email,
+                    UserName = user.UserName,
+                    Address = user.Address,
+                    Phone = user.PhoneNumber,
+                },
+            };
+
+            return View(accountVM);
+        }
+
+        [Authorize(Roles = "Member")]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Profile(ProfileEditViewModel profileVM)
+        {
+            if (!ModelState.IsValid)
+            {
+                AccountProfileViewModel vm = new AccountProfileViewModel { Profile = profileVM };
+                return View(vm);
+            }
+
+            AppUser user = await _userManager.FindByNameAsync(User.Identity.Name);
+
+            user.Email = profileVM.Email;
+            user.UserName = profileVM.UserName;
+            user.Address = profileVM.Address;
+            user.PhoneNumber = profileVM.Phone;
+
+            if (!string.IsNullOrEmpty(profileVM.NewPassword))
+            {
+                var changePasswordResult = await _userManager.ChangePasswordAsync(user, profileVM.CurrentPassword, profileVM.NewPassword);
+
+                if (!changePasswordResult.Succeeded)
+                {
+                    foreach (var error in changePasswordResult.Errors)
+                    {
+                        ModelState.AddModelError("", error.Description);
+                    }
+
+                    AccountProfileViewModel vm = new AccountProfileViewModel { Profile = profileVM };
+                    return View(vm);
+                }
+            }
+
+            var result = await _userManager.UpdateAsync(user);
+
+            if (!result.Succeeded)
+            {
+                foreach (var item in result.Errors)
+                {
+                    ModelState.AddModelError("", item.Description);
+                }
+                AccountProfileViewModel vm = new AccountProfileViewModel { Profile = profileVM };
+                return View(vm);
+            }
+
+            await _signInManager.SignInAsync(user, false);
+
+            return RedirectToAction("profile");
         }
 
         public IActionResult Register()

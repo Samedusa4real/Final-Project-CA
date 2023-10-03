@@ -1,131 +1,97 @@
-﻿<!-- Edit Profile Start -->
-<div class="modal fade theme-modal" id="editProfile" tabindex="-1" aria-labelledby="exampleModalLabel2"
-     aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered modal-fullscreen-sm-down">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel2">Edit Profile</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="row g-4">
-                    <div class="col-xxl-12">
-                        <form>
-                            <div class="form-floating theme-form-floating">
-                                <input type="text" class="form-control" id="pname" value="Jack Jennas">
-                                <label for="pname">Full Name</label>
-                            </div>
-                        </form>
-                    </div>
-
-                    <div class="col-xxl-6">
-                        <form>
-                            <div class="form-floating theme-form-floating">
-                                <input type="email" class="form-control" id="email1" value="vicki.pope@gmail.com">
-                                <label for="email1">Email address</label>
-                            </div>
-                        </form>
-                    </div>
-
-                    <div class="col-xxl-6">
-                        <form>
-                            <div class="form-floating theme-form-floating">
-                                <input class="form-control" type="tel" value="4567891234" name="mobile" id="mobile"
-                                       maxlength="10" oninput="javascript: if (this.value.length > this.maxLength) this.value =
-                                            this.value.slice(0, this.maxLength);">
-                                <label for="mobile">Email address</label>
-                            </div>
-                        </form>
-                    </div>
-
-                    <div class="col-12">
-                        <form>
-                            <div class="form-floating theme-form-floating">
-                                <input type="text" class="form-control" id="address1"
-                                       value="8424 James Lane South San Francisco">
-                                <label for="address1">Add Address</label>
-                            </div>
-                        </form>
-                    </div>
-
-                    <div class="col-12">
-                        <form>
-                            <div class="form-floating theme-form-floating">
-                                <input type="text" class="form-control" id="address2" value="CA 94080">
-                                <label for="address2">Add Address 2</label>
-                            </div>
-                        </form>
-                    </div>
-
-                    <div class="col-xxl-4">
-                        <form>
-                            <div class="form-floating theme-form-floating">
-                                <select class="form-select" id="floatingSelect1"
-                                        aria-label="Floating label select example">
-                                    <option selected>Choose Your Country</option>
-                                    <option value="kindom">United Kingdom</option>
-                                    <option value="states">United States</option>
-                                    <option value="fra">France</option>
-                                    <option value="china">China</option>
-                                    <option value="spain">Spain</option>
-                                    <option value="italy">Italy</option>
-                                    <option value="turkey">Turkey</option>
-                                    <option value="germany">Germany</option>
-                                    <option value="russian">Russian Federation</option>
-                                    <option value="malay">Malaysia</option>
-                                    <option value="mexico">Mexico</option>
-                                    <option value="austria">Austria</option>
-                                    <option value="hong">Hong Kong SAR, China</option>
-                                    <option value="ukraine">Ukraine</option>
-                                    <option value="thailand">Thailand</option>
-                                    <option value="saudi">Saudi Arabia</option>
-                                    <option value="canada">Canada</option>
-                                    <option value="singa">Singapore</option>
-                                </select>
-                                <label for="floatingSelect">Country</label>
-                            </div>
-                        </form>
-                    </div>
-
-                    <div class="col-xxl-4">
-                        <form>
-                            <div class="form-floating theme-form-floating">
-                                <select class="form-select" id="floatingSelect">
-                                    <option selected>Choose Your City</option>
-                                    <option value="kindom">India</option>
-                                    <option value="states">Canada</option>
-                                    <option value="fra">Dubai</option>
-                                    <option value="china">Los Angeles</option>
-                                    <option value="spain">Thailand</option>
-                                </select>
-                                <label for="floatingSelect">City</label>
-                            </div>
-                        </form>
-                    </div>
-
-                    <div class="col-xxl-4">
-                        <form>
-                            <div class="form-floating theme-form-floating">
-                                <input type="text" class="form-control" id="address3" value="94080">
-                                <label for="address3">Pin Code</label>
-                            </div>
-                        </form>
-                    </div>
+﻿@model ProfileEditViewModel
+<form asp-action="profile" method="post">
+    <div class="modal-body">
+        <div class="row g-4">
+            <div class="col-xxl-12">
+                <div class="form-floating theme-form-floating">
+                    <input asp-for="UserName" class="form-control">
+                    <label asp-for="UserName">UserName</label>
+                    <span class="text-danger" asp-validation-for="UserName"></span>
                 </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-animation btn-md fw-bold"
-                        data-bs-dismiss="modal">
-                    Close
-                </button>
-                <button type="button" data-bs-dismiss="modal"
-                        class="btn theme-bg-color btn-md fw-bold text-light">
-                    Save changes
-                </button>
+
+            <div class="col-xxl-6">
+                <div class="form-floating theme-form-floating">
+                    <input asp-for="Email" class="form-control">
+                    <label asp-for="Email">Email address</label>
+                    <span class="text-danger" asp-validation-for="Email"></span>
+                </div>
             </div>
+
+            <div class="col-xxl-6">
+                <div class="form-floating theme-form-floating">
+                    <input asp-for="Address" class="form-control">
+                    <label asp-for="Address">Add Address</label>
+                    <span class="text-danger" asp-validation-for="Address"></span>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="form-floating theme-form-floating">
+                    <input asp-for="Phone" class="form-control">
+                    <label asp-for="Phone">Phone Number</label>
+                    <span class="text-danger" asp-validation-for="Phone"></span>
+                </div>
+            </div>
+
+            <h5 class="modal-title" style="color: red">Password Change</h5>
+
+            <div class="col-xxl-4">
+                <div class="form-floating theme-form-floating">
+                    <input asp-for="CurrentPassword" id="currentPassword" class="form-control">
+                    <label asp-for="CurrentPassword">Current Password</label>
+                    <span class="text-danger" asp-validation-for="CurrentPassword"></span>
+                </div>
+            </div>
+
+            <div class="col-xxl-4">
+                <div class="form-floating theme-form-floating">
+                    <input asp-for="NewPassword" id="newPassword" class="form-control" disabled>
+                    <label asp-for="NewPassword">New Password</label>
+                    <span class="text-danger" asp-validation-for="NewPassword"></span>
+                </div>
+            </div>
+
+            <div class="col-xxl-4">
+                <div class="form-floating theme-form-floating">
+                    <input asp-for="ConfirmNewPassword" id="confirmNewPassword" class="form-control" disabled>
+                    <label asp-for="ConfirmNewPassword">Confirm New Password</label>
+                    <span class="text-danger" asp-validation-for="ConfirmNewPassword"></span>
+                </div>
+            </div>
+
+            <div class="text-danger" asp-validation-summary="ModelOnly"></div>
         </div>
     </div>
-</div>
-<!-- Edit Profile End -->
+    <div class="modal-footer">
+        <button type="submit" class="btn theme-bg-color btn-md fw-bold text-light">
+            Save changes
+        </button>
+    </div>
+</form>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const currentPasswordInput = document.getElementById("currentPassword");
+        const newPasswordInput = document.getElementById("newPassword");
+        const confirmNewPasswordInput = document.getElementById("confirmNewPassword");
+
+        currentPasswordInput.addEventListener("input", function () {
+            if (this.value.trim() !== "") {
+                newPasswordInput.disabled = false;
+                confirmNewPasswordInput.disabled = true;
+            } else {
+                newPasswordInput.disabled = true;
+                confirmNewPasswordInput.disabled = true;
+            }
+        });
+
+        newPasswordInput.addEventListener("input", function () {
+            if (this.value.trim() !== "") {
+                confirmNewPasswordInput.disabled = false;
+            } else {
+                confirmNewPasswordInput.disabled = true;
+            }
+        });
+    });
+</script>

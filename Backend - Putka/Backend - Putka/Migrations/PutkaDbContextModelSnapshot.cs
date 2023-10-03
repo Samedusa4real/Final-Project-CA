@@ -70,6 +70,77 @@ namespace Backend___Putka.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("Backend___Putka.Models.Order", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Address")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(250)
+                        .HasColumnType("nvarchar(250)");
+
+                    b.Property<string>("Note")
+                        .HasMaxLength(250)
+                        .HasColumnType("nvarchar(250)");
+
+                    b.Property<string>("Phone")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<byte>("Status")
+                        .HasColumnType("tinyint");
+
+                    b.Property<string>("UserName")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserId");
+
+                    b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("Backend___Putka.Models.OrderItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
+                    b.Property<int>("OrderId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OrderId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("OrderItems");
+                });
+
             modelBuilder.Entity("Backend___Putka.Models.Product", b =>
                 {
                     b.Property<int>("Id")
@@ -491,6 +562,34 @@ namespace Backend___Putka.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("Backend___Putka.Models.Order", b =>
+                {
+                    b.HasOne("Backend___Putka.Models.AppUser", "AppUser")
+                        .WithMany()
+                        .HasForeignKey("AppUserId");
+
+                    b.Navigation("AppUser");
+                });
+
+            modelBuilder.Entity("Backend___Putka.Models.OrderItem", b =>
+                {
+                    b.HasOne("Backend___Putka.Models.Order", "Order")
+                        .WithMany("OrderItems")
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Backend___Putka.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Order");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("Backend___Putka.Models.Product", b =>
                 {
                     b.HasOne("Backend___Putka.Models.Category", "Category")
@@ -509,7 +608,7 @@ namespace Backend___Putka.Migrations
                         .HasForeignKey("AppUserId");
 
                     b.HasOne("Backend___Putka.Models.Product", "Product")
-                        .WithMany()
+                        .WithMany("ProductComments")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -624,8 +723,15 @@ namespace Backend___Putka.Migrations
                     b.Navigation("Products");
                 });
 
+            modelBuilder.Entity("Backend___Putka.Models.Order", b =>
+                {
+                    b.Navigation("OrderItems");
+                });
+
             modelBuilder.Entity("Backend___Putka.Models.Product", b =>
                 {
+                    b.Navigation("ProductComments");
+
                     b.Navigation("ProductImages");
 
                     b.Navigation("ProductTags");
