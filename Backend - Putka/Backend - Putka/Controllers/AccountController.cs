@@ -10,11 +10,13 @@ namespace Backend___Putka.Controllers
 {
     public class AccountController : Controller
     {
+        private readonly PutkaDbContext _context;
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
 
-        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
+        public AccountController(PutkaDbContext context, UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
         {
+            _context = context;
             _userManager = userManager;
             _signInManager = signInManager;
         }
@@ -39,6 +41,9 @@ namespace Backend___Putka.Controllers
                     Address = user.Address,
                     Phone = user.PhoneNumber,
                 },
+
+                Orders = _context.Orders.Include(x => x.OrderItems).ThenInclude(x => x.Product).ThenInclude(x => x.ProductImages).Where(x => x.AppUserId == user.Id).ToList(),
+
             };
 
             return View(accountVM);
