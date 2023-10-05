@@ -21,6 +21,7 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
 
 
 builder.Services.AddScoped<LayoutService>();
+builder.Services.AddScoped<IEmailSender, EmailSender>();
 
 builder.Services.AddHttpContextAccessor();
 

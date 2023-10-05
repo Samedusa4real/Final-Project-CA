@@ -1,0 +1,139 @@
+﻿@using Backend___Putka.Enums;
+@model Order
+
+<h1>Detail</h1>
+<div class="page-body">
+    <!-- tracking table start -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="title-header title-header-block package-card">
+                            <div>
+                                <h5>Order #@((User.Identity.Name.Substring(0, 1) + Model.UserName.Substring(0, 1)).ToUpper())-@(Model.CreatedDate.Minute)</h5>
+                            </div>
+                            <div class="card-order-section">
+                                <ul>
+                                    <li>@Model.CreatedDate.ToString("MMMM d, yyyy 'at' h:mm tt")</li>
+                                    <li>@Model.OrderItems.Count</li>
+                                    <li>Total $@Model.OrderItems.Sum(x=>x.Count * ((x.Product.DiscountPercent > 0) ? (x.Product.SalePrice * (100 - x.Product.DiscountPercent) / 100) : x.Product.SalePrice)).ToString("0.00")</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bg-inner cart-section order-details-table">
+                            <div class="row g-4">
+                                <div class="col-xl-8">
+                                    <div class="table-responsive table-details">
+                                        <table class="table cart-table table-borderless">
+                                            <thead>
+                                                <tr>
+                                                    <th colspan="2">Items</th>
+                                                    <th class="text-end" colspan="2">
+                                                        
+                                                    </th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                @foreach (var item in Model.OrderItems)
+                                                {
+                                                    <tr class="table-order">
+                                                        <td>
+                                                            <a href="javascript:void(0)">
+                                                                <img src="~/uploads/products/@item.Product.ProductImages.FirstOrDefault(x=>x.IsMain == true)?.Url"
+                                                                     class="img-fluid blur-up lazyload" alt="">
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <p>Product Name</p>
+                                                            <h5>@item.Product.Name</h5>
+                                                        </td>
+                                                        <td>
+                                                            <p>Quantity</p>
+                                                            <h5>@item.Count</h5>
+                                                        </td>
+                                                        <td>
+                                                            <p>Price</p>
+                                                            <h5>$@item.Product.SalePrice.ToString("0.00")</h5>
+                                                        </td>
+                                                    </tr>
+
+                                                }
+
+                                            </tbody>
+
+                                            <tfoot>
+                                                <tr class="table-order">
+                                                    <td colspan="3">
+                                                        <h4 class="theme-color fw-bold">Total Price :</h4>
+                                                    </td>
+                                                    <td>
+                                                        <h4 class="theme-color fw-bold">$@Model.OrderItems.Sum(x=>x.Count*x.Product.SalePrice).ToString("0.00")</h4>
+                                                    </td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+
+                                    @if (Model.Status == OrderStatus.Pending)
+                                    {
+                                        <div class="card-body" style="width: 300px; margin-left: 170px">
+                                            <a asp-action="accept" asp-route-id="@Model.Id" class="btn btn-primary">Accept</a>
+                                            <a asp-action="reject" asp-route-id="@Model.Id" class="btn btn-secondary" style="margin-top: 10px">Reject</a>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <button class="btn btn-@(Model.Status==OrderStatus.Rejected?"secondary":"primary")">@Model.Status.ToString()</button>
+                                    }
+
+                                </div>
+
+                                <div class="col-xl-4">
+                                    <div class="order-success">
+                                        <div class="row g-4">
+                                            <h4>summery</h4>
+                                            <ul class="order-details">
+                                                <li>Order #: @((User.Identity.Name.Substring(0, 1) + Model.UserName.Substring(0, 1)).ToUpper())-@(Model.CreatedDate.Minute)</li>
+                                                <li>Order Date: @Model.CreatedDate.ToString("MMMM d, yyyy 'at' h:mm tt")</li>
+                                                <li>Order Total: $@Model.OrderItems.Sum(x=>x.Count*x.Product.SalePrice).ToString("0.00")</li>
+                                            </ul>
+
+                                            <h4>shipping address</h4>
+                                            <ul class="order-details">
+                                                <li>Email: @Model.Email.ToLower()</li>
+                                                <li>Phone: @Model.Phone</li>
+                                                <li>Address: @Model.Address</li>
+                                            </ul>
+
+                                            <div class="payment-mode">
+                                                <h4>Client Note</h4>
+                                                <p>
+                                                    @Model.Note
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- section end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- tracking table end -->
+
+    <div class="container-fluid">
+        <!-- footer start-->
+        <footer class="footer">
+            <div class="row">
+                <div class="col-md-12 footer-copyright text-center">
+                    <p class="mb-0">Copyright 2023 © Putka by Samedusa</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>

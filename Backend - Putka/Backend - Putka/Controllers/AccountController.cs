@@ -1,5 +1,6 @@
 ﻿using Backend___Putka.DAL;
 using Backend___Putka.Models;
+using Backend___Putka.Services;
 using Backend___Putka.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -13,12 +14,14 @@ namespace Backend___Putka.Controllers
         private readonly PutkaDbContext _context;
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
+        private readonly IEmailSender _emailSender;
 
-        public AccountController(PutkaDbContext context, UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
+        public AccountController(PutkaDbContext context, UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, IEmailSender emailSender)
         {
             _context = context;
             _userManager = userManager;
             _signInManager = signInManager;
+            _emailSender = emailSender;
         }
 
         [Authorize(Roles = "Member")]
@@ -183,6 +186,60 @@ namespace Backend___Putka.Controllers
         public IActionResult ForgotPassword()
         {
             return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ForgotPassword(ForgotPasswordViewModel passwordVM)
+        {
+            if (!ModelState.IsValid) return View();
+            AppUser user = await _userManager.FindByEmailAsync(passwordVM.Email);
+
+            if (user == null || user.IsAdmin)
+            {
+                ModelState.AddModelError("Email", "Email is not correct");
+                return View();
+            }
+
+            string token = await _userManager.GeneratePasswordResetTokenAsync(user);
+
+            string url = Url.Action("resetpassword", "account", new { email = passwordVM.Email, token = token }, Request.Scheme);
+            url = url.Replace("\u0026", "&");
+
+            _emailSender.Send(passwordVM.Email, "Reset Password", $"Click <a href=\"{url}\">here</a> to reset your password");
+            return RedirectToAction("login");
+        }
+
+        public async Task<IActionResult> ResetPassword(string email, string token)
+        {
+            AppUser user = await _userManager.FindByEmailAsync(email);
+
+            if (user == null || user.IsAdmin || !await _userManager.VerifyUserTokenAsync(user, _userManager.Options.Tokens.PasswordResetTokenProvider, "ResetPassword", token))
+                return RedirectToAction("login");
+
+            ViewBag.Email = email;
+            ViewBag.Token = token;
+
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ResetPassword(ResetPasswordViewModel resetVM)
+        {
+            AppUser user = await _userManager.FindByEmailAsync(resetVM.Email);
+
+            if (user == null || user.IsAdmin)
+                return RedirectToAction("login");
+
+            var result = await _userManager.ResetPasswordAsync(user, resetVM.Token, resetVM.Password);
+
+            if (!result.Succeeded)
+            {
+                return RedirectToAction("login");
+            }
+
+            return RedirectToAction("login");
         }
 
         public async Task<IActionResult> LogOut()
