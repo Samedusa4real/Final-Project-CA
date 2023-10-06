@@ -25,6 +25,14 @@ builder.Services.AddScoped<IEmailSender, EmailSender>();
 
 builder.Services.AddHttpContextAccessor();
 
+builder.Services.AddAuthentication().AddGoogle(opt =>
+{
+    opt.ClientId = "408124144865-0dqsjr4alf7rsh2t335mbcjes8h46j1v.apps.googleusercontent.com";
+    opt.ClientSecret = "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";
+});
+
+
+
 //builder.Services.ConfigureApplicationCookie(options =>
 //{
 //    bool alreadyRedirected = false;

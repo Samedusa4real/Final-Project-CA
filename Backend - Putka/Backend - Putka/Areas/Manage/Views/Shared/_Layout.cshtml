@@ -128,47 +128,6 @@
                 </div>
                 <div class="nav-right col-6 pull-right right-header p-0">
                     <ul class="nav-menus">
-                        <li class="onhover-dropdown">
-                            <div class="notification-box">
-                                <i class="ri-notification-line"></i>
-                                <span class="badge rounded-pill badge-theme">4</span>
-                            </div>
-                            <ul class="notification-dropdown onhover-show-div">
-                                <li>
-                                    <i class="ri-notification-line"></i>
-                                    <h6 class="f-18 mb-0">Notitications</h6>
-                                </li>
-                                <li>
-                                    <p>
-                                        <i class="fa fa-circle me-2 font-primary"></i>Delivery processing <span class="pull-right">10 min.</span>
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>
-                                        <i class="fa fa-circle me-2 font-success"></i>Order Complete<span class="pull-right">1 hr</span>
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>
-                                        <i class="fa fa-circle me-2 font-info"></i>Tickets Generated<span class="pull-right">3 hr</span>
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>
-                                        <i class="fa fa-circle me-2 font-danger"></i>Delivery Complete<span class="pull-right">6 hr</span>
-                                    </p>
-                                </li>
-                                <li>
-                                    <a class="btn btn-primary" href="javascript:void(0)">Check all notification</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <div class="mode">
-                                <i class="ri-moon-line"></i>
-                            </div>
-                        </li>
                         <li class="profile-nav onhover-dropdown pe-0 me-0">
                             <div class="media profile-media">
                                 <img class="user-profile rounded-circle" src="~/manage/assets/images/users/4.jpg" alt="">
@@ -179,32 +138,25 @@
                             </div>
                             <ul class="profile-dropdown onhover-show-div">
                                 <li>
-                                    <a href="all-users.html">
+                                    <a asp-controller="user" asp-action="index">
                                         <i data-feather="users"></i>
                                         <span>Users</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="order-list.html">
+                                    <a asp-controller="order" asp-action="index">
                                         <i data-feather="archive"></i>
                                         <span>Orders</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="support-ticket.html">
-                                        <i data-feather="phone"></i>
-                                        <span>Spports Tickets</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="profile-setting.html">
+                                    <a asp-controller="setting" asp-action="index">
                                         <i data-feather="settings"></i>
                                         <span>Settings</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-                                       href="javascript:void(0)">
+                                    <a asp-controller="account" asp-action="logout">
                                         <i data-feather="log-out"></i>
                                         <span>Log out</span>
                                     </a>
@@ -322,7 +274,7 @@
 
                                 <li class="sidebar-list">
                                     <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
-                                        <i class="fa-solid fa-scale-unbalanced-flip"></i>
+                                        <i class="ri-scales-line"></i>
                                         <span>Weights</span>
                                     </a>
                                     <ul class="sidebar-submenu">
@@ -359,25 +311,22 @@
                                     </a>
                                     <ul class="sidebar-submenu">
                                         <li>
-                                            <a href="all-users.html">All users</a>
-                                        </li>
-                                        <li>
-                                            <a href="add-new-user.html">Add new user</a>
+                                            <a asp-controller="user" asp-action="index">All users</a>
                                         </li>
                                     </ul>
                                 </li>
 
                                 <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title" href="javascript:void(0)">
-                                        <i class="ri-user-3-line"></i>
+                                        <i class="ri-shield-user-line"></i>
                                         <span>Roles</span>
                                     </a>
                                     <ul class="sidebar-submenu">
                                         <li>
-                                            <a href="role.html">All roles</a>
+                                            <a asp-controller="role" asp-action="index">All roles</a>
                                         </li>
                                         <li>
-                                            <a href="create-role.html">Create Role</a>
+                                            <a asp-controller="role" asp-action="create">Create Role</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -389,13 +338,7 @@
                                     </a>
                                     <ul class="sidebar-submenu">
                                         <li>
-                                            <a href="order-list.html">Order List</a>
-                                        </li>
-                                        <li>
-                                            <a href="order-detail.html">Order Detail</a>
-                                        </li>
-                                        <li>
-                                            <a href="order-tracking.html">Order Tracking</a>
+                                            <a asp-controller="order" asp-action="index">Order List</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -444,7 +387,7 @@
                                     </a>
                                     <ul class="sidebar-submenu">
                                         <li>
-                                            <a href="profile-setting.html">Profile Setting</a>
+                                            <a asp-controller="setting" asp-action="index">Layout Settings</a>
                                         </li>
                                     </ul>
                                 </li>

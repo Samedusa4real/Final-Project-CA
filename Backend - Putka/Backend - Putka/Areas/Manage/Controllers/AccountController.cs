@@ -72,5 +72,11 @@ namespace Backend___Putka.Areas.Manage.Controllers
             return RedirectToAction("index", "dashboard");
         }
 
+        public async Task<IActionResult> LogOut()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Login", "Account");
+        }
+
     }
 }

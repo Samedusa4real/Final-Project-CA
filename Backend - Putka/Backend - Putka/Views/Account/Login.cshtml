@@ -93,15 +93,9 @@
                         <div class="log-in-button">
                             <ul>
                                 <li>
-                                    <a href="https://www.google.com/" class="btn google-button w-100">
-                                        <img src="../assets/images/inner-page/google.png" class="blur-up lazyload"
+                                    <a asp-action="googlelogin" class="btn google-button w-100">
+                                        <img src="~/assets/images/inner-page/google.png" class="blur-up lazyload"
                                              alt=""> Log In with Google
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.facebook.com/" class="btn google-button w-100">
-                                        <img src="../assets/images/inner-page/facebook.png" class="blur-up lazyload"
-                                             alt=""> Log In with Facebook
                                     </a>
                                 </li>
                             </ul>
@@ -113,7 +107,7 @@
 
                         <div class="sign-up-box">
                             <h4>Don't have an account?</h4>
-                            <a href="sign-up.html">Sign Up</a>
+                            <a asp-action="register">Sign Up</a>
                         </div>
                     </div>
                 </div>
