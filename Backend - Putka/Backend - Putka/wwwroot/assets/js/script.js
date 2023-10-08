@@ -2,7 +2,7 @@
 // 02. Shop Page Grid Setting Js
 // 03. Footer function js
 // 04. mobile menu active class js
-// 05. btn-cart open close js
+// 05. btn-cart open close jsF
 // 06. quantity js
 // 07. Tap to Top js
 // 08. User Dashboard Left Sidebar Show js

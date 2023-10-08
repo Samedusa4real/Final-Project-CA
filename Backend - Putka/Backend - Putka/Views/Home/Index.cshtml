@@ -13,7 +13,7 @@
                 <div class="col-xl-8 ratio_65">
                     <div class="home-contain h-100">
                         <div class="h-100">
-                            <img src="../assets/images/vegetable/banner/1.jpg" class="bg-img blur-up lazyload" alt="">
+                            <img src="~/assets/images/vegetable/banner/1.jpg" class="bg-img blur-up lazyload" alt="">
                         </div>
                         <div class="home-detail p-center-left w-75">
                             <div>
@@ -60,7 +60,7 @@
 
                         <div class="col-xl-12 col-md-6">
                             <div class="home-contain">
-                                <img src="../assets/images/vegetable/banner/3.jpg" class="bg-img blur-up lazyload"
+                                <img src="~/assets/images/vegetable/banner/3.jpg" class="bg-img blur-up lazyload"
                                      alt="">
                                 <div class="home-detail p-center-left home-p-sm w-75">
                                     <div>
@@ -86,7 +86,7 @@
             <div class="banner-slider">
                 <div>
                     <div class="banner-contain hover-effect">
-                        <img src="../assets/images/vegetable/banner/4.jpg" class="bg-img blur-up lazyload" alt="">
+                        <img src="~/assets/images/vegetable/banner/4.jpg" class="bg-img blur-up lazyload" alt="">
                         <div class="banner-details">
                             <div class="banner-box">
                                 <h6 class="text-danger">5% OFF</h6>
@@ -102,7 +102,7 @@
 
                 <div>
                     <div class="banner-contain hover-effect">
-                        <img src="../assets/images/vegetable/banner/5.jpg" class="bg-img blur-up lazyload" alt="">
+                        <img src="~/assets/images/vegetable/banner/5.jpg" class="bg-img blur-up lazyload" alt="">
                         <div class="banner-details">
                             <div class="banner-box">
                                 <h6 class="text-danger">5% OFF</h6>
@@ -378,6 +378,8 @@
 
                                 @foreach (var item in Model.Products)
                                 {
+                                    int rate = item.ProductComments.Any() ? (int)Math.Ceiling(item.ProductComments.Average(x => x.Rate)) : 0;
+
                                     if (item.Id % 2 != 0)
                                     {
                                         <div>
@@ -400,9 +402,9 @@
 
                                                                 <li data-bs-toggle="tooltip" data-bs-placement="top"
                                                                     title="Wishlist">
-                                                                    <a href="wishlist.html" class="notifi-wishlist">
-                                                                        <i data-feather="heart"></i>
-                                                                    </a>
+                                                                    <a asp-controller="product" asp-action="addtowishlist" asp-route-id="@item.Id" class="notifi-wishlist addtowishlist">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart" id="heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                                                                    </a>    
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -425,24 +427,24 @@
 
                                                             <div class="product-rating mt-sm-2 mt-1">
                                                                 <ul class="rating">
-                                                                    <li>
-                                                                        <i data-feather="star" class="fill"></i>
-                                                                    </li>
-                                                                    <li>
-                                                                        <i data-feather="star" class="fill"></i>
-                                                                    </li>
-                                                                    <li>
-                                                                        <i data-feather="star" class="fill"></i>
-                                                                    </li>
-                                                                    <li>
-                                                                        <i data-feather="star" class="fill"></i>
-                                                                    </li>
-                                                                    <li>
-                                                                        <i data-feather="star"></i>
-                                                                    </li>
+                                                                    @for (int i = 1; i <= 5; i++)
+                                                                    {
+                                                                        <li>
+                                                                            <i data-feather="star" class="@(i <= rate ? "fill" : "")"></i>
+                                                                        </li>
+                                                                    }
                                                                 </ul>
 
-                                                                <h6 class="theme-color">In Stock</h6>
+                                                                <h6 class="theme-color">
+                                                                    @if (item.StockStatus)
+                                                                    {
+                                                                        <text>In Stock</text>
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        <text>Out of Stock</text>
+                                                                    }
+                                                                </h6>
                                                             </div>
 
                                                             <div class="add-to-cart-box">

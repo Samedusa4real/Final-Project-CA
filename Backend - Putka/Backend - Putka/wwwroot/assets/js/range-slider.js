@@ -2709,12 +2709,16 @@ export function priceFilter(){
     // Trigger
 
     $(function () {
+        var viewBagMax = document.getElementById("jsValueMax").value;
+        var viewBagMin = document.getElementById("jsValueMin").value;
+        var viewBagMaxPriceLimit = document.getElementById("jsMaxPriceLimit").value;
+
       var $range = $(".js-range-slider"),
-        $inputFrom = $(".js-input-from"),
-        $inputTo = $(".js-input-to"),
+        $inputFrom = $("#minPriceInput"),
+        $inputTo = $("#maxPriceInput"),
         instance,
         min = 0,
-        max = 1000000,
+        max = viewBagMaxPriceLimit,
         from = 0,
         to = 0;
 
@@ -2722,12 +2726,12 @@ export function priceFilter(){
         type: "double",
         min: min,
         max: max,
-        from: 0,
-        to: 500000,
+        from: viewBagMin,
+        to: viewBagMax,
         prefix: "$. ",
         onStart: updateInputs,
         onChange: updateInputs,
-        step: 50000,
+        step: 10,
         prettify_enabled: true,
         prettify_separator: ".",
         values_separator: " - ",
