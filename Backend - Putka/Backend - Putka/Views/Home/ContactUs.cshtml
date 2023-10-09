@@ -1,4 +1,5 @@
-﻿@{
+﻿@model ContactUs
+@{
     ViewBag.Title = "Contact Us | Putka";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -15,7 +16,7 @@
                         <nav>
                             <ol class="breadcrumb mb-0">
                                 <li class="breadcrumb-item">
-                                    <a href="index.html">
+                                    <a asp-controller="home" asp-action="index">
                                         <i class="fa-solid fa-house"></i>
                                     </a>
                                 </li>
@@ -37,7 +38,7 @@
                         <div class="row">
                             <div class="col-xl-12">
                                 <div class="contact-image">
-                                    <img src="../assets/images/inner-page/contact-us.png"
+                                    <img src="~/assets/images/inner-page/contact-us.png"
                                          class="img-fluid blur-up lazyloaded" alt="">
                                 </div>
                             </div>
@@ -58,7 +59,7 @@
                                                 </div>
 
                                                 <div class="contact-detail-contain">
-                                                    <p>(+1) 618 190 496</p>
+                                                    <p>(+994) 55 869 03 96</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -73,7 +74,7 @@
                                                 </div>
 
                                                 <div class="contact-detail-contain">
-                                                    <p>geweto9420@chokxus.com</p>
+                                                    <p>samadnm@code.edu.az</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -84,11 +85,11 @@
                                                     <i class="fa-solid fa-location-dot"></i>
                                                 </div>
                                                 <div class="contact-detail-title">
-                                                    <h4>London Office</h4>
+                                                    <h4>Goycha Office</h4>
                                                 </div>
 
                                                 <div class="contact-detail-contain">
-                                                    <p>Cruce Casa de Postas 29</p>
+                                                    <p>Qhosha de Bulhag 20</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -99,11 +100,11 @@
                                                     <i class="fa-solid fa-building"></i>
                                                 </div>
                                                 <div class="contact-detail-title">
-                                                    <h4>Bournemouth Office</h4>
+                                                    <h4>Ganja Office</h4>
                                                 </div>
 
                                                 <div class="contact-detail-contain">
-                                                    <p>Visitación de la Encina 22</p>
+                                                    <p>New la Ganja 21</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -119,64 +120,68 @@
                         <h2>Contact Us</h2>
                     </div>
                     <div class="right-sidebar-box">
-                        <div class="row">
-                            <div class="col-xxl-6 col-lg-12 col-sm-6">
-                                <div class="mb-md-4 mb-3 custom-form">
-                                    <label for="exampleFormControlInput" class="form-label">First Name</label>
-                                    <div class="custom-input">
-                                        <input type="text" class="form-control" id="exampleFormControlInput"
-                                               placeholder="Enter First Name">
-                                        <i class="fa-solid fa-user"></i>
+                        <form method="post" asp-action="contactus">
+                            <div class="row">
+                                <div class="col-xxl-6 col-lg-12 col-sm-6">
+                                    <div class="mb-md-4 mb-3 custom-form">
+                                        <label asp-for="FirstName" class="form-label">First Name</label>
+                                        <div class="custom-input">
+                                            <input asp-for="FirstName" class="form-control" placeholder="Enter First Name">
+                                            <i class="fa-solid fa-user"></i>
+                                        </div>
+                                        <span class="text-danger" asp-validation-for="FirstName"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-xxl-6 col-lg-12 col-sm-6">
+                                    <div class="mb-md-4 mb-3 custom-form">
+                                        <label asp-for="LastName" class="form-label">Last Name</label>
+                                        <div class="custom-input">
+                                            <input asp-for="LastName" class="form-control" placeholder="Enter Last Name">
+                                            <i class="fa-solid fa-user"></i>
+                                        </div>
+                                        <span class="text-danger" asp-validation-for="LastName"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-xxl-6 col-lg-12 col-sm-6">
+                                    <div class="mb-md-4 mb-3 custom-form">
+                                        <label asp-for="Email" class="form-label">Email Address</label>
+                                        <div class="custom-input">
+                                            <input asp-for="Email" class="form-control" placeholder="Enter Email Address">
+                                            <i class="fa-solid fa-envelope"></i>
+                                        </div>
+                                        <span class="text-danger" asp-validation-for="Email"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-xxl-6 col-lg-12 col-sm-6">
+                                    <div class="mb-md-4 mb-3 custom-form">
+                                        <label asp-for="Phone" class="form-label">Phone Number</label>
+                                        <div class="custom-input">
+                                            <input asp-for="Phone" class="form-control" placeholder="Enter Your Phone Number">
+                                            <i class="fa-solid fa-mobile-screen-button"></i>
+                                        </div>
+                                        <span class="text-danger" asp-validation-for="Phone"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="mb-md-4 mb-3 custom-form">
+                                        <label asp-for="Message" class="form-label">Message</label>
+                                        <div class="custom-textarea">
+                                            <textarea class="form-control" asp-for="Message" placeholder="Enter Your Message" rows="6"></textarea>
+                                            <i class="fa-solid fa-message"></i>
+                                        </div>
+                                        <span class="text-danger" asp-validation-for="Message"></span>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-xxl-6 col-lg-12 col-sm-6">
-                                <div class="mb-md-4 mb-3 custom-form">
-                                    <label for="exampleFormControlInput1" class="form-label">Last Name</label>
-                                    <div class="custom-input">
-                                        <input type="text" class="form-control" id="exampleFormControlInput1"
-                                               placeholder="Enter Last Name">
-                                        <i class="fa-solid fa-user"></i>
-                                    </div>
-                                </div>
-                            </div>
+                            <div asp-validation-summary="ModelOnly"></div>
 
-                            <div class="col-xxl-6 col-lg-12 col-sm-6">
-                                <div class="mb-md-4 mb-3 custom-form">
-                                    <label for="exampleFormControlInput2" class="form-label">Email Address</label>
-                                    <div class="custom-input">
-                                        <input type="email" class="form-control" id="exampleFormControlInput2"
-                                               placeholder="Enter Email Address">
-                                        <i class="fa-solid fa-envelope"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-xxl-6 col-lg-12 col-sm-6">
-                                <div class="mb-md-4 mb-3 custom-form">
-                                    <label for="exampleFormControlInput3" class="form-label">Phone Number</label>
-                                    <div class="custom-input">
-                                        <input type="tel" class="form-control" id="exampleFormControlInput3"
-                                               placeholder="Enter Your Phone Number" maxlength="10" oninput="javascript: if (this.value.length > this.maxLength) this.value =
-                                            this.value.slice(0, this.maxLength);">
-                                        <i class="fa-solid fa-mobile-screen-button"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <div class="mb-md-4 mb-3 custom-form">
-                                    <label for="exampleFormControlTextarea" class="form-label">Message</label>
-                                    <div class="custom-textarea">
-                                        <textarea class="form-control" id="exampleFormControlTextarea"
-                                                  placeholder="Enter Your Message" rows="6"></textarea>
-                                        <i class="fa-solid fa-message"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="btn btn-animation btn-md fw-bold ms-auto">Send Message</button>
+                            <button type="submit" class="btn btn-animation btn-md fw-bold ms-auto">Send Message</button>
+                        </form>
                     </div>
                 </div>
             </div>

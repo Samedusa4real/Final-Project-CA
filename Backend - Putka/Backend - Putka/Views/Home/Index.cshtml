@@ -28,7 +28,7 @@
                                     Vegetables contain many vitamins and minerals that are
                                     good for your health.
                                 </p>
-                                <button onclick="location.href = 'shop.html';"
+                                <button onclick="location.href = '@Url.Action("Index", "Shop")';"
                                         class="btn btn-animation mt-xxl-4 mt-2 home-button mend-auto">
                                     Shop Now <i class="fa-solid fa-right-long icon"></i>
                                 </button>
@@ -41,7 +41,7 @@
                     <div class="row g-4">
                         <div class="col-xl-12 col-md-6">
                             <div class="home-contain">
-                                <img src="../assets/images/vegetable/banner/2.jpg" class="bg-img blur-up lazyload"
+                                <img src="~/assets/images/vegetable/banner/2.jpg" class="bg-img blur-up lazyload"
                                      alt="">
                                 <div class="home-detail p-center-left home-p-sm w-75">
                                     <div>
@@ -50,7 +50,7 @@
                                         </h2>
                                         <h3 class="theme-color">Nut Collection</h3>
                                         <p class="w-75">We deliver organic vegetables & fruits</p>
-                                        <a href="shop.html" class="shop-button">
+                                        <a asp-controller="shop" asp-action="index" class="shop-button">
                                             Shop Now <i class="fa-solid fa-right-long"></i>
                                         </a>
                                     </div>
@@ -67,7 +67,7 @@
                                         <h3 class="mt-0 theme-color fw-bold">Healthy Food</h3>
                                         <h4 class="text-danger">Organic Market</h4>
                                         <p class="organic">Start your daily shopping with some Organic food</p>
-                                        <a href="shop.html" class="shop-button">
+                                        <a asp-controller="shop" asp-action="index" class="shop-button">
                                             Shop Now <i class="fa-solid fa-right-long"></i>
                                         </a>
                                     </div>
@@ -93,7 +93,7 @@
                                 <h5>Hot Deals on New Items</h5>
                                 <h6 class="text-content">Daily Essentials Eggs & Dairy</h6>
                             </div>
-                            <a href="shop-left-sidebar.html" class="banner-button text-white">
+                            <a asp-controller="shop" asp-action="index" class="banner-button text-white">
                                 Shop Now <i class="fa-solid fa-right-long ms-2"></i>
                             </a>
                         </div>
@@ -109,7 +109,7 @@
                                 <h5>Buy More & Save More</h5>
                                 <h6 class="text-content">Fresh Vegetables</h6>
                             </div>
-                            <a href="shop-left-sidebar.html" class="banner-button text-white">
+                            <a asp-controller="shop" asp-action="index" class="banner-button text-white">
                                 Shop Now <i class="fa-solid fa-right-long ms-2"></i>
                             </a>
                         </div>
@@ -125,7 +125,7 @@
                                 <h5>Organic Meat Prepared</h5>
                                 <h6 class="text-content">Delivered to Your Home</h6>
                             </div>
-                            <a href="shop-left-sidebar.html" class="banner-button text-white">
+                            <a asp-controller="shop" asp-action="index" class="banner-button text-white">
                                 Shop Now <i class="fa-solid fa-right-long ms-2"></i>
                             </a>
                         </div>
@@ -141,7 +141,7 @@
                                 <h5>Buy More & Save More</h5>
                                 <h6 class="text-content">Nuts & Snacks</h6>
                             </div>
-                            <a href="shop-left-sidebar.html" class="banner-button text-white">
+                            <a asp-controller="shop" asp-action="index" class="banner-button text-white">
                                 Shop Now <i class="fa-solid fa-right-long ms-2"></i>
                             </a>
                         </div>
@@ -160,68 +160,24 @@
                         <div class="category-menu">
                             <h3>Category</h3>
                             <ul>
-                                <li>
-                                    <div class="category-list">
-                                        <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/vegetable.svg" class="blur-up lazyload" alt="">
-                                        <h5>
-                                            <a href="shop-left-sidebar.html">Vegetables & Fruit</a>
-                                        </h5>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="category-list">
-                                        <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/meats.svg" class="blur-up lazyload" alt="">
-                                        <h5>
-                                            <a href="shop-left-sidebar.html">Meats & Seafood</a>
-                                        </h5>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="category-list">
-                                        <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/breakfast.svg" class="blur-up lazyload" alt="">
-                                        <h5>
-                                            <a href="shop-left-sidebar.html">Breakfast & Dairy</a>
-                                        </h5>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="category-list">
-                                        <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/biscuit.svg" class="blur-up lazyload" alt="">
-                                        <h5>
-                                            <a href="shop-left-sidebar.html">Biscuits & Snacks</a>
-                                        </h5>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="category-list">
-                                        <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/cup.svg" class="blur-up lazyload" alt="">
-                                        <h5>
-                                            <a href="shop-left-sidebar.html">Beverages</a>
-                                        </h5>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="category-list">
-                                        <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/drink.svg" class="blur-up lazyload" alt="">
-                                        <h5>
-                                            <a href="shop-left-sidebar.html">Wines & Alcohol Drinks</a>
-                                        </h5>
-                                    </div>
-                                </li>
-                                <li class="mb-3">
-                                    <div class="category-list">
-                                        <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/milk.svg" class="blur-up lazyload" alt="">
-                                        <h5>
-                                            <a href="shop-left-sidebar.html">Milk & Dairies</a>
-                                        </h5>
-                                    </div>
-                                </li>
+                                @foreach (var item in Model.Categories)
+                                {
+                                    <li>
+                                        <div class="category-list">
+                                            <img src="/assets/svg/@item.Icon" class="blur-up lazyload" alt="">
+                                            <h5>
+                                                <a href="@Url.Action("Index", "Shop", new { categoryId = item.Id })">@item.Name</a>
+                                            </h5>
+                                        </div>
+                                    </li>
+                                }
+                                
                             </ul>
                         </div>
 
                         <div class="ratio_medium section-t-space">
                             <div class="home-contain hover-effect">
-                                <img src="../assets/images/vegetable/banner/11.jpg" class="img-fluid blur-up lazyload"
+                                <img src="~/assets/images/vegetable/banner/11.jpg" class="img-fluid blur-up lazyload"
                                      alt="">
                                 <div class="home-detail p-top-left home-p-medium">
                                     <div>
@@ -229,7 +185,7 @@
                                         <h2 class="text-uppercase fw-normal mb-0 text-russo theme-color">fresh</h2>
                                         <h2 class="text-uppercase fw-normal text-title">Vegetables</h2>
                                         <p class="mb-3">Super Offer to 50% Off</p>
-                                        <button onclick="location.href = 'shop-left-sidebar.html';"
+                                        <button onclick="location.href = '@Url.Action("Index", "Shop")';"
                                                 class="btn btn-animation btn-md mend-auto">
                                             Shop Now <i class="fa-solid fa-arrow-right icon"></i>
                                         </button>
@@ -243,81 +199,26 @@
                                 <h3>Trending Products</h3>
 
                                 <ul class="product-list border-0 p-0 d-block">
-                                    <li>
-                                        <div class="offer-product">
-                                            <a href="product-left-thumbnail.html" class="offer-image">
-                                                <img src="../assets/images/vegetable/product/23.png"
-                                                     class="blur-up lazyload" alt="">
-                                            </a>
+                                    @foreach (var item in Model.TrendingProducts)
+                                    {
+                                        <li>
+                                            <div class="offer-product">
+                                                <a asp-controller="product" asp-action="detail" asp-route-id="@item.Id" class="offer-image">
+                                                    <img src="~/uploads/products/@item.ProductImages.FirstOrDefault(x=>x.IsMain == true)?.Url"
+                                                         class="blur-up lazyload" alt="">
+                                                </a>
 
-                                            <div class="offer-detail">
-                                                <div>
-                                                    <a href="product-left-thumbnail.html" class="text-title">
-                                                        <h6 class="name">Meatigo Premium Goat Curry</h6>
-                                                    </a>
-                                                    <span>450 G</span>
-                                                    <h6 class="price theme-color">$ 70.00</h6>
+                                                <div class="offer-detail">
+                                                    <div>
+                                                        <a asp-controller="product" asp-action="detail" asp-route-id="@item.Id" class="text-title">
+                                                            <h6 class="name">@item.Name</h6>
+                                                        </a>
+                                                        <h6 class="price theme-color">$ @((item.SalePrice * (100 - item.DiscountPercent) / 100).ToString("0.00"))</h6>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </li>
-
-                                    <li>
-                                        <div class="offer-product">
-                                            <a href="product-left-thumbnail.html" class="offer-image">
-                                                <img src="../assets/images/vegetable/product/24.png"
-                                                     class="blur-up lazyload" alt="">
-                                            </a>
-
-                                            <div class="offer-detail">
-                                                <div>
-                                                    <a href="product-left-thumbnail.html" class="text-title">
-                                                        <h6 class="name">Dates Medjoul Premium Imported</h6>
-                                                    </a>
-                                                    <span>450 G</span>
-                                                    <h6 class="price theme-color">$ 40.00</h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li>
-                                        <div class="offer-product">
-                                            <a href="product-left-thumbnail.html" class="offer-image">
-                                                <img src="../assets/images/vegetable/product/25.png"
-                                                     class="blur-up lazyload" alt="">
-                                            </a>
-
-                                            <div class="offer-detail">
-                                                <div>
-                                                    <a href="product-left-thumbnail.html" class="text-title">
-                                                        <h6 class="name">Good Life Walnut Kernels</h6>
-                                                    </a>
-                                                    <span>200 G</span>
-                                                    <h6 class="price theme-color">$ 52.00</h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li class="mb-0">
-                                        <div class="offer-product">
-                                            <a href="product-left-thumbnail.html" class="offer-image">
-                                                <img src="../assets/images/vegetable/product/26.png"
-                                                     class="blur-up lazyload" alt="">
-                                            </a>
-
-                                            <div class="offer-detail">
-                                                <div>
-                                                    <a href="product-left-thumbnail.html" class="text-title">
-                                                        <h6 class="name">Apple Red Premium Imported</h6>
-                                                    </a>
-                                                    <span>1 KG</span>
-                                                    <h6 class="price theme-color">$ 80.00</h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
+                                        </li>
+                                    }
                                 </ul>
                             </div>
                         </div>
@@ -409,7 +310,7 @@
                                                             </ul>
                                                         </div>
                                                         <div class="product-detail">
-                                                            <a asp-controller="product" asp-action="detail">
+                                                            <a asp-controller="product" asp-action="detail" asp-route-id="@item.Id">
                                                                 <h6 class="name">@item.Name</h6>
                                                             </a>
 
@@ -500,14 +401,14 @@
                                 {
                                     <li>
                                         <div class="offer-product">
-                                            <a href="product-left-thumbnail.html" class="offer-image">
+                                            <a asp-controller="product" asp-action="detail" asp-route-id="@item.Id" class="offer-image">
                                                 <img src="/assets/images/vegetable/product/@item.ProductImages.FirstOrDefault(x=>x.IsMain == true)?.Url"
                                                      class="blur-up lazyload" alt="">
                                             </a>
 
                                             <div class="offer-detail">
                                                 <div>
-                                                    <a href="product-left-thumbnail.html" class="text-title">
+                                                    <a asp-controller="product" asp-action="detail" asp-route-id="@item.Id" class="text-title">
                                                         <h6 class="name">@item.Name</h6>
                                                     </a>
                                                     <span>500 G</span>
@@ -533,14 +434,14 @@
                                 {
                                     <li>
                                         <div class="offer-product">
-                                            <a href="product-left-thumbnail.html" class="offer-image">
+                                            <a asp-controller="product" asp-action="detail" asp-route-id="@item.Id" class="offer-image">
                                                 <img src="/assets/images/vegetable/product/@item.ProductImages.FirstOrDefault(x=>x.IsMain == true)?.Url"
                                                      class="blur-up lazyload" alt="">
                                             </a>
 
                                             <div class="offer-detail">
                                                 <div>
-                                                    <a href="product-left-thumbnail.html" class="text-title">
+                                                    <a asp-controller="product" asp-action="detail" asp-route-id="@item.Id" class="text-title">
                                                         <h6 class="name">@item.Name</h6>
                                                     </a>
                                                     <span>500 G</span>
@@ -566,14 +467,14 @@
                                 {
                                     <li>
                                         <div class="offer-product">
-                                            <a href="product-left-thumbnail.html" class="offer-image">
+                                            <a asp-controller="product" asp-action="detail" asp-route-id="@item.Id" class="offer-image">
                                                 <img src="/assets/images/vegetable/product/@item.ProductImages.FirstOrDefault(x=>x.IsMain == true)?.Url"
                                                      class="blur-up lazyload" alt="">
                                             </a>
 
                                             <div class="offer-detail">
                                                 <div>
-                                                    <a href="product-left-thumbnail.html" class="text-title">
+                                                    <a asp-controller="product" asp-action="detail" asp-route-id="@item.Id" class="text-title">
                                                         <h6 class="name">@item.Name</h6>
                                                     </a>
                                                     <span>500 G</span>
@@ -605,13 +506,13 @@
                         <div>
                             <div class="blog-box">
                                 <div class="blog-box-image">
-                                    <a href="blog-detail.html" class="blog-image">
-                                        <img src="../assets/images/vegetable/blog/1.jpg" class="bg-img blur-up lazyload"
+                                    <a asp-controller="home" asp-action="blogs" class="blog-image">
+                                        <img src="~/assets/images/vegetable/blog/1.jpg" class="bg-img blur-up lazyload"
                                              alt="">
                                     </a>
                                 </div>
 
-                                <a href="blog-detail.html" class="blog-detail">
+                                <a asp-controller="home" asp-action="blogs" class="blog-detail">
                                     <h6>20 March, 2022</h6>
                                     <h5>Fresh Vegetable Online</h5>
                                 </a>
@@ -621,13 +522,13 @@
                         <div>
                             <div class="blog-box">
                                 <div class="blog-box-image">
-                                    <a href="blog-detail.html" class="blog-image">
-                                        <img src="../assets/images/vegetable/blog/2.jpg" class="bg-img blur-up lazyload"
+                                    <a asp-controller="home" asp-action="blogs" class="blog-image">
+                                        <img src="~/assets/images/vegetable/blog/2.jpg" class="bg-img blur-up lazyload"
                                              alt="">
                                     </a>
                                 </div>
 
-                                <a href="blog-detail.html" class="blog-detail">
+                                <a asp-controller="home" asp-action="blogs" class="blog-detail">
                                     <h6>10 April, 2022</h6>
                                     <h5>Fresh Combo Fruit</h5>
                                 </a>
@@ -637,13 +538,13 @@
                         <div>
                             <div class="blog-box">
                                 <div class="blog-box-image">
-                                    <a href="blog-detail.html" class="blog-image">
-                                        <img src="../assets/images/vegetable/blog/3.jpg" class="bg-img blur-up lazyload"
+                                    <a asp-controller="home" asp-action="blogs" class="blog-image">
+                                        <img src="~/assets/images/vegetable/blog/3.jpg" class="bg-img blur-up lazyload"
                                              alt="">
                                     </a>
                                 </div>
 
-                                <a href="blog-detail.html" class="blog-detail">
+                                <a asp-controller="home" asp-action="blogs" class="blog-detail">
                                     <h6>10 April, 2022</h6>
                                     <h5>Nuts to Eat for Better Health</h5>
                                 </a>
@@ -653,13 +554,13 @@
                         <div>
                             <div class="blog-box">
                                 <div class="blog-box-image">
-                                    <a href="blog-detail.html" class="blog-image">
-                                        <img src="../assets/images/vegetable/blog/1.jpg" class="bg-img blur-up lazyload"
+                                    <a asp-controller="home" asp-action="blogs" class="blog-image">
+                                        <img src="~/assets/images/vegetable/blog/1.jpg" class="bg-img blur-up lazyload"
                                              alt="">
                                     </a>
                                 </div>
 
-                                <a href="blog-detail.html" class="blog-detail">
+                                <a asp-controller="home" asp-action="blogs" class="blog-detail">
                                     <h6>20 March, 2022</h6>
                                     <h5>Fresh Vegetable Online</h5>
                                 </a>

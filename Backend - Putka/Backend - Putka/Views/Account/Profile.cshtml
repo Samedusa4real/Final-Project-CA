@@ -18,7 +18,7 @@
                         <nav>
                             <ol class="breadcrumb mb-0">
                                 <li class="breadcrumb-item">
-                                    <a href="index.html">
+                                    <a asp-controller="home" asp-action="index">
                                         <i class="fa-solid fa-house"></i>
                                     </a>
                                 </li>
@@ -207,14 +207,14 @@
                                                 @foreach (var item in order.OrderItems)
                                                 {
                                                     <div class="product-order-detail">
-                                                        <a href="product-left-thumbnail.html" class="order-image">
+                                                        <a asp-controller="product" asp-action="detail" asp-route-id="@item.Product.Id" class="order-image">
                                                             <img src="~/uploads/products/@item.Product.ProductImages.FirstOrDefault(x=>x.IsMain == true)?.Url"
                                                                 style="width: 200px" 
                                                                 class="blur-up lazyload" alt="">
                                                         </a>
 
                                                         <div class="order-wrap">
-                                                            <a href="product-left-thumbnail.html">
+                                                            <a asp-controller="product" asp-action="detail" asp-route-id="@item.Product.Id">
                                                                 <h3>@item.Product.Name</h3>
                                                             </a>
                                                             <ul class="product-size">

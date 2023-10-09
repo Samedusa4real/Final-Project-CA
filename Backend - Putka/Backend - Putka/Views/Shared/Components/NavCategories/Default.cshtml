@@ -30,10 +30,9 @@
                                 @foreach (var product in item.Products)
                                 {
                                     <li>
-                                        <a href="javascript:void(0)">@product.Name</a>
+                                        <a href="@Url.Action("Index", "Shop", new { categoryId = product.CategoryId })">@product.Name</a>
                                     </li>
                                 }
-
                             </ul>
                         </div>
                     </div>

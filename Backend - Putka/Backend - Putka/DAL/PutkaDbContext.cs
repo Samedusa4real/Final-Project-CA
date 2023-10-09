@@ -24,6 +24,7 @@ namespace Backend___Putka.DAL
         public DbSet<ProductComment> ProductComments { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }
+        public DbSet<ContactUs> ContactUs { get; set; }
 
 
 

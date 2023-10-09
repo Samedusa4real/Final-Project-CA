@@ -107,7 +107,7 @@ namespace Backend___Putka.Controllers
             _context.Orders.Add(order);
             _context.SaveChanges();
 
-            return RedirectToAction("index", "home");
+            return RedirectToAction("Order", "OrderSuccess");
         }
 
         private void ClearDbBasket(string userId)

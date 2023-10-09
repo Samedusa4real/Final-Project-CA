@@ -240,7 +240,19 @@ namespace Backend___Putka.Controllers
 
         public IActionResult Cart()
         {
-            return View();
+            BasketViewModel basketVM = new BasketViewModel();
+            foreach (var item in basketVM.BasketItems)
+            {
+                BasketItemViewModel bi = new BasketItemViewModel
+                {
+                    Count = item.Count,
+                    Product = item.Product
+                };
+                basketVM.BasketItems.Add(bi);
+                basketVM.TotalPrice += (bi.Product.DiscountPercent > 0 ? (bi.Product.SalePrice * (100 - bi.Product.DiscountPercent) / 100) : bi.Product.SalePrice) * bi.Count;
+            }
+
+            return View(basketVM);
         }
 
         public IActionResult Wishlist()
