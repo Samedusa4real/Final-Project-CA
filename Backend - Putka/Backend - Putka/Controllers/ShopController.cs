@@ -98,9 +98,29 @@ namespace Backend___Putka.Controllers
             return View(shopVM);
         }
 
-        public IActionResult Search()
+        public IActionResult Search(string search = null)
         {
-            return View();
+            SearchViewModel searchVM = new SearchViewModel
+            {
+                Products = _context.Products.Include(x => x.Category)
+                                            .Include(x => x.ProductImages)
+                                            .Include(x => x.ProductTags)
+                                            .ToList(),
+            };
+
+            var query = _context.Products.Include(x => x.Category)
+                                            .Include(x => x.ProductImages)
+                                            .Include(x => x.ProductTags)
+                                            .AsQueryable();
+
+            if (search != null)
+                query = query.Where(x => x.Name.Contains(search));
+
+            searchVM.Products = query.ToList();
+
+            ViewBag.Search = search;
+
+            return View(searchVM);
         }
     }
 }

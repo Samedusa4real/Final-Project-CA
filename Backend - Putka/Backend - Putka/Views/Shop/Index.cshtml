@@ -186,7 +186,7 @@
                                 <div class="product-box-3 h-100 wow fadeInUp" @(delayCount > 0 ? $"data-wow-daley=\"{delayCount}\"" : "")>
                                     <div class="product-header">
                                         <div class="product-image">
-                                            <a href="product-left-thumbnail.html">
+                                            <a asp-controller="product" asp-action="detail" asp-route-id="@item.Id">
                                                 <img src="~/uploads/products/@item.ProductImages.FirstOrDefault(x=>x.IsMain == true)?.Url"
                                                      class="img-fluid blur-up lazyload"
                                                      alt="" />
@@ -210,7 +210,7 @@
                                     <div class="product-footer">
                                         <div class="product-detail">
                                             <span class="span-name">@item.Category.Name</span>
-                                            <a href="product-left-thumbnail.html">
+                                            <a asp-controller="product" asp-action="detail" asp-route-id="@item.Id">
                                                 <h5 class="name">
                                                     @item.Name
                                                 </h5>
