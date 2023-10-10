@@ -9917,6 +9917,34 @@
       "PackagePath": "staticwebassets\\manage\\assets\\svg\\vegetable.svg"
     },
     {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\banners\\4ee8b1d4-9205-4e5f-8de1-b7ab26313d236.jpg",
+      "PackagePath": "staticwebassets\\uploads\\banners\\4ee8b1d4-9205-4e5f-8de1-b7ab26313d236.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\banners\\4f9feebc-e54f-45cd-8fbc-4755b39d69fe4.jpg",
+      "PackagePath": "staticwebassets\\uploads\\banners\\4f9feebc-e54f-45cd-8fbc-4755b39d69fe4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\banners\\99b2e76d-70f2-4345-950c-5641954a9f625.jpg",
+      "PackagePath": "staticwebassets\\uploads\\banners\\99b2e76d-70f2-4345-950c-5641954a9f625.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\banners\\9fe6a8b3-ac61-4f77-83d5-004c614951f97.jpg",
+      "PackagePath": "staticwebassets\\uploads\\banners\\9fe6a8b3-ac61-4f77-83d5-004c614951f97.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\banners\\ea539040-1c16-4e6a-bf3f-5156e849503a3.jpg",
+      "PackagePath": "staticwebassets\\uploads\\banners\\ea539040-1c16-4e6a-bf3f-5156e849503a3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\banners\\eb58a175-79d1-4d66-bf34-2240326ea5d51.jpg",
+      "PackagePath": "staticwebassets\\uploads\\banners\\eb58a175-79d1-4d66-bf34-2240326ea5d51.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\banners\\f7e6b3bf-0904-4fe8-b80e-7a6658d3b3592.jpg",
+      "PackagePath": "staticwebassets\\uploads\\banners\\f7e6b3bf-0904-4fe8-b80e-7a6658d3b3592.jpg"
+    },
+    {
       "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\categories\\23ca36e8-ec7a-44e8-b76e-8fceb10cba00peska.png",
       "PackagePath": "staticwebassets\\uploads\\categories\\23ca36e8-ec7a-44e8-b76e-8fceb10cba00peska.png"
     },
@@ -9969,36 +9997,192 @@
       "PackagePath": "staticwebassets\\uploads\\categories\\vegetable.svg"
     },
     {
-      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\1.jpg",
-      "PackagePath": "staticwebassets\\uploads\\products\\1.jpg"
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\04fdcd45-07a8-4e04-967a-3eb7cef00b4c2.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\04fdcd45-07a8-4e04-967a-3eb7cef00b4c2.png"
     },
     {
-      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\2.jpg",
-      "PackagePath": "staticwebassets\\uploads\\products\\2.jpg"
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\077003e6-3d55-4969-845d-8a138cca60a99.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\077003e6-3d55-4969-845d-8a138cca60a99.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\1489050d-2af9-4b74-ad11-94a807dc233a9.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\1489050d-2af9-4b74-ad11-94a807dc233a9.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\19c5347a-2eaa-478a-b768-45f6ba715e9c9.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\19c5347a-2eaa-478a-b768-45f6ba715e9c9.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\1e99f7b2-74ce-4ebc-b118-65c93b818ffc8.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\1e99f7b2-74ce-4ebc-b118-65c93b818ffc8.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\2074f2a4-2dc4-43c9-891b-33644c1f264f1.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\2074f2a4-2dc4-43c9-891b-33644c1f264f1.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\2970a87d-17de-42e4-b806-78643388039919.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\2970a87d-17de-42e4-b806-78643388039919.png"
     },
     {
       "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\2a7f0a41-db7d-48fa-ae37-2e3f3d52f119putka3.png",
       "PackagePath": "staticwebassets\\uploads\\products\\2a7f0a41-db7d-48fa-ae37-2e3f3d52f119putka3.png"
     },
     {
-      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\3.jpg",
-      "PackagePath": "staticwebassets\\uploads\\products\\3.jpg"
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\341eac50-84bb-4a7d-8923-d0b3538d63bd3.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\341eac50-84bb-4a7d-8923-d0b3538d63bd3.png"
     },
     {
-      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\4.jpg",
-      "PackagePath": "staticwebassets\\uploads\\products\\4.jpg"
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\3c8aff82-cf50-4a22-abc6-70a5cb3ced958.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\3c8aff82-cf50-4a22-abc6-70a5cb3ced958.png"
     },
     {
-      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\5.jpg",
-      "PackagePath": "staticwebassets\\uploads\\products\\5.jpg"
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\41d5e027-6f9f-497c-a263-5100b4102d6d12.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\41d5e027-6f9f-497c-a263-5100b4102d6d12.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\42af54c0-b6a7-4386-a36d-eb3efeb378349.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\42af54c0-b6a7-4386-a36d-eb3efeb378349.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\4627be36-f502-4d48-8a13-7758c74ec2939.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\4627be36-f502-4d48-8a13-7758c74ec2939.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\46ebd1eb-a671-4def-92ad-4869e40502c413.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\46ebd1eb-a671-4def-92ad-4869e40502c413.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\4a0d727f-046a-4c76-852c-e56da96e4ce27.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\4a0d727f-046a-4c76-852c-e56da96e4ce27.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\4a27f27c-83ff-4b6e-a603-6e412fc8ca1e22.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\4a27f27c-83ff-4b6e-a603-6e412fc8ca1e22.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\59fbe388-1876-4a41-94ec-37c355d76e563.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\59fbe388-1876-4a41-94ec-37c355d76e563.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\5b32b19a-2c37-4b3b-8991-c1cd368fd4751.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\5b32b19a-2c37-4b3b-8991-c1cd368fd4751.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\5de71765-5e0b-4c3e-b783-9ce0f8cf3dd92.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\5de71765-5e0b-4c3e-b783-9ce0f8cf3dd92.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\5f422bf8-95a8-4e43-b7ff-d0cbec720a508.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\5f422bf8-95a8-4e43-b7ff-d0cbec720a508.png"
     },
     {
       "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\6.jpg",
       "PackagePath": "staticwebassets\\uploads\\products\\6.jpg"
     },
     {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\61b634f4-66f3-4207-902d-61bd13bf230a1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\products\\61b634f4-66f3-4207-902d-61bd13bf230a1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\62e9e32c-8ead-441e-8477-cc85fc35ed795.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\62e9e32c-8ead-441e-8477-cc85fc35ed795.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\64710f75-1be7-4241-9ebc-35d496fdcf5d1.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\64710f75-1be7-4241-9ebc-35d496fdcf5d1.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\6826e6ee-f419-4fbf-9c4d-f6361d2b8ad71.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\6826e6ee-f419-4fbf-9c4d-f6361d2b8ad71.png"
+    },
+    {
       "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\720cefa2-7903-4d13-920f-27644a5715f3putka3.png",
       "PackagePath": "staticwebassets\\uploads\\products\\720cefa2-7903-4d13-920f-27644a5715f3putka3.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\79845230-40e9-49ee-8198-5cc9a73c29657.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\79845230-40e9-49ee-8198-5cc9a73c29657.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\7b152963-c394-4785-9903-cc4d19f573967.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\7b152963-c394-4785-9903-cc4d19f573967.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\91404f43-06ed-45bc-949a-6d81df6413678.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\91404f43-06ed-45bc-949a-6d81df6413678.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\96f510fd-db67-41d4-a893-ef18b216f5df5.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\96f510fd-db67-41d4-a893-ef18b216f5df5.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\a3f55146-6dfb-4a0a-991c-6d73a3fb3d6b3.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\a3f55146-6dfb-4a0a-991c-6d73a3fb3d6b3.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\ad9ec157-58fb-42fe-907f-3a8ca33173385.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\ad9ec157-58fb-42fe-907f-3a8ca33173385.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\b030a879-3670-4934-bb39-4d563ddb45b87.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\b030a879-3670-4934-bb39-4d563ddb45b87.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\b8a05977-068c-4140-a806-b29ac0cf8cb93.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\b8a05977-068c-4140-a806-b29ac0cf8cb93.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\b94e933d-0f64-4760-a9ab-9ba24c4cacdd3.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\b94e933d-0f64-4760-a9ab-9ba24c4cacdd3.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\bcc6964f-064a-49b2-b38d-88674a9a93e011.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\bcc6964f-064a-49b2-b38d-88674a9a93e011.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\c44bea93-3f95-4d28-91b6-3d6dde75f52213.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\c44bea93-3f95-4d28-91b6-3d6dde75f52213.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\c7c50685-9246-4c04-a56f-f8ec8c835b8d3.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\c7c50685-9246-4c04-a56f-f8ec8c835b8d3.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\c89da540-e645-43ec-84e0-44b46d02a03b2.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\c89da540-e645-43ec-84e0-44b46d02a03b2.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\ce6ea196-ffcc-4e9c-9e70-e47b9fcc066e1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\products\\ce6ea196-ffcc-4e9c-9e70-e47b9fcc066e1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\d0454282-f13b-4dc0-b131-180add78fc438.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\d0454282-f13b-4dc0-b131-180add78fc438.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\d7752ee0-a8a0-43fa-b519-c39a48f23eb05.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\d7752ee0-a8a0-43fa-b519-c39a48f23eb05.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\e3f24927-7074-4dd2-bfa3-c7285ed2a4238.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\e3f24927-7074-4dd2-bfa3-c7285ed2a4238.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\e779ed36-26ed-482a-8740-0a8409504d838.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\e779ed36-26ed-482a-8740-0a8409504d838.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\ef69c016-9f3f-4187-96d1-a93f21cc6b891.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\ef69c016-9f3f-4187-96d1-a93f21cc6b891.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\f0902c05-779e-420c-8fe4-3182b512d3912.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\f0902c05-779e-420c-8fe4-3182b512d3912.png"
+    },
+    {
+      "Id": "C:\\Users\\Samedusa\\Desktop\\Final-Project-CA\\Backend - Putka\\Backend - Putka\\wwwroot\\uploads\\products\\f8b05603-f433-4596-aa6a-ca2b2e7222278.png",
+      "PackagePath": "staticwebassets\\uploads\\products\\f8b05603-f433-4596-aa6a-ca2b2e7222278.png"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Backend - Putka.Microsoft.AspNetCore.StaticWebAssets.props",

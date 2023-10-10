@@ -20,9 +20,10 @@ namespace Backend___Putka.Controllers
             HomeViewModel hvm = new HomeViewModel
             {
                 Products = _context.Products.Include(x => x.ProductImages).Where(x => x.StockStatus == true).Take(8).ToList(),
-                BestSellerProducts = _context.Products.Include(x => x.ProductImages).Where(x => x.IsNew == false).Take(8).ToList(),
+                BestSellerProducts = _context.Products.Include(x => x.ProductImages).Where(x => x.IsNew == false).Include(x=>x.ProductWeights).ThenInclude(x=>x.Weight).Take(12).ToList(),
                 TrendingProducts = _context.Products.Include(x=>x.ProductImages).OrderByDescending(x=>x.ProductComments.Any()).ThenByDescending(x=>x.ProductComments.Average(c=>c.Rate)).Take(4).ToList(),
                 Categories = _context.Categories.ToList(),
+                SmallBanners = _context.Banners.Where(x=>x.IsSmall).Take(4).ToList()
             };
 
             return View(hvm);

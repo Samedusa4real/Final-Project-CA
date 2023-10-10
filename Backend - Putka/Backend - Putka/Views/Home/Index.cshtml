@@ -84,69 +84,25 @@
     <section class="banner-section ratio_60 wow fadeInUp">
         <div class="container-fluid-lg">
             <div class="banner-slider">
-                <div>
-                    <div class="banner-contain hover-effect">
-                        <img src="~/assets/images/vegetable/banner/4.jpg" class="bg-img blur-up lazyload" alt="">
-                        <div class="banner-details">
-                            <div class="banner-box">
-                                <h6 class="text-danger">5% OFF</h6>
-                                <h5>Hot Deals on New Items</h5>
-                                <h6 class="text-content">Daily Essentials Eggs & Dairy</h6>
+                @foreach (var item in Model.SmallBanners)
+                {
+                    <div>
+                        <div class="banner-contain hover-effect">
+                            <img src="~/uploads/banners/@item.BackgroundImage" class="bg-img blur-up lazyload" alt="">
+                            <div class="banner-details">
+                                <div class="banner-box">
+                                    <h6 class="text-danger">@item.SaleText</h6>
+                                    <h5>@item.HeaderOne</h5>
+                                    <h6 class="text-content">@item.Description</h6>
+                                </div>
+                                <a asp-controller="shop" asp-action="index" class="banner-button text-white">
+                                    @item.ButtonText <i class="fa-solid fa-right-long ms-2"></i>
+                                </a>
                             </div>
-                            <a asp-controller="shop" asp-action="index" class="banner-button text-white">
-                                Shop Now <i class="fa-solid fa-right-long ms-2"></i>
-                            </a>
                         </div>
                     </div>
-                </div>
 
-                <div>
-                    <div class="banner-contain hover-effect">
-                        <img src="~/assets/images/vegetable/banner/5.jpg" class="bg-img blur-up lazyload" alt="">
-                        <div class="banner-details">
-                            <div class="banner-box">
-                                <h6 class="text-danger">5% OFF</h6>
-                                <h5>Buy More & Save More</h5>
-                                <h6 class="text-content">Fresh Vegetables</h6>
-                            </div>
-                            <a asp-controller="shop" asp-action="index" class="banner-button text-white">
-                                Shop Now <i class="fa-solid fa-right-long ms-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="banner-contain hover-effect">
-                        <img src="../assets/images/vegetable/banner/6.jpg" class="bg-img blur-up lazyload" alt="">
-                        <div class="banner-details">
-                            <div class="banner-box">
-                                <h6 class="text-danger">5% OFF</h6>
-                                <h5>Organic Meat Prepared</h5>
-                                <h6 class="text-content">Delivered to Your Home</h6>
-                            </div>
-                            <a asp-controller="shop" asp-action="index" class="banner-button text-white">
-                                Shop Now <i class="fa-solid fa-right-long ms-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="banner-contain hover-effect">
-                        <img src="../assets/images/vegetable/banner/7.jpg" class="bg-img blur-up lazyload" alt="">
-                        <div class="banner-details">
-                            <div class="banner-box">
-                                <h6 class="text-danger">5% OFF</h6>
-                                <h5>Buy More & Save More</h5>
-                                <h6 class="text-content">Nuts & Snacks</h6>
-                            </div>
-                            <a asp-controller="shop" asp-action="index" class="banner-button text-white">
-                                Shop Now <i class="fa-solid fa-right-long ms-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                }
             </div>
         </div>
     </section>
@@ -399,10 +355,12 @@
                             <ul class="product-list">
                                 @foreach (var item in Model.BestSellerProducts.Take(4))
                                 {
+                                    decimal productWeight = @item.ProductWeights.FirstOrDefault(x => x.ProductId == item.Id).Weight.Name;
+
                                     <li>
                                         <div class="offer-product">
                                             <a asp-controller="product" asp-action="detail" asp-route-id="@item.Id" class="offer-image">
-                                                <img src="/assets/images/vegetable/product/@item.ProductImages.FirstOrDefault(x=>x.IsMain == true)?.Url"
+                                                <img src="~/uploads/products/@item.ProductImages.FirstOrDefault(x=>x.IsMain == true)?.Url"
                                                      class="blur-up lazyload" alt="">
                                             </a>
 
@@ -411,7 +369,7 @@
                                                     <a asp-controller="product" asp-action="detail" asp-route-id="@item.Id" class="text-title">
                                                         <h6 class="name">@item.Name</h6>
                                                     </a>
-                                                    <span>500 G</span>
+                                                    <span>@((productWeight * 1000).ToString("0")) G</span>
                                                     @if (item.DiscountPercent > 0)
                                                     {
                                                         <h6 class="price theme-color">@((item.SalePrice * (100 - item.DiscountPercent) / 100).ToString("0.00"))</h6>
@@ -432,10 +390,12 @@
                             <ul class="product-list">
                                 @foreach (var item in Model.BestSellerProducts.Skip(4).Take(4))
                                 {
+                                    decimal productWeight = @item.ProductWeights.FirstOrDefault(x => x.ProductId == item.Id).Weight.Name;
+
                                     <li>
                                         <div class="offer-product">
                                             <a asp-controller="product" asp-action="detail" asp-route-id="@item.Id" class="offer-image">
-                                                <img src="/assets/images/vegetable/product/@item.ProductImages.FirstOrDefault(x=>x.IsMain == true)?.Url"
+                                                <img src="~/uploads/products/@item.ProductImages.FirstOrDefault(x=>x.IsMain == true)?.Url"
                                                      class="blur-up lazyload" alt="">
                                             </a>
 
@@ -444,7 +404,7 @@
                                                     <a asp-controller="product" asp-action="detail" asp-route-id="@item.Id" class="text-title">
                                                         <h6 class="name">@item.Name</h6>
                                                     </a>
-                                                    <span>500 G</span>
+                                                    <span>@((productWeight * 1000).ToString("0")) G</span>
                                                     @if (item.DiscountPercent > 0)
                                                     {
                                                         <h6 class="price theme-color">@((item.SalePrice * (100 - item.DiscountPercent) / 100).ToString("0.00"))</h6>
@@ -468,7 +428,7 @@
                                     <li>
                                         <div class="offer-product">
                                             <a asp-controller="product" asp-action="detail" asp-route-id="@item.Id" class="offer-image">
-                                                <img src="/assets/images/vegetable/product/@item.ProductImages.FirstOrDefault(x=>x.IsMain == true)?.Url"
+                                                <img src="~/uploads/products/@item.ProductImages.FirstOrDefault(x=>x.IsMain == true)?.Url"
                                                      class="blur-up lazyload" alt="">
                                             </a>
 

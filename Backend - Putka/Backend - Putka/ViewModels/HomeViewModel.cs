@@ -9,5 +9,6 @@ namespace Backend___Putka.ViewModels
         public List<Product> TrendingProducts { get; set; }
 
         public List<Category> Categories { get; set; }
+        public List<Banner> SmallBanners { get; set; }
     }
 }
